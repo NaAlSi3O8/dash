@@ -74,7 +74,7 @@ class TestManager(NodeConnCB):
 class MaxBlocksInFlightTest(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("DASHD", "allgamescoind"),
+                          default=os.getenv("ALLGAMESCOIND", "allgamescoind"),
                           help="Binary to test max block requests behavior")
 
     def setup_chain(self):

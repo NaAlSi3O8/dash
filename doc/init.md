@@ -104,7 +104,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy allgamescoind.init to /etc/init.d/allgamescoind. Test by running `service allgamescoind start`.
 
 Using this script, you can adjust the path and flags to the allgamescoind program by
-setting the DASHD and FLAGS environment variables in the file
+setting the ALLGAMESCOIND and FLAGS environment variables in the file
 /etc/sysconfig/allgamescoind. You can also use the DAEMONOPTS environment variable here.
 
 4e) Mac OS X

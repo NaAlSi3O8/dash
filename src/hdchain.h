@@ -1,7 +1,7 @@
 // Copyright (c) 2014-2017 The Allgamescoin Core developers
 // Distributed under the MIT software license, see the accompanying
-#ifndef DASH_HDCHAIN_H
-#define DASH_HDCHAIN_H
+#ifndef ALLGAMESCOIN_HDCHAIN_H
+#define ALLGAMESCOIN_HDCHAIN_H
 
 #include "key.h"
 #include "sync.h"
@@ -149,4 +149,4 @@ public:
     std::string GetKeyPath() const;
 };
 
-#endif // DASH_HDCHAIN_H
+#endif // ALLGAMESCOIN_HDCHAIN_H

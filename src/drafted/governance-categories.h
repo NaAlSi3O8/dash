@@ -4,7 +4,7 @@
 
 	* means the category has an associated class
 	
-	CAllgamescoinNetwork: DASH NETWORK (ROOT)
+	CAllgamescoinNetwork: ALLGAMESCOIN NETWORK (ROOT)
 	has:
 		vector<CNetworkVariable> vecNetworkVariables;
 		vector<CAllgamescoinProject> vecProjects;
@@ -19,7 +19,7 @@
 
 */
 
-	// DASH NETWORK (ROOT)
+	// ALLGAMESCOIN NETWORK (ROOT)
 	// 	-> NETWORK VARIABLE
 	// 		-> switch, setting
 	// 	-> CATEGORIES
@@ -49,7 +49,7 @@
 	// 			-> USER1 (only users are allowed here in this scope)
 	// 			-> USER2
 	// 		-> GROUP2 (EVO)
-	// 			-> VALUEOVERRIDE (STORE=DASHDRIVE)
+	// 			-> VALUEOVERRIDE (STORE=ALLGAMESCOINDRIVE)
 	// 			-> USER1
 
 	// 	-> COMPANIES

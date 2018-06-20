@@ -19,9 +19,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(DASH);
-    unitlist.append(mDASH);
-    unitlist.append(uDASH);
+    unitlist.append(ALLGAMESCOIN);
+    unitlist.append(mALLGAMESCOIN);
+    unitlist.append(uALLGAMESCOIN);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -30,9 +30,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case DASH:
-    case mDASH:
-    case uDASH:
+    case ALLGAMESCOIN:
+    case mALLGAMESCOIN:
+    case uALLGAMESCOIN:
     case duffs:
         return true;
     default:
@@ -46,9 +46,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("DASH");
-            case mDASH: return QString("mDASH");
-            case uDASH: return QString::fromUtf8("μDASH");
+            case ALLGAMESCOIN: return QString("ALLGAMESCOIN");
+            case mALLGAMESCOIN: return QString("mALLGAMESCOIN");
+            case uALLGAMESCOIN: return QString::fromUtf8("μALLGAMESCOIN");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("tDASH");
-            case mDASH: return QString("mtDASH");
-            case uDASH: return QString::fromUtf8("μtDASH");
+            case ALLGAMESCOIN: return QString("tALLGAMESCOIN");
+            case mALLGAMESCOIN: return QString("mtALLGAMESCOIN");
+            case uALLGAMESCOIN: return QString::fromUtf8("μtALLGAMESCOIN");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -72,9 +72,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("Allgamescoin");
-            case mDASH: return QString("Milli-Allgamescoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-Allgamescoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case ALLGAMESCOIN: return QString("Allgamescoin");
+            case mALLGAMESCOIN: return QString("Milli-Allgamescoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uALLGAMESCOIN: return QString("Micro-Allgamescoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-Allgamescoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -83,9 +83,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("TestAllgamescoins");
-            case mDASH: return QString("Milli-TestAllgamescoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-TestAllgamescoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case ALLGAMESCOIN: return QString("TestAllgamescoins");
+            case mALLGAMESCOIN: return QString("Milli-TestAllgamescoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uALLGAMESCOIN: return QString("Micro-TestAllgamescoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestAllgamescoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -96,9 +96,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case DASH:  return 100000000;
-    case mDASH: return 100000;
-    case uDASH: return 100;
+    case ALLGAMESCOIN:  return 100000000;
+    case mALLGAMESCOIN: return 100000;
+    case uALLGAMESCOIN: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -108,9 +108,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case DASH: return 8;
-    case mDASH: return 5;
-    case uDASH: return 2;
+    case ALLGAMESCOIN: return 8;
+    case mALLGAMESCOIN: return 5;
+    case uALLGAMESCOIN: return 2;
     case duffs: return 0;
     default: return 0;
     }
