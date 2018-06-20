@@ -7,7 +7,7 @@
 #include "config/allgamescoin-config.h"
 #endif
 
-#include "bitcoingui.h"
+#include "allgamescoingui.h"
 
 #include "chainparams.h"
 #include "clientmodel.h"
@@ -142,11 +142,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in allgamescoin.qrc)
+    // Load e.g. allgamescoin_de.qm (shortcut "de" needs to be defined in allgamescoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in allgamescoin.qrc)
+    // Load e.g. allgamescoin_de_DE.qm (shortcut "de_DE" needs to be defined in allgamescoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }

@@ -7,7 +7,7 @@
 
 #include "ui_helpmessagedialog.h"
 
-#include "bitcoingui.h"
+#include "allgamescoingui.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "intro.h"

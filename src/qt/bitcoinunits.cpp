@@ -3,7 +3,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "bitcoinunits.h"
+#include "allgamescoinunits.h"
 #include "chainparams.h"
 #include "primitives/transaction.h"
 

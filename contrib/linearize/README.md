@@ -21,7 +21,7 @@ Optional config file setting for linearize-hashes:
     $ ./linearize-data.py linearize.cfg
 
 Required configuration file settings:
-* "input": bitcoind blocks/ directory containing blkNNNNN.dat
+* "input": allgamescoind blocks/ directory containing blkNNNNN.dat
 * "hashlist": text file containing list of block hashes, linearized-hashes.py
 output.
 * "output_file" for bootstrap.dat or "output" for output directory for linearized blocks/blkNNNNN.dat output

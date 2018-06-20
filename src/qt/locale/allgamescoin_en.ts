@@ -314,7 +314,7 @@
         <translation>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="+130"/>
+        <location filename="../allgamescoingui.cpp" line="+130"/>
         <location line="+988"/>
         <source>Allgamescoin Core</source>
         <translation>Allgamescoin Core</translation>
@@ -2559,7 +2559,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Allgamescoin Core didn&apos;t yet exit safely...</translation>
     </message>
     <message>
-        <location filename="../bitcoinunits.cpp" line="+233"/>
+        <location filename="../allgamescoinunits.cpp" line="+233"/>
         <source>Amount</source>
         <translation>Amount</translation>
     </message>
@@ -4817,7 +4817,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
 <context>
     <name>UnitDisplayStatusBarControl</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+138"/>
+        <location filename="../allgamescoingui.cpp" line="+138"/>
         <source>Unit to show amounts in. Click to select another unit.</source>
         <translation>Unit to show amounts in. Click to select another unit.</translation>
     </message>

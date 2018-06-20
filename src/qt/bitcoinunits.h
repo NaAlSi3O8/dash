@@ -53,7 +53,7 @@ public:
     explicit BitcoinUnits(QObject *parent);
 
     /** Allgamescoin units.
-      @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
+      @note Source: https://en.allgamescoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {

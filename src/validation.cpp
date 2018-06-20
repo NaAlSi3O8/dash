@@ -1224,7 +1224,7 @@ double ConvertBitsToDouble(unsigned int nBits)
 }
 
 /*
-NOTE:   unlike bitcoin we are using PREVIOUS block height here,
+NOTE:   unlike allgamescoin we are using PREVIOUS block height here,
         might be a good idea to change this to use prev bits
         but current height to avoid confusion.
 */

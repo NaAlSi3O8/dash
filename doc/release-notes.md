@@ -79,7 +79,7 @@ This release also fixes a few crashes and compatibility issues.
 See detailed [change log](https://github.com/allgamescoindev/allgamescoin/compare/v0.12.2.2...allgamescoindev:v0.12.2.3) below.
 
 ### Backports:
-- [`068b20bc7`](https://github.com/allgamescoindev/allgamescoin/commit/068b20bc7) Merge #8256: BUG: bitcoin-qt crash
+- [`068b20bc7`](https://github.com/allgamescoindev/allgamescoin/commit/068b20bc7) Merge #8256: BUG: allgamescoin-qt crash
 - [`f71ab1daf`](https://github.com/allgamescoindev/allgamescoin/commit/f71ab1daf) Merge #11847: Fixes compatibility with boost 1.66 (#1836)
 
 ### PrivateSend:

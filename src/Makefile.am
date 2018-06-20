@@ -20,13 +20,13 @@ BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BOOST_CPPFLAGS) $(LEVELDB_CPP
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBBITCOIN_SERVER=libbitcoin_server.a
-LIBBITCOIN_WALLET=libbitcoin_wallet.a
-LIBBITCOIN_COMMON=libbitcoin_common.a
-LIBBITCOIN_CLI=libbitcoin_cli.a
-LIBBITCOIN_UTIL=libbitcoin_util.a
-LIBBITCOIN_CRYPTO=crypto/libbitcoin_crypto.a
-LIBBITCOINQT=qt/libbitcoinqt.a
+LIBBITCOIN_SERVER=liballgamescoin_server.a
+LIBBITCOIN_WALLET=liballgamescoin_wallet.a
+LIBBITCOIN_COMMON=liballgamescoin_common.a
+LIBBITCOIN_CLI=liballgamescoin_cli.a
+LIBBITCOIN_UTIL=liballgamescoin_util.a
+LIBBITCOIN_CRYPTO=crypto/liballgamescoin_crypto.a
+LIBBITCOINQT=qt/liballgamescoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -35,17 +35,17 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  crypto/libbitcoin_crypto.a \
-  libbitcoin_util.a \
-  libbitcoin_common.a \
-  libbitcoin_server.a \
-  libbitcoin_cli.a
+  crypto/liballgamescoin_crypto.a \
+  liballgamescoin_util.a \
+  liballgamescoin_common.a \
+  liballgamescoin_server.a \
+  liballgamescoin_cli.a
 if ENABLE_WALLET
 BITCOIN_INCLUDES += $(BDB_CPPFLAGS)
-EXTRA_LIBRARIES += libbitcoin_wallet.a
+EXTRA_LIBRARIES += liballgamescoin_wallet.a
 endif
 if ENABLE_ZMQ
-EXTRA_LIBRARIES += libbitcoin_zmq.a
+EXTRA_LIBRARIES += liballgamescoin_zmq.a
 endif
 
 if BUILD_BITCOIN_LIBS
@@ -205,12 +205,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
+liballgamescoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between allgamescoind and allgamescoin-qt
-libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_server_a_SOURCES = \
+liballgamescoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+liballgamescoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+liballgamescoin_server_a_SOURCES = \
   activemasternode.cpp \
   addrman.cpp \
   addrdb.cpp \
@@ -269,11 +269,11 @@ libbitcoin_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libbitcoin_zmq.a
+LIBBITCOIN_ZMQ=liballgamescoin_zmq.a
 
-libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_zmq_a_SOURCES = \
+liballgamescoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+liballgamescoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+liballgamescoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
@@ -282,9 +282,9 @@ endif
 
 # wallet: shared between allgamescoind and allgamescoin-qt, but only linked
 # when wallet enabled
-libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_wallet_a_SOURCES = \
+liballgamescoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+liballgamescoin_wallet_a_SOURCES = \
   keepass.cpp \
   privatesend-client.cpp \
   privatesend-util.cpp \
@@ -299,9 +299,9 @@ libbitcoin_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libbitcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES) $(PIC_FLAGS)
-crypto_libbitcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(PIC_FLAGS)
-crypto_libbitcoin_crypto_a_SOURCES = \
+crypto_liballgamescoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES) $(PIC_FLAGS)
+crypto_liballgamescoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(PIC_FLAGS)
+crypto_liballgamescoin_crypto_a_SOURCES = \
   crypto/common.h \
   crypto/hmac_sha256.cpp \
   crypto/hmac_sha256.h \
@@ -318,7 +318,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sha512.h
 
 # x11
-crypto_libbitcoin_crypto_a_SOURCES += \
+crypto_liballgamescoin_crypto_a_SOURCES += \
   crypto/blake.c \
   crypto/bmw.c \
   crypto/cubehash.c \
@@ -344,9 +344,9 @@ crypto_libbitcoin_crypto_a_SOURCES += \
   crypto/sph_types.h
 
 # common: shared between allgamescoind, and allgamescoin-qt and non-server tools
-libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_common_a_SOURCES = \
+liballgamescoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+liballgamescoin_common_a_SOURCES = \
   amount.cpp \
   arith_uint256.cpp \
   base58.cpp \
@@ -378,9 +378,9 @@ libbitcoin_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libbitcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_util_a_SOURCES = \
+liballgamescoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+liballgamescoin_util_a_SOURCES = \
   support/pagelocker.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -400,20 +400,20 @@ libbitcoin_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
+liballgamescoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
 # cli: shared between allgamescoin-cli and allgamescoin-qt
-libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_cli_a_SOURCES = \
+liballgamescoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+liballgamescoin_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_liballgamescoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# bitcoind binary #
+# allgamescoind binary #
 allgamescoind_SOURCES = allgamescoind.cpp
 allgamescoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 allgamescoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -438,7 +438,7 @@ allgamescoind_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-allgamescoind_LDADD += libbitcoin_wallet.a
+allgamescoind_LDADD += liballgamescoin_wallet.a
 endif
 
 allgamescoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)

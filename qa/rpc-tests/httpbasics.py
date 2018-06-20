@@ -94,7 +94,7 @@ class HTTPBasicsTest (BitcoinTestFramework):
         conn.request('POST', '/', '{"method": "getbestblockhash"}', headers)
         out1 = conn.getresponse().read()
         assert(b'"error":null' in out1)
-        assert(conn.sock!=None) #connection must be closed because bitcoind should use keep-alive by default
+        assert(conn.sock!=None) #connection must be closed because allgamescoind should use keep-alive by default
 
         # Check excessive request size
         conn = httplib.HTTPConnection(urlNode2.hostname, urlNode2.port)

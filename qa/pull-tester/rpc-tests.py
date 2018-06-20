@@ -68,13 +68,13 @@ if "ALLGAMESCOINCLI" not in os.environ:
     os.environ["ALLGAMESCOINCLI"] = buildDir + '/src/allgamescoin-cli' + EXEEXT
 
 if EXEEXT == ".exe" and "-win" not in opts:
-    # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
-    # https://github.com/bitcoin/bitcoin/pull/5677#issuecomment-136646964
+    # https://github.com/allgamescoin/allgamescoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
+    # https://github.com/allgamescoin/allgamescoin/pull/5677#issuecomment-136646964
     print "Win tests currently disabled by default.  Use -win option to enable"
     sys.exit(0)
 
 if not (ENABLE_WALLET == 1 and ENABLE_UTILS == 1 and ENABLE_BITCOIND == 1):
-    print "No rpc tests to run. Wallet, utils, and bitcoind must all be enabled"
+    print "No rpc tests to run. Wallet, utils, and allgamescoind must all be enabled"
     sys.exit(0)
 
 # python-zmq may not be installed. Handle this gracefully and with some helpful info
@@ -139,7 +139,7 @@ testScriptsExt = [
     'bip68-sequence.py',
     'bipdersig-p2p.py', # NOTE: needs allgamescoin_hash to pass
     'bipdersig.py',
-    'getblocktemplate_longpoll.py', # FIXME: "socket.error: [Errno 54] Connection reset by peer" on my Mac, same as  https://github.com/bitcoin/bitcoin/issues/6651
+    'getblocktemplate_longpoll.py', # FIXME: "socket.error: [Errno 54] Connection reset by peer" on my Mac, same as  https://github.com/allgamescoin/allgamescoin/issues/6651
     'getblocktemplate_proposals.py',
     'txn_doublespend.py',
     'txn_clone.py --mineblock',
@@ -214,7 +214,7 @@ class RPCCoverage(object):
     Coverage calculation works by having each test script subprocess write
     coverage files into a particular directory. These files contain the RPC
     commands invoked during testing, as well as a complete listing of RPC
-    commands per `bitcoin-cli help` (`rpc_interface.txt`).
+    commands per `allgamescoin-cli help` (`rpc_interface.txt`).
 
     After all tests complete, the commands run are combined and diff'd against
     the complete list to calculate uncovered RPC commands.

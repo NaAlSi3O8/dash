@@ -36,10 +36,10 @@ CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno
 
 CLEANFILES += $(CLEAN_BITCOIN_BENCH)
 
-bitcoin_bench: $(BENCH_BINARY)
+allgamescoin_bench: $(BENCH_BINARY)
 
 bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
-bitcoin_bench_clean : FORCE
+allgamescoin_bench_clean : FORCE
 	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_allgamescoin_OBJECTS) $(BENCH_BINARY)

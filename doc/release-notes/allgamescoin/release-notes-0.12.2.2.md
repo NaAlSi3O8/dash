@@ -49,7 +49,7 @@ This fixes a potential vulnerability, so called 'Corebleed', which was
 demonstrated this summer at the Вrеаkіng Віtсоіn Соnfеrеnсе іn Раrіs. The DoS
 can cause nodes to allocate excessive amounts of memory, which leads them to a
 halt. You can read more about the fix in the original Bitcoin Core pull request
-https://github.com/bitcoin/bitcoin/pull/10195
+https://github.com/allgamescoin/allgamescoin/pull/10195
 
 To fix this issue in Allgamescoin Core however, we had to backport a lot of other
 improvements from Bitcoin Core, see full list of backports in the detailed
@@ -128,7 +128,7 @@ See detailed [change log](https://github.com/allgamescoindev/allgamescoin/compar
 - [`09b3e042f`](https://github.com/allgamescoindev/allgamescoin/commit/09b3e042f) Backport #9310: Assert FRESH validity in CCoinsViewCache::BatchWrite
 - [`ceb64fcd4`](https://github.com/allgamescoindev/allgamescoin/commit/ceb64fcd4) Backport #8610: Share unused mempool memory with coincache
 - [`817ecc03d`](https://github.com/allgamescoindev/allgamescoin/commit/817ecc03d) Backport #9353: Add data() method to CDataStream (and use it)
-- [`249db2776`](https://github.com/allgamescoindev/allgamescoin/commit/249db2776) Backport #9999: [LevelDB] Plug leveldb logs to bitcoin logs
+- [`249db2776`](https://github.com/allgamescoindev/allgamescoin/commit/249db2776) Backport #9999: [LevelDB] Plug leveldb logs to allgamescoin logs
 - [`cfefd34f4`](https://github.com/allgamescoindev/allgamescoin/commit/cfefd34f4) Backport #10126: Compensate for memory peak at flush time
 - [`ff9b2967a`](https://github.com/allgamescoindev/allgamescoin/commit/ff9b2967a) Backport #10133: Clean up calculations of pcoinsTip memory usage
 - [`567043d36`](https://github.com/allgamescoindev/allgamescoin/commit/567043d36) Make DisconnectBlock and ConnectBlock static in validation.cpp

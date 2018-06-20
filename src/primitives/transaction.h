@@ -340,7 +340,7 @@ struct CMutableTransaction
 };
 
 /** Implementation of BIP69
- * https://github.com/bitcoin/bips/blob/master/bip-0069.mediawiki
+ * https://github.com/allgamescoin/bips/blob/master/bip-0069.mediawiki
  */
 struct CompareInputBIP69
 {

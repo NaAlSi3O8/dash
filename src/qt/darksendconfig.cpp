@@ -1,7 +1,7 @@
 #include "darksendconfig.h"
 #include "ui_darksendconfig.h"
 
-#include "bitcoinunits.h"
+#include "allgamescoinunits.h"
 #include "guiconstants.h"
 #include "optionsmodel.h"
 #include "privatesend-client.h"

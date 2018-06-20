@@ -1,7 +1,7 @@
 Protocol Documentation - 0.12.1
 =====================================
 
-This document describes the protocol extensions for all additional functionality build into the Allgamescoin protocol. This doesn't include any of the Bitcoin protocol, which has been left intact in the Allgamescoin project. For more information about the core protocol, please see https://en.bitcoin.it/w/index.php?title#Protocol_documentation&action#edit
+This document describes the protocol extensions for all additional functionality build into the Allgamescoin protocol. This doesn't include any of the Bitcoin protocol, which has been left intact in the Allgamescoin project. For more information about the core protocol, please see https://en.allgamescoin.it/w/index.php?title#Protocol_documentation&action#edit
 
 ## Common Structures
 
@@ -13,7 +13,7 @@ CScript => uchar[]
 
 ### COutPoint
 
-Bitcoin Outpoint https://bitcoin.org/en/glossary/outpoint
+Bitcoin Outpoint https://allgamescoin.org/en/glossary/outpoint
 
 | Field Size | Field Name | Data type | Description |
 | ---------- | ----------- | --------- | -------- |
@@ -23,7 +23,7 @@ Bitcoin Outpoint https://bitcoin.org/en/glossary/outpoint
 
 ### CTxIn
 
-Bitcoin Input https://bitcoin.org/en/glossary/input
+Bitcoin Input https://allgamescoin.org/en/glossary/input
 
 | Field Size | Field Name | Data type | Description |
 | ---------- | ----------- | --------- | -------- |
@@ -34,7 +34,7 @@ Bitcoin Input https://bitcoin.org/en/glossary/input
 
 ### CTxOut
 
-Bitcoin Output https://bitcoin.org/en/glossary/output
+Bitcoin Output https://allgamescoin.org/en/glossary/output
 
 | Field Size | Field Name | Data type | Description |
 | ---------- | ----------- | --------- | -------- |
@@ -54,7 +54,7 @@ Bitcoin Output https://bitcoin.org/en/glossary/output
 
 ### CPubKey
 
-Bitcoin Public Key https://bitcoin.org/en/glossary/public-key
+Bitcoin Public Key https://allgamescoin.org/en/glossary/public-key
 
 | Field Size | Field Name | Data type | Description |
 | ---------- | ----------- | --------- | -------- |

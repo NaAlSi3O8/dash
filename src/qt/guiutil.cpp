@@ -5,8 +5,8 @@
 
 #include "guiutil.h"
 
-#include "bitcoinaddressvalidator.h"
-#include "bitcoinunits.h"
+#include "allgamescoinaddressvalidator.h"
+#include "allgamescoinunits.h"
 #include "qvalidatedlineedit.h"
 #include "walletmodel.h"
 
@@ -831,21 +831,21 @@ LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef
 
 bool GetStartOnSystemStartup()
 {
-    CFURLRef bitcoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef allgamescoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, allgamescoinAppUrl);
     return !!foundItem; // return boolified object
 }
 
 bool SetStartOnSystemStartup(bool fAutoStart)
 {
-    CFURLRef bitcoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFURLRef allgamescoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, allgamescoinAppUrl);
 
     if(fAutoStart && !foundItem) {
         // add Allgamescoin Core app to startup item list
-        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
+        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, allgamescoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
         // remove item

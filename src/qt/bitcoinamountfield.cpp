@@ -2,9 +2,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "bitcoinamountfield.h"
+#include "allgamescoinamountfield.h"
 
-#include "bitcoinunits.h"
+#include "allgamescoinunits.h"
 #include "guiconstants.h"
 #include "qvaluecombobox.h"
 
@@ -188,7 +188,7 @@ Q_SIGNALS:
     void valueChanged();
 };
 
-#include "bitcoinamountfield.moc"
+#include "allgamescoinamountfield.moc"
 
 BitcoinAmountField::BitcoinAmountField(QWidget *parent) :
     QWidget(parent),

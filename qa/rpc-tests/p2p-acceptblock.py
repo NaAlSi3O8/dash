@@ -110,7 +110,7 @@ class AcceptBlockTest(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
                           default=os.getenv("ALLGAMESCOIND", "allgamescoind"),
-                          help="bitcoind binary to test")
+                          help="allgamescoind binary to test")
 
     def setup_chain(self):
         initialize_chain_clean(self.options.tmpdir, 2)

@@ -282,7 +282,7 @@ CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& s
 
         }
 
-        // NOTE: unlike in bitcoin, we need to pass PREVIOUS block height here
+        // NOTE: unlike in allgamescoin, we need to pass PREVIOUS block height here
         CAmount blockReward = nFees + GetBlockSubsidy(pindexPrev->nBits, pindexPrev->nHeight, Params().GetConsensus());
 
         // Compute regular coinbase transaction.
@@ -399,7 +399,7 @@ static bool ProcessBlockFound(const CBlock* pblock, const CChainParams& chainpar
     return true;
 }
 
-// ***TODO*** that part changed in bitcoin, we are using a mix with old one here for now
+// ***TODO*** that part changed in allgamescoin, we are using a mix with old one here for now
 void static BitcoinMiner(const CChainParams& chainparams, CConnman& connman)
 {
     LogPrintf("AllgamescoinMiner -- started\n");

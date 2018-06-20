@@ -28,8 +28,8 @@ The interface is defined in the C header `allgamescoinconsensus.h` located in  `
 
 ##### Script Flags
 - `allgamescoinconsensus_SCRIPT_FLAGS_VERIFY_NONE`
-- `allgamescoinconsensus_SCRIPT_FLAGS_VERIFY_P2SH` - Evaluate P2SH ([BIP16](https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki)) subscripts
-- `allgamescoinconsensus_SCRIPT_FLAGS_VERIFY_DERSIG` - Enforce strict DER ([BIP66](https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki)) compliance
+- `allgamescoinconsensus_SCRIPT_FLAGS_VERIFY_P2SH` - Evaluate P2SH ([BIP16](https://github.com/allgamescoin/bips/blob/master/bip-0016.mediawiki)) subscripts
+- `allgamescoinconsensus_SCRIPT_FLAGS_VERIFY_DERSIG` - Enforce strict DER ([BIP66](https://github.com/allgamescoin/bips/blob/master/bip-0066.mediawiki)) compliance
 
 ##### Errors
 - `allgamescoinconsensus_ERR_OK` - No errors with input parameters *(see the return value of `allgamescoinconsensus_verify_script` for the verification status)*
@@ -39,6 +39,6 @@ The interface is defined in the C header `allgamescoinconsensus.h` located in  `
 
 ### Example Implementations
 - [NBitcoin](https://github.com/NicolasDorier/NBitcoin/blob/master/NBitcoin/Script.cs#L814) (.NET Bindings)
-- [node-libbitcoinconsensus](https://github.com/bitpay/node-libbitcoinconsensus) (Node.js Bindings)
-- [java-libbitcoinconsensus](https://github.com/dexX7/java-libbitcoinconsensus) (Java Bindings)
-- [bitcoinconsensus-php](https://github.com/Bit-Wasp/bitcoinconsensus-php) (PHP Bindings)
+- [node-liballgamescoinconsensus](https://github.com/bitpay/node-liballgamescoinconsensus) (Node.js Bindings)
+- [java-liballgamescoinconsensus](https://github.com/dexX7/java-liballgamescoinconsensus) (Java Bindings)
+- [allgamescoinconsensus-php](https://github.com/Bit-Wasp/allgamescoinconsensus-php) (PHP Bindings)

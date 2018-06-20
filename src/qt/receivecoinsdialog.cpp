@@ -7,7 +7,7 @@
 
 #include "addressbookpage.h"
 #include "addresstablemodel.h"
-#include "bitcoinunits.h"
+#include "allgamescoinunits.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
 #include "platformstyle.h"

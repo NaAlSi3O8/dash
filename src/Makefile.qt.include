@@ -1,5 +1,5 @@
 bin_PROGRAMS += qt/allgamescoin-qt
-EXTRA_LIBRARIES += qt/libbitcoinqt.a
+EXTRA_LIBRARIES += qt/liballgamescoinqt.a
 
 # allgamescoin qt core #
 QT_TS = \
@@ -46,10 +46,10 @@ QT_MOC_CPP = \
   qt/moc_addresstablemodel.cpp \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_bantablemodel.cpp \
-  qt/moc_bitcoinaddressvalidator.cpp \
-  qt/moc_bitcoinamountfield.cpp \
-  qt/moc_bitcoingui.cpp \
-  qt/moc_bitcoinunits.cpp \
+  qt/moc_allgamescoinaddressvalidator.cpp \
+  qt/moc_allgamescoinamountfield.cpp \
+  qt/moc_allgamescoingui.cpp \
+  qt/moc_allgamescoinunits.cpp \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
   qt/moc_coincontroltreewidget.cpp \
@@ -96,7 +96,7 @@ BITCOIN_MM = \
 
 QT_MOC = \
   qt/allgamescoin.moc \
-  qt/bitcoinamountfield.moc \
+  qt/allgamescoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
@@ -115,10 +115,10 @@ BITCOIN_QT_H = \
   qt/addresstablemodel.h \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
-  qt/bitcoinaddressvalidator.h \
-  qt/bitcoinamountfield.h \
-  qt/bitcoingui.h \
-  qt/bitcoinunits.h \
+  qt/allgamescoinaddressvalidator.h \
+  qt/allgamescoinamountfield.h \
+  qt/allgamescoingui.h \
+  qt/allgamescoinunits.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
   qt/coincontroltreewidget.h \
@@ -168,8 +168,8 @@ BITCOIN_QT_H = \
   qt/winshutdownmonitor.h
 
 RES_ICONS = \
-  qt/res/icons/bitcoin.ico \
-  qt/res/icons/bitcoin.png \
+  qt/res/icons/allgamescoin.ico \
+  qt/res/icons/allgamescoin.png \
   qt/res/icons/chevron.png \
   qt/res/icons/warning.png \
   qt/res/icons/drkblue/add.png \
@@ -391,10 +391,10 @@ RES_ICONS = \
 
 BITCOIN_QT_CPP = \
   qt/bantablemodel.cpp \
-  qt/bitcoinaddressvalidator.cpp \
-  qt/bitcoinamountfield.cpp \
-  qt/bitcoingui.cpp \
-  qt/bitcoinunits.cpp \
+  qt/allgamescoinaddressvalidator.cpp \
+  qt/allgamescoinamountfield.cpp \
+  qt/allgamescoingui.cpp \
+  qt/allgamescoinunits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
   qt/guiutil.cpp \
@@ -516,14 +516,14 @@ BITCOIN_RC = qt/res/allgamescoin-qt-res.rc
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
 
-qt_libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_liballgamescoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
-qt_libbitcoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_liballgamescoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+qt_liballgamescoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES)
 
-nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_qt_liballgamescoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
 
 # forms/foo.h -> forms/ui_foo.h
@@ -532,7 +532,7 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_allgamescoin_qt_OBJECTS) : | $(QT_MOC)
+$(qt_liballgamescoinqt_a_OBJECTS) $(qt_allgamescoin_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -551,7 +551,7 @@ endif
 if TARGET_WINDOWS
   qt_allgamescoin_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_allgamescoin_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_allgamescoin_qt_LDADD = qt/liballgamescoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
 qt_allgamescoin_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
@@ -569,7 +569,7 @@ QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-qt/allgamescoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libbitcoin_consensus_a_SOURCES) $(libbitcoin_util_a_SOURCES)
+qt/allgamescoinstrings.cpp: $(liballgamescoin_server_a_SOURCES) $(liballgamescoin_wallet_a_SOURCES) $(liballgamescoin_common_a_SOURCES) $(liballgamescoin_zmq_a_SOURCES) $(liballgamescoin_consensus_a_SOURCES) $(liballgamescoin_util_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) ../share/qt/extract_strings_qt.py $^
 
@@ -588,12 +588,12 @@ $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(R
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) $(RCCFLAGS) -name allgamescoin $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
+CLEAN_QT = $(nodist_qt_liballgamescoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
 allgamescoin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_allgamescoin_qt_OBJECTS) qt/allgamescoin-qt$(EXEEXT) $(LIBBITCOINQT)
+	rm -f $(CLEAN_QT) $(qt_liballgamescoinqt_a_OBJECTS) $(qt_allgamescoin_qt_OBJECTS) qt/allgamescoin-qt$(EXEEXT) $(LIBBITCOINQT)
 
 allgamescoin_qt : qt/allgamescoin-qt$(EXEEXT)
 

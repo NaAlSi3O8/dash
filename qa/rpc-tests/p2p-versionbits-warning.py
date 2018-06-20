@@ -139,7 +139,7 @@ class VersionBitsWarningTest(BitcoinTestFramework):
         # to ACTIVE.
         self.nodes[0].generate(VB_PERIOD)
         stop_node(self.nodes[0], 0)
-        wait_bitcoinds()
+        wait_allgamescoinds()
         # Empty out the alert file
         with open(self.alert_filename, 'w') as f:
             pass
@@ -149,7 +149,7 @@ class VersionBitsWarningTest(BitcoinTestFramework):
         self.nodes[0].generate(1)
         assert(len(self.nodes[0].getinfo()["errors"]) != 0)
         stop_node(self.nodes[0], 0)
-        wait_bitcoinds()
+        wait_allgamescoinds()
         self.test_versionbits_in_alert_file()
 
         # Test framework expects the node to still be running...

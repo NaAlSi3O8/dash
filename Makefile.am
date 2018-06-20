@@ -20,7 +20,7 @@ OSX_BACKGROUND_IMAGE=background.tiff
 OSX_DEPLOY_SCRIPT=$(top_srcdir)/contrib/macdeploy/macdeployqtplus
 OSX_FANCY_PLIST=$(top_srcdir)/contrib/macdeploy/fancy.plist
 OSX_BASE_LPROJ_DIR=$(top_srcdir)/contrib/macdeploy/Base.lproj/InfoPlist.strings
-OSX_INSTALLER_ICONS=$(top_srcdir)/src/qt/res/icons/bitcoin.icns
+OSX_INSTALLER_ICONS=$(top_srcdir)/src/qt/res/icons/allgamescoin.icns
 OSX_PLIST=$(top_srcdir)/share/qt/Info.plist #not installed
 OSX_QT_TRANSLATIONS = da,de,es,hu,ru,uk,zh_CN,zh_TW
 
@@ -29,7 +29,7 @@ DIST_DOCS = $(wildcard doc/*.md) $(wildcard doc/release-notes/*.md)
 BIN_CHECKS=$(top_srcdir)/contrib/devtools/symbol-check.py \
            $(top_srcdir)/contrib/devtools/security-check.py
 
-WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/bitcoin.ico \
+WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/allgamescoin.ico \
   $(top_srcdir)/share/pixmaps/nsis-header.bmp \
   $(top_srcdir)/share/pixmaps/nsis-wizard.bmp \
   $(top_srcdir)/doc/README_windows.txt
@@ -82,7 +82,7 @@ $(OSX_APP)/Contents/Info.plist: $(OSX_PLIST)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/Resources/bitcoin.icns: $(OSX_INSTALLER_ICONS)
+$(OSX_APP)/Contents/Resources/allgamescoin.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
@@ -95,7 +95,7 @@ $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings: $(OSX_BASE_LPROJ_DIR
 	$(INSTALL_DATA) $< $@
 
 OSX_APP_BUILT=$(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
-  $(OSX_APP)/Contents/Resources/bitcoin.icns $(OSX_APP)/Contents/Info.plist \
+  $(OSX_APP)/Contents/Resources/allgamescoin.icns $(OSX_APP)/Contents/Info.plist \
   $(OSX_APP)/Contents/MacOS/Allgamescoin-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
 
 if BUILD_DARWIN
@@ -173,7 +173,7 @@ test_allgamescoin_filtered.info: test_allgamescoin.info
 
 block_test.info: test_allgamescoin_filtered.info
 	$(MKDIR_P) qa/tmp
-	-@TIMEOUT=15 qa/pull-tester/run-bitcoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool $(COMPARISON_TOOL_REORG_TESTS)
+	-@TIMEOUT=15 qa/pull-tester/run-allgamescoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool $(COMPARISON_TOOL_REORG_TESTS)
 	$(LCOV) -c -d $(abs_builddir)/src --t BitcoinJBlockTest -o $@
 	$(LCOV) -z -d $(abs_builddir)/src
 	$(LCOV) -z -d $(abs_builddir)/src/leveldb
@@ -209,11 +209,11 @@ cov: test_allgamescoin.coverage/.dirstamp total.coverage/.dirstamp
 endif
 
 # Allgamescoin: disable the test until upstream switches from convoluted comparison tool
-# Ref https://github.com/bitcoin/bitcoin/issues/4545
+# Ref https://github.com/allgamescoin/allgamescoin/issues/4545
 if USE_COMPARISON_TOOL
 check-local:
 	## $(MKDIR_P) qa/tmp
-	## @qa/pull-tester/run-bitcoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool $(COMPARISON_TOOL_REORG_TESTS) 2>&1
+	## @qa/pull-tester/run-allgamescoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool $(COMPARISON_TOOL_REORG_TESTS) 2>&1
 endif
 
 dist_noinst_SCRIPTS = autogen.sh

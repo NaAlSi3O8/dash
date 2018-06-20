@@ -221,20 +221,20 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
   [build allgamescoin-cli allgamescoin-tx (default=yes)])],
-  [build_bitcoin_utils=$withval],
-  [build_bitcoin_utils=yes])
+  [build_allgamescoin_utils=$withval],
+  [build_allgamescoin_utils=yes])
 
 AC_ARG_WITH([libs],
   [AS_HELP_STRING([--with-libs],
   [build libraries (default=yes)])],
-  [build_bitcoin_libs=$withval],
-  [build_bitcoin_libs=yes])
+  [build_allgamescoin_libs=$withval],
+  [build_allgamescoin_libs=yes])
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
   [build allgamescoind daemon (default=yes)])],
-  [build_bitcoind=$withval],
-  [build_bitcoind=yes])
+  [build_allgamescoind=$withval],
+  [build_allgamescoind=yes])
 
 use_pkgconfig=yes
 case $host in
@@ -589,10 +589,10 @@ fi
 
 BITCOIN_QT_INIT
 
-dnl sets $bitcoin_enable_qt, $bitcoin_enable_qt_test, $bitcoin_enable_qt_dbus
+dnl sets $allgamescoin_enable_qt, $allgamescoin_enable_qt_test, $allgamescoin_enable_qt_dbus
 BITCOIN_QT_CONFIGURE([$use_pkgconfig], [qt5])
 
-if test x$build_bitcoin_utils$build_bitcoind$bitcoin_enable_qt$use_tests = xnononono; then
+if test x$build_allgamescoin_utils$build_allgamescoind$allgamescoin_enable_qt$use_tests = xnononono; then
     use_boost=no
 else
     use_boost=yes
@@ -776,7 +776,7 @@ if test x$use_pkgconfig = xyes; then
       if test x$use_qr != xno; then
         BITCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
       fi
-      if test x$build_bitcoin_utils$build_bitcoind$bitcoin_enable_qt$use_tests != xnononono; then
+      if test x$build_allgamescoin_utils$build_allgamescoind$allgamescoin_enable_qt$use_tests != xnononono; then
         PKG_CHECK_MODULES([EVENT], [libevent],, [AC_MSG_ERROR(libevent not found.)])
         if test x$TARGET_OS != xwindows; then
           PKG_CHECK_MODULES([EVENT_PTHREADS], [libevent_pthreads],, [AC_MSG_ERROR(libevent_pthreads not found.)])
@@ -801,7 +801,7 @@ else
   AC_CHECK_HEADER([openssl/ssl.h],, AC_MSG_ERROR(libssl headers missing),)
   AC_CHECK_LIB([ssl],         [main],SSL_LIBS=-lssl, AC_MSG_ERROR(libssl missing))
 
-  if test x$build_bitcoin_utils$build_bitcoind$bitcoin_enable_qt$use_tests != xnononono; then
+  if test x$build_allgamescoin_utils$build_allgamescoind$allgamescoin_enable_qt$use_tests != xnononono; then
     AC_CHECK_HEADER([event2/event.h],, AC_MSG_ERROR(libevent headers missing),)
     AC_CHECK_LIB([event],[main],EVENT_LIBS=-levent,AC_MSG_ERROR(libevent missing))
     if test x$TARGET_OS != xwindows; then
@@ -879,20 +879,20 @@ LIBS="$LIBS_TEMP"
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
 AC_MSG_CHECKING([whether to build allgamescoind])
-AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
-AC_MSG_RESULT($build_bitcoind)
+AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_allgamescoind = xyes])
+AC_MSG_RESULT($build_allgamescoind)
 
 AC_MSG_CHECKING([whether to build utils (allgamescoin-cli allgamescoin-tx)])
-AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
-AC_MSG_RESULT($build_bitcoin_utils)
+AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_allgamescoin_utils = xyes])
+AC_MSG_RESULT($build_allgamescoin_utils)
 
 AC_MSG_CHECKING([whether to build libraries])
-AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_bitcoin_libs = xyes])
-if test x$build_bitcoin_libs = xyes; then
+AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_allgamescoin_libs = xyes])
+if test x$build_allgamescoin_libs = xyes; then
   AC_DEFINE(HAVE_CONSENSUS_LIB, 1, [Define this symbol if the consensus lib has been built])
   AC_CONFIG_FILES([liballgamescoinconsensus.pc:liballgamescoinconsensus.pc.in])
 fi
-AC_MSG_RESULT($build_bitcoin_libs)
+AC_MSG_RESULT($build_allgamescoin_libs)
 
 AC_LANG_POP
 
@@ -954,13 +954,13 @@ fi
 
 dnl these are only used when qt is enabled
 BUILD_TEST_QT=""
-if test x$bitcoin_enable_qt != xno; then
+if test x$allgamescoin_enable_qt != xno; then
   dnl enable dbus support
   AC_MSG_CHECKING([whether to build GUI with support for D-Bus])
-  if test x$bitcoin_enable_qt_dbus != xno; then
+  if test x$allgamescoin_enable_qt_dbus != xno; then
     AC_DEFINE([USE_DBUS],[1],[Define if dbus support should be compiled in])
   fi
-  AC_MSG_RESULT($bitcoin_enable_qt_dbus)
+  AC_MSG_RESULT($allgamescoin_enable_qt_dbus)
 
   dnl enable qr support
   AC_MSG_CHECKING([whether to build GUI with support for QR codes])
@@ -984,7 +984,7 @@ if test x$bitcoin_enable_qt != xno; then
   fi
 
   AC_MSG_CHECKING([whether to build test_allgamescoin-qt])
-  if test x$use_gui_tests$bitcoin_enable_qt_test = xyesyes; then
+  if test x$use_gui_tests$allgamescoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
   else
@@ -1010,7 +1010,7 @@ else
   AC_MSG_RESULT([no])
 fi
 
-if test x$build_bitcoin_utils$build_bitcoin_libs$build_bitcoind$bitcoin_enable_qt$use_tests = xnonononono; then
+if test x$build_allgamescoin_utils$build_allgamescoin_libs$build_allgamescoind$allgamescoin_enable_qt$use_tests = xnonononono; then
   AC_MSG_ERROR([No targets! Please specify at least one of: --with-utils --with-libs --with-daemon --with-gui or --enable-tests])
 fi
 
@@ -1019,7 +1019,7 @@ AM_CONDITIONAL([BUILD_DARWIN], [test x$BUILD_OS = xdarwin])
 AM_CONDITIONAL([TARGET_WINDOWS], [test x$TARGET_OS = xwindows])
 AM_CONDITIONAL([ENABLE_WALLET],[test x$enable_wallet = xyes])
 AM_CONDITIONAL([ENABLE_TESTS],[test x$BUILD_TEST = xyes])
-AM_CONDITIONAL([ENABLE_QT],[test x$bitcoin_enable_qt = xyes])
+AM_CONDITIONAL([ENABLE_QT],[test x$allgamescoin_enable_qt = xyes])
 AM_CONDITIONAL([ENABLE_QT_TESTS],[test x$BUILD_TEST_QT = xyes])
 AM_CONDITIONAL([ENABLE_BENCH],[test x$use_bench = xyes])
 AM_CONDITIONAL([USE_QRCODE], [test x$use_qr = xyes])
@@ -1059,7 +1059,7 @@ AC_SUBST(MINIUPNPC_LIBS)
 AC_SUBST(LEVELDB_ATOMIC_CPPFLAGS)
 AC_SUBST(LEVELDB_ATOMIC_CXXFLAGS)
 AC_CONFIG_FILES([Makefile src/Makefile share/setup.nsi share/qt/Info.plist src/test/buildenv.py])
-AC_CONFIG_FILES([qa/pull-tester/run-bitcoind-for-test.sh],[chmod +x qa/pull-tester/run-bitcoind-for-test.sh])
+AC_CONFIG_FILES([qa/pull-tester/run-allgamescoind-for-test.sh],[chmod +x qa/pull-tester/run-allgamescoind-for-test.sh])
 AC_CONFIG_FILES([qa/pull-tester/tests_config.py],[chmod +x qa/pull-tester/tests_config.py])
 
 dnl boost's m4 checks do something really nasty: they export these vars. As a

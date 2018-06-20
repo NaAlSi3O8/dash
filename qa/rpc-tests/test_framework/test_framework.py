@@ -5,7 +5,7 @@
 
 # Base class for RPC testing
 
-# Add python-bitcoinrpc to module search path:
+# Add python-allgamescoinrpc to module search path:
 import os
 import sys
 
@@ -21,7 +21,7 @@ from .util import (
     sync_blocks,
     sync_mempools,
     stop_nodes,
-    wait_bitcoinds,
+    wait_allgamescoinds,
     enable_coverage,
     check_json_precision,
     initialize_chain_clean,
@@ -72,7 +72,7 @@ class BitcoinTestFramework(object):
         """
         assert not self.is_network_split
         stop_nodes(self.nodes)
-        wait_bitcoinds()
+        wait_allgamescoinds()
         self.setup_network(True)
 
     def sync_all(self):
@@ -91,7 +91,7 @@ class BitcoinTestFramework(object):
         """
         assert self.is_network_split
         stop_nodes(self.nodes)
-        wait_bitcoinds()
+        wait_allgamescoinds()
         self.setup_network(False)
 
     def main(self):
@@ -149,7 +149,7 @@ class BitcoinTestFramework(object):
         if not self.options.noshutdown:
             print("Stopping nodes")
             stop_nodes(self.nodes)
-            wait_bitcoinds()
+            wait_allgamescoinds()
         else:
             print("Note: allgamescoinds were not stopped and may still be running")
 
@@ -165,7 +165,7 @@ class BitcoinTestFramework(object):
             sys.exit(1)
 
 
-# Test framework for doing p2p comparison testing, which sets up some bitcoind
+# Test framework for doing p2p comparison testing, which sets up some allgamescoind
 # binaries:
 # 1 binary: test binary
 # 2 binaries: 1 test binary, 1 ref binary
@@ -180,10 +180,10 @@ class ComparisonTestFramework(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
                           default=os.getenv("ALLGAMESCOIND", "allgamescoind"),
-                          help="bitcoind binary to test")
+                          help="allgamescoind binary to test")
         parser.add_option("--refbinary", dest="refbinary",
                           default=os.getenv("ALLGAMESCOIND", "allgamescoind"),
-                          help="bitcoind binary to use for reference nodes (if any)")
+                          help="allgamescoind binary to use for reference nodes (if any)")
 
     def setup_chain(self):
         print "Initializing test directory "+self.options.tmpdir

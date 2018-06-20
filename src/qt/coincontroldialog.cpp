@@ -7,7 +7,7 @@
 #include "ui_coincontroldialog.h"
 
 #include "addresstablemodel.h"
-#include "bitcoinunits.h"
+#include "allgamescoinunits.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
 #include "platformstyle.h"
@@ -127,7 +127,7 @@ CoinControlDialog::CoinControlDialog(const PlatformStyle *platformStyle, QWidget
     connect(ui->pushButtonToggleLock, SIGNAL(clicked()), this, SLOT(buttonToggleLockClicked()));
 
     // change coin control first column label due Qt4 bug.
-    // see https://github.com/bitcoin/bitcoin/issues/5716
+    // see https://github.com/allgamescoin/allgamescoin/issues/5716
     ui->treeWidget->headerItem()->setText(COLUMN_CHECKBOX, QString());
 
     ui->treeWidget->setColumnWidth(COLUMN_CHECKBOX, 84);

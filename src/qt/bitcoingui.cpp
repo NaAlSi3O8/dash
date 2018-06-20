@@ -3,9 +3,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "bitcoingui.h"
+#include "allgamescoingui.h"
 
-#include "bitcoinunits.h"
+#include "allgamescoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -1007,7 +1007,7 @@ void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVer
 #ifdef ENABLE_WALLET
     if (walletFrame)
     {
-        if(secs < 25*60) // 90*60 in bitcoin
+        if(secs < 25*60) // 90*60 in allgamescoin
         {
             modalOverlay->showHide(true, true);
             // TODO instead of hiding it forever, we should add meaningful information about MN sync to the overlay
