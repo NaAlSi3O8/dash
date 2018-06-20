@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. dash_test
+	$(MAKE) -C .. allgamescoin_test
 clean:
-	$(MAKE) -C .. dash_test_clean
+	$(MAKE) -C .. allgamescoin_test_clean
 check:
-	$(MAKE) -C .. dash_test_check
+	$(MAKE) -C .. allgamescoin_test_check

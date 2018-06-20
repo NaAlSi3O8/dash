@@ -344,19 +344,19 @@ static const CRPCCommand vRPCCommands[] =
 #endif
 
     /* Dash features */
-    { "dash",               "masternode",             &masternode,             true  },
-    { "dash",               "masternodelist",         &masternodelist,         true  },
-    { "dash",               "masternodebroadcast",    &masternodebroadcast,    true  },
-    { "dash",               "gobject",                &gobject,                true  },
-    { "dash",               "getgovernanceinfo",      &getgovernanceinfo,      true  },
-    { "dash",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
-    { "dash",               "voteraw",                &voteraw,                true  },
-    { "dash",               "mnsync",                 &mnsync,                 true  },
-    { "dash",               "spork",                  &spork,                  true  },
-    { "dash",               "getpoolinfo",            &getpoolinfo,            true  },
-    { "dash",               "sentinelping",           &sentinelping,           true  },
+    { "allgamescoin",               "masternode",             &masternode,             true  },
+    { "allgamescoin",               "masternodelist",         &masternodelist,         true  },
+    { "allgamescoin",               "masternodebroadcast",    &masternodebroadcast,    true  },
+    { "allgamescoin",               "gobject",                &gobject,                true  },
+    { "allgamescoin",               "getgovernanceinfo",      &getgovernanceinfo,      true  },
+    { "allgamescoin",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
+    { "allgamescoin",               "voteraw",                &voteraw,                true  },
+    { "allgamescoin",               "mnsync",                 &mnsync,                 true  },
+    { "allgamescoin",               "spork",                  &spork,                  true  },
+    { "allgamescoin",               "getpoolinfo",            &getpoolinfo,            true  },
+    { "allgamescoin",               "sentinelping",           &sentinelping,           true  },
 #ifdef ENABLE_WALLET
-    { "dash",               "privatesend",            &privatesend,            false },
+    { "allgamescoin",               "privatesend",            &privatesend,            false },
 
     /* Wallet */
     { "wallet",             "keepass",                &keepass,                true },
@@ -580,7 +580,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
-    return "> dash-cli " + methodname + " " + args + "\n";
+    return "> allgamescoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(const std::string& methodname, const std::string& args)

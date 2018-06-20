@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: dashd.service
-Upstart: dashd.conf
-OpenRC:  dashd.openrc
-         dashd.openrcconf
-CentOS:  dashd.init
-OS X:    org.dash.dashd.plist
+SystemD: allgamescoind.service
+Upstart: allgamescoind.conf
+OpenRC:  allgamescoind.openrc
+         allgamescoind.openrcconf
+CentOS:  allgamescoind.init
+OS X:    org.allgamescoin.allgamescoind.plist
 
 have been made available to assist packagers in creating node packages here.
 

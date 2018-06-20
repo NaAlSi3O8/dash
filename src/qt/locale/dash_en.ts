@@ -237,8 +237,8 @@
     </message>
     <message>
         <location line="-57"/>
-        <source>Dash Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dashs from being stolen by malware infecting your computer.</source>
-        <translation>Dash Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dashs from being stolen by malware infecting your computer.</translation>
+        <source>Dash Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</source>
+        <translation>Dash Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -309,7 +309,7 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../dash.cpp" line="+542"/>
+        <location filename="../allgamescoin.cpp" line="+542"/>
         <source>A fatal error occurred. Dash Core can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. Dash Core can no longer continue safely and will quit.</translation>
     </message>
@@ -356,8 +356,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Request payments (generates QR codes and dash: URIs)</source>
-        <translation>Request payments (generates QR codes and dash: URIs)</translation>
+        <source>Request payments (generates QR codes and allgamescoin: URIs)</source>
+        <translation>Request payments (generates QR codes and allgamescoin: URIs)</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -601,8 +601,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a dash: URI or payment request</source>
-        <translation>Open a dash: URI or payment request</translation>
+        <source>Open a allgamescoin: URI or payment request</source>
+        <translation>Open a allgamescoin: URI or payment request</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1918,9 +1918,9 @@
     <message>
         <location line="+34"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/dash/</source>
+https://www.transifex.com/projects/p/allgamescoin/</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/dash/</translation>
+https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -2388,8 +2388,8 @@ https://www.transifex.com/projects/p/dash/</translation>
     </message>
     <message>
         <location line="-402"/>
-        <source>Cannot start dash: click-to-pay handler</source>
-        <translation>Cannot start dash: click-to-pay handler</translation>
+        <source>Cannot start allgamescoin: click-to-pay handler</source>
+        <translation>Cannot start allgamescoin: click-to-pay handler</translation>
     </message>
     <message>
         <location line="+103"/>
@@ -2526,7 +2526,7 @@ https://www.transifex.com/projects/p/dash/</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../dash.cpp" line="+86"/>
+        <location filename="../allgamescoin.cpp" line="+86"/>
         <location line="+7"/>
         <location line="+15"/>
         <location line="+19"/>
@@ -3542,8 +3542,8 @@ https://www.transifex.com/projects/p/dash/</translation>
     <message>
         <location line="+33"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for dash transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for dash transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for allgamescoin transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for allgamescoin transactions than the network can process.</translation>
     </message>
     <message>
         <location line="-59"/>
@@ -3888,8 +3888,8 @@ https://www.transifex.com/projects/p/dash/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the dash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</source>
-        <translation>A message that was attached to the dash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</translation>
+        <source>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</source>
+        <translation>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</translation>
     </message>
     <message>
         <location line="+433"/>
@@ -4901,9 +4901,9 @@ https://www.transifex.com/projects/p/dash/</translation>
     </message>
 </context>
 <context>
-    <name>dash-core</name>
+    <name>allgamescoin-core</name>
     <message>
-        <location filename="../dashstrings.cpp" line="+34"/>
+        <location filename="../allgamescoinstrings.cpp" line="+34"/>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>
     </message>

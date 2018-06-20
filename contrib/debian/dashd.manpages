@@ -1,3 +1,3 @@
-debian/manpages/dashd.1
-debian/manpages/dash.conf.5
-debian/manpages/dash-cli.1
+debian/manpages/allgamescoind.1
+debian/manpages/allgamescoin.conf.5
+debian/manpages/allgamescoin-cli.1

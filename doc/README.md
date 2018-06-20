@@ -1,7 +1,7 @@
 Dash Core 0.12.1
 =====================
 
-This is the official reference wallet for Dash digital currency and comprises the backbone of the Dash peer-to-peer network. You can [download Dash Core](https://www.dash.org/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Dash digital currency and comprises the backbone of the Dash peer-to-peer network. You can [download Dash Core](https://www.allgamescoin.org/downloads/) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -11,12 +11,12 @@ The following are some helpful notes on how to run Dash on your native platform.
 
 Unpack the files into a directory and run:
 
-- `bin/dash-qt` (GUI) or
-- `bin/dashd` (headless)
+- `bin/allgamescoin-qt` (GUI) or
+- `bin/allgamescoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run dash-qt.exe.
+Unpack the files into a directory, and then run allgamescoin-qt.exe.
 
 ### OS X
 
@@ -27,7 +27,7 @@ Drag Dash-Qt to your applications folder, and then run Dash-Qt.
 * See the [Dash documentation](https://allgamescoindev.atlassian.net/wiki/display/DOC)
 for help and more information.
 * Ask for help on [#allgamescoindev](http://webchat.freenode.net?channels=allgamescoindev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=allgamescoindev).
-* Ask for help on the [DashTalk](https://dashtalk.org/) forums.
+* Ask for help on the [DashTalk](https://allgamescointalk.org/) forums.
 
 Building
 ---------------------
@@ -57,7 +57,7 @@ The Dash Core repo's [root README](/README.md) contains relevant information on 
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [DashTalk](https://dashtalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on the [DashTalk](https://allgamescointalk.org/) forums, in the Development & Technical Discussion board.
 * Discuss on [#allgamescoindev](http://webchat.freenode.net/?channels=allgamescoindev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=allgamescoindev).
 
 ### Miscellaneous

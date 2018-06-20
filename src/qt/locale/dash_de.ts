@@ -188,7 +188,7 @@
         <translation>Wallet verschlüsselt</translation>
     </message>
     <message>
-        <source>Dash Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dashs from being stolen by malware infecting your computer.</source>
+        <source>Dash Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</source>
         <translation>Dash wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Wallet-Verschlüsselung nicht vollständig vor Diebstahl ihrer Dash durch Schadsoftware schützt, die ihren Computer befallen könnte.</translation>
     </message>
     <message>
@@ -278,8 +278,8 @@
         <translation>&amp;Empfangen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and dash: URIs)</source>
-        <translation>Zahlungen anfordern (erzeugt QR-Codes und "dash:"-URIs)</translation>
+        <source>Request payments (generates QR codes and allgamescoin: URIs)</source>
+        <translation>Zahlungen anfordern (erzeugt QR-Codes und "allgamescoin:"-URIs)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -474,8 +474,8 @@
         <translation>&amp;URI öffnen...</translation>
     </message>
     <message>
-        <source>Open a dash: URI or payment request</source>
-        <translation>Eine "dash:"-URI oder Zahlungsanforderung öffnen</translation>
+        <source>Open a allgamescoin: URI or payment request</source>
+        <translation>Eine "allgamescoin:"-URI oder Zahlungsanforderung öffnen</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1515,9 +1515,9 @@ Der Mixing-Prozeß läuft nach dem Start vollständig im Hintergrund, d.h. es is
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/dash/</source>
+https://www.transifex.com/projects/p/allgamescoin/</source>
         <translation>Fehlt eine Sprache oder ist unvollständig übersetzt? Hier können Sie helfen:
-https://www.transifex.com/projects/p/dash/</translation>
+https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <source>User Interface Theme:</source>
@@ -1865,7 +1865,7 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>Fehlerhafte Zahlungsanforderung</translation>
     </message>
     <message>
-        <source>Cannot start dash: click-to-pay handler</source>
+        <source>Cannot start allgamescoin: click-to-pay handler</source>
         <translation>Dash kann nicht gestartet werden: click-to-pay handler</translation>
     </message>
     <message>
@@ -2733,7 +2733,7 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>Wenn die benutzerdefinierten Gebühren auf 1000 duffs gesetzt sind und eine Transaktion hat nur 250 Bytes, dann kostet "pro Kilobyte" nur 250 duffs Gebühren, während "mindestens" 1000 duffs kostet. Transaktionen größer als 1 Kilobyte werden immer pro Kilobyte bezahlt.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for dash transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for allgamescoin transactions than the network can process.</source>
         <translation>Nur die minimalen Gebühren zu zahlen ist völlig ausreichend so lange in einem neuen Block der Blockkette noch genug Platz für neue Transaktionen ist.&lt;br /&gt; Bitte beachten Sie dass wenn dies in der Zukunft nicht mehr der Fall sein sollte Ihre Transaktion eventuell niemals in einen neuen Block aufgenommen werden wird, also niemals bestätigt wird.</translation>
     </message>
     <message>
@@ -3001,8 +3001,8 @@ Dies kann passieren, wenn einige Dash aus ihrer Wallet bereits ausgegeben wurden
         <translation>Nachricht:</translation>
     </message>
     <message>
-        <source>A message that was attached to the dash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</source>
-        <translation>Eine an die "dash:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Dash-Netzwerk gesendet.</translation>
+        <source>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</source>
+        <translation>Eine an die "allgamescoin:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Dash-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>This is an unauthenticated payment request.</source>
@@ -3786,7 +3786,7 @@ Dies kann passieren, wenn einige Dash aus ihrer Wallet bereits ausgegeben wurden
     </message>
 </context>
 <context>
-    <name>dash-core</name>
+    <name>allgamescoin-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>An die angegebene Adresse binden und immer abhören. Für IPv6 "[Host]:Port"-Schreibweise verwenden</translation>
