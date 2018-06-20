@@ -446,10 +446,10 @@ Then when building, override the remote URLs that gbuild would otherwise pull fr
 cd /some/root/path/
 git clone https://github.com/allgamescoindev/allgamescoin-detached-sigs.git
 
-BTCPATH=/some/root/path/allgamescoin.git
+AGCPATH=/some/root/path/allgamescoin.git
 SIGPATH=/some/root/path/allgamescoin-detached-sigs.git
 
-./bin/gbuild --url allgamescoin=${BTCPATH},signature=${SIGPATH} ../allgamescoin/contrib/gitian-descriptors/gitian-win-signer.yml
+./bin/gbuild --url allgamescoin=${AGCPATH},signature=${SIGPATH} ../allgamescoin/contrib/gitian-descriptors/gitian-win-signer.yml
 ```
 
 Signing externally
