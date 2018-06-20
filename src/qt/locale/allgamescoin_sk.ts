@@ -236,7 +236,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>Allgamescoin Core</source>
         <translation>Allgamescoin Core</translation>
@@ -2960,8 +2960,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Verzia %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Vývojári Bitcoin Core</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Vývojári Allgamescoin Core</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -3830,8 +3830,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Pripojiť ku KeePassHttp na porte &lt;port&gt; (predvolené: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Autorské práva (C) 2009-%i Vývojári Bitcoin Core</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>Autorské práva (C) 2009-%i Vývojári Allgamescoin Core</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>

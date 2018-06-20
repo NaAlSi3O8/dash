@@ -240,7 +240,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</source>
         <translation>發生致命錯誤。達世幣核心軟體不再能安全地繼續運行下去，程式將會關閉。</translation>
@@ -3163,7 +3163,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>版本 %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Allgamescoin Core developers</source>
         <translation>位元幣核心開發人員</translation>
     </message>
     <message>
@@ -4073,7 +4073,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>使用端口&lt;port&gt; 連接到 KeePassHttp (預設值: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
         <translation>版權為位元幣核心開發人員自西元 2009 至 %i 年起所有</translation>
     </message>
     <message>

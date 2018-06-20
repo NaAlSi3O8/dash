@@ -106,5 +106,5 @@ Thanks to who contributed to this release, at least:
 - morcos
 - 21E14
 
-As well as the Bitcoin Core developers and everyone that helped translating on
+As well as the Allgamescoin Core developers and everyone that helped translating on
 [Transifex](https://www.transifex.com/projects/p/darkcoin/).

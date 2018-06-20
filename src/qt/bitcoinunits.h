@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2011-2015 The Allgamescoin Core developers
 // Copyright (c) 2014-2017 The Allgamescoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -45,12 +45,12 @@
 /** Allgamescoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class BitcoinUnits: public QAbstractListModel
+class AllgamescoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinUnits(QObject *parent);
+    explicit AllgamescoinUnits(QObject *parent);
 
     /** Allgamescoin units.
       @note Source: https://en.allgamescoin.it/wiki/Units . Please add only sensible ones
@@ -127,8 +127,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<BitcoinUnits::Unit> unitlist;
+    QList<AllgamescoinUnits::Unit> unitlist;
 };
-typedef BitcoinUnits::Unit BitcoinUnit;
+typedef AllgamescoinUnits::Unit AllgamescoinUnit;
 
 #endif // BITCOIN_QT_BITCOINUNITS_H

@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin Core developers
+// Copyright (c) 2009-2014 The Allgamescoin Core developers
 // Copyright (c) 2014-2017 The Allgamescoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -154,9 +154,9 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
         // Allgamescoin private keys start with '7' or 'X'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,204);
-        // Allgamescoin BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Allgamescoin BIP32 pubkeys start with 'xpub' (Allgamescoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Allgamescoin BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Allgamescoin BIP32 prvkeys start with 'xprv' (Allgamescoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
         // Allgamescoin BIP44 coin type is '5'
@@ -287,11 +287,11 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
         // Testnet Allgamescoin script addresses start with '8' or '9'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
-        // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
+        // Testnet private keys start with '9' or 'c' (Allgamescoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Testnet Allgamescoin BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Allgamescoin BIP32 pubkeys start with 'tpub' (Allgamescoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Allgamescoin BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Allgamescoin BIP32 prvkeys start with 'tprv' (Allgamescoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
 
         // Testnet Allgamescoin BIP44 coin type is '1' (All coin's testnet default)
@@ -412,11 +412,11 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
         // Regtest Allgamescoin script addresses start with '8' or '9'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
-        // Regtest private keys start with '9' or 'c' (Bitcoin defaults)
+        // Regtest private keys start with '9' or 'c' (Allgamescoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Regtest Allgamescoin BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Regtest Allgamescoin BIP32 pubkeys start with 'tpub' (Allgamescoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Allgamescoin BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Regtest Allgamescoin BIP32 prvkeys start with 'tprv' (Allgamescoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
 
         // Regtest Allgamescoin BIP44 coin type is '1' (All coin's testnet default)

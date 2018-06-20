@@ -1,11 +1,11 @@
 #!/usr/bin/env python2
-# Copyright (c) 2016 The Bitcoin Core developers
+# Copyright (c) 2016 The Allgamescoin Core developers
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
 
 from test_framework.mininode import *
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AllgamescoinTestFramework
 from test_framework.util import *
 import time
 from test_framework.blocktools import create_block, create_coinbase
@@ -59,7 +59,7 @@ class TestNode(NodeConnCB):
         return received_pong
 
 
-class VersionBitsWarningTest(BitcoinTestFramework):
+class VersionBitsWarningTest(AllgamescoinTestFramework):
     def setup_chain(self):
         initialize_chain_clean(self.options.tmpdir, 1)
 

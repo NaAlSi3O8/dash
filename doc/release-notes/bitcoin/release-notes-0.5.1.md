@@ -1,5 +1,5 @@
-Bitcoin version 0.5.1 is now available for download at:
-http://sourceforge.net/projects/allgamescoin/files/Bitcoin/allgamescoin-0.5.1/
+Allgamescoin version 0.5.1 is now available for download at:
+http://sourceforge.net/projects/allgamescoin/files/Allgamescoin/allgamescoin-0.5.1/
 
 This is a bugfix-only release.
 

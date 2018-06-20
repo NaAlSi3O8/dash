@@ -39,7 +39,7 @@ Notable changes
 DIP0001
 -------
 
-We outline an initial scaling mechanism for Allgamescoin. After deployment and activation, Allgamescoin will be able to handle double the transactions it can currently handle. Together with the faster block times, Allgamescoin we will be prepared to handle eight times the traffic of Bitcoin.
+We outline an initial scaling mechanism for Allgamescoin. After deployment and activation, Allgamescoin will be able to handle double the transactions it can currently handle. Together with the faster block times, Allgamescoin we will be prepared to handle eight times the traffic of Allgamescoin.
 
 https://github.com/allgamescoindev/dips/blob/master/dip-0001.md
 
@@ -88,7 +88,7 @@ Algorithm for selecting inputs was slightly changed in [`6067896ae`](https://git
 Lots of backports, refactoring and bug fixes
 --------------------------------------------
 
-We backported some performance improvements from Bitcoin Core and aligned our codebase with their source a little bit better. We still do not have all the improvements so this work is going to be continued in next releases.
+We backported some performance improvements from Allgamescoin Core and aligned our codebase with their source a little bit better. We still do not have all the improvements so this work is going to be continued in next releases.
 
 A lot of refactoring and other fixes should make code more reliable and easier to review now.
 
@@ -125,47 +125,47 @@ Detailed [change log](https://github.com/allgamescoindev/allgamescoin/compare/v0
 - [`11afc8f4b`](https://github.com/allgamescoindev/allgamescoin/commit/11afc8f4b) Minimal fix to slow prevector tests as stopgap measure
 - [`11121747b`](https://github.com/allgamescoindev/allgamescoin/commit/11121747b) build: fix qt5.7 build under macOS (#1469)
 - [`5988e1e7f`](https://github.com/allgamescoindev/allgamescoin/commit/5988e1e7f) Increase minimum debug.log size to 10MB after shrink. (#1480)
-- [`a443d4e2d`](https://github.com/allgamescoindev/allgamescoin/commit/a443d4e2d) Backport Bitcoin PRs #6589, #7180 and remaining part of #7181: enable per-command byte counters in `CNode` (#1496)
+- [`a443d4e2d`](https://github.com/allgamescoindev/allgamescoin/commit/a443d4e2d) Backport Allgamescoin PRs #6589, #7180 and remaining part of #7181: enable per-command byte counters in `CNode` (#1496)
 - [`f9730cb2e`](https://github.com/allgamescoindev/allgamescoin/commit/f9730cb2e) Increase test coverage for addrman and addrinfo (#1497)
 - [`a12491448`](https://github.com/allgamescoindev/allgamescoin/commit/a12491448) Eliminate unnecessary call to CheckBlock (#1498)
 - [`b0843c397`](https://github.com/allgamescoindev/allgamescoin/commit/b0843c397) Backport Bincoin PR#7348: MOVE ONLY: move rpc* to rpc/ + same for Allgamescoin-specific rpc (#1502)
-- [`f65017cfe`](https://github.com/allgamescoindev/allgamescoin/commit/f65017cfe) Backport Bitcoin PR#7349: Build against system UniValue when available (#1503)
-- [`ac6c3c900`](https://github.com/allgamescoindev/allgamescoin/commit/ac6c3c900) Backport Bitcoin PR#7350: Banlist updates (#1505)
-- [`d787fe4ab`](https://github.com/allgamescoindev/allgamescoin/commit/d787fe4ab) Backport Bitcoin PR#7458: [Net] peers.dat, banlist.dat recreated when missing (#1506)
-- [`6af9955fa`](https://github.com/allgamescoindev/allgamescoin/commit/6af9955fa) Backport Bitcoin PR#7696: Fix de-serialization bug where AddrMan is corrupted after exception (#1507)
-- [`b39c518d5`](https://github.com/allgamescoindev/allgamescoin/commit/b39c518d5) Backport Bitcoin PR#7749: Enforce expected outbound services (#1508)
-- [`9268a336d`](https://github.com/allgamescoindev/allgamescoin/commit/9268a336d) Backport Bitcoin PR#7917: Optimize reindex (#1515)
+- [`f65017cfe`](https://github.com/allgamescoindev/allgamescoin/commit/f65017cfe) Backport Allgamescoin PR#7349: Build against system UniValue when available (#1503)
+- [`ac6c3c900`](https://github.com/allgamescoindev/allgamescoin/commit/ac6c3c900) Backport Allgamescoin PR#7350: Banlist updates (#1505)
+- [`d787fe4ab`](https://github.com/allgamescoindev/allgamescoin/commit/d787fe4ab) Backport Allgamescoin PR#7458: [Net] peers.dat, banlist.dat recreated when missing (#1506)
+- [`6af9955fa`](https://github.com/allgamescoindev/allgamescoin/commit/6af9955fa) Backport Allgamescoin PR#7696: Fix de-serialization bug where AddrMan is corrupted after exception (#1507)
+- [`b39c518d5`](https://github.com/allgamescoindev/allgamescoin/commit/b39c518d5) Backport Allgamescoin PR#7749: Enforce expected outbound services (#1508)
+- [`9268a336d`](https://github.com/allgamescoindev/allgamescoin/commit/9268a336d) Backport Allgamescoin PR#7917: Optimize reindex (#1515)
 - [`b47984f30`](https://github.com/allgamescoindev/allgamescoin/commit/b47984f30) Remove non-determinism which is breaking net_tests #8069 (#1517)
 - [`9a8a290b8`](https://github.com/allgamescoindev/allgamescoin/commit/9a8a290b8) fix race that could fail to persist a ban (#1518)
-- [`5a1961e5e`](https://github.com/allgamescoindev/allgamescoin/commit/5a1961e5e) Backport Bitcoin PR#7906: net: prerequisites for p2p encapsulation changes (#1521)
-- [`7b5556a29`](https://github.com/allgamescoindev/allgamescoin/commit/7b5556a29) Backport Bitcoin PR#8084: Add recently accepted blocks and txn to AttemptToEvictConnection (#1522)
-- [`9ce2b966c`](https://github.com/allgamescoindev/allgamescoin/commit/9ce2b966c) Backport Bitcoin PR#8113: Rework addnode behaviour (#1525)
+- [`5a1961e5e`](https://github.com/allgamescoindev/allgamescoin/commit/5a1961e5e) Backport Allgamescoin PR#7906: net: prerequisites for p2p encapsulation changes (#1521)
+- [`7b5556a29`](https://github.com/allgamescoindev/allgamescoin/commit/7b5556a29) Backport Allgamescoin PR#8084: Add recently accepted blocks and txn to AttemptToEvictConnection (#1522)
+- [`9ce2b966c`](https://github.com/allgamescoindev/allgamescoin/commit/9ce2b966c) Backport Allgamescoin PR#8113: Rework addnode behaviour (#1525)
 - [`aa32f1dc9`](https://github.com/allgamescoindev/allgamescoin/commit/aa32f1dc9) Remove bad chain alert partition check (#1529)
 - [`d934ffb2f`](https://github.com/allgamescoindev/allgamescoin/commit/d934ffb2f) Added feeler connections increasing good addrs in the tried table. (#1530)
-- [`290fb3b57`](https://github.com/allgamescoindev/allgamescoin/commit/290fb3b57) Backport Bitcoin PR#7942: locking for Misbehave() and other cs_main locking fixes (#1535)
-- [`a9d771e49`](https://github.com/allgamescoindev/allgamescoin/commit/a9d771e49) Backport Bitcoin PR#8085: p2p: Begin encapsulation (#1537)
-- [`82851b439`](https://github.com/allgamescoindev/allgamescoin/commit/82851b439) Backport Bitcoin PR#8049: Expose information on whether transaction relay is enabled in `getnetwork` (#1545)
+- [`290fb3b57`](https://github.com/allgamescoindev/allgamescoin/commit/290fb3b57) Backport Allgamescoin PR#7942: locking for Misbehave() and other cs_main locking fixes (#1535)
+- [`a9d771e49`](https://github.com/allgamescoindev/allgamescoin/commit/a9d771e49) Backport Allgamescoin PR#8085: p2p: Begin encapsulation (#1537)
+- [`82851b439`](https://github.com/allgamescoindev/allgamescoin/commit/82851b439) Backport Allgamescoin PR#8049: Expose information on whether transaction relay is enabled in `getnetwork` (#1545)
 - [`7707c0789`](https://github.com/allgamescoindev/allgamescoin/commit/7707c0789) backport 9008: Remove assert(nMaxInbound > 0) (#1548)
-- [`b621cfb5f`](https://github.com/allgamescoindev/allgamescoin/commit/b621cfb5f) Backport Bitcoin PR#8708: net: have CConnman handle message sending (#1553)
+- [`b621cfb5f`](https://github.com/allgamescoindev/allgamescoin/commit/b621cfb5f) Backport Allgamescoin PR#8708: net: have CConnman handle message sending (#1553)
 - [`cc4db34f4`](https://github.com/allgamescoindev/allgamescoin/commit/cc4db34f4) net: only delete CConnman if it's been created (#1555)
-- [`a3c8cb20d`](https://github.com/allgamescoindev/allgamescoin/commit/a3c8cb20d) Backport Bitcoin PR#8865: Decouple peer-processing-logic from block-connection-logic (#1556)
-- [`e7e106e22`](https://github.com/allgamescoindev/allgamescoin/commit/e7e106e22) Backport Bitcoin PR#8969: Decouple peer-processing-logic from block-connection-logic (#2) (#1558)
-- [`b4b343145`](https://github.com/allgamescoindev/allgamescoin/commit/b4b343145) Backport Bitcoin PR#9075: Decouple peer-processing-logic from block-connection-logic (#3) (#1560)
-- [`415085c73`](https://github.com/allgamescoindev/allgamescoin/commit/415085c73) Backport Bitcoin PR#9183: Final Preparation for main.cpp Split (#1561)
-- [`bcf5455bf`](https://github.com/allgamescoindev/allgamescoin/commit/bcf5455bf) Backport Bitcoin PR#8822: net: Consistent checksum handling (#1565)
-- [`df6d458b8`](https://github.com/allgamescoindev/allgamescoin/commit/df6d458b8) Backport Bitcoin PR#9260: Mrs Peacock in The Library with The Candlestick (killed main.{h,cpp}) (#1566)
-- [`42c784dc7`](https://github.com/allgamescoindev/allgamescoin/commit/42c784dc7) Backport Bitcoin PR#9289: net: drop boost::thread_group (#1568)
-- [`b9c67258b`](https://github.com/allgamescoindev/allgamescoin/commit/b9c67258b) Backport Bitcoin PR#9609: net: fix remaining net assertions (#1575) + Allgamescoinify
-- [`2472999da`](https://github.com/allgamescoindev/allgamescoin/commit/2472999da) Backport Bitcoin PR#9441: Net: Massive speedup. Net locks overhaul (#1586)
-- [`ccee103a0`](https://github.com/allgamescoindev/allgamescoin/commit/ccee103a0) Backport "assumed valid blocks" feature from Bitcoin 0.13 (#1582)
-- [`105122181`](https://github.com/allgamescoindev/allgamescoin/commit/105122181) Partially backport Bitcoin PR#9626: Clean up a few CConnman cs_vNodes/CNode things (#1591)
+- [`a3c8cb20d`](https://github.com/allgamescoindev/allgamescoin/commit/a3c8cb20d) Backport Allgamescoin PR#8865: Decouple peer-processing-logic from block-connection-logic (#1556)
+- [`e7e106e22`](https://github.com/allgamescoindev/allgamescoin/commit/e7e106e22) Backport Allgamescoin PR#8969: Decouple peer-processing-logic from block-connection-logic (#2) (#1558)
+- [`b4b343145`](https://github.com/allgamescoindev/allgamescoin/commit/b4b343145) Backport Allgamescoin PR#9075: Decouple peer-processing-logic from block-connection-logic (#3) (#1560)
+- [`415085c73`](https://github.com/allgamescoindev/allgamescoin/commit/415085c73) Backport Allgamescoin PR#9183: Final Preparation for main.cpp Split (#1561)
+- [`bcf5455bf`](https://github.com/allgamescoindev/allgamescoin/commit/bcf5455bf) Backport Allgamescoin PR#8822: net: Consistent checksum handling (#1565)
+- [`df6d458b8`](https://github.com/allgamescoindev/allgamescoin/commit/df6d458b8) Backport Allgamescoin PR#9260: Mrs Peacock in The Library with The Candlestick (killed main.{h,cpp}) (#1566)
+- [`42c784dc7`](https://github.com/allgamescoindev/allgamescoin/commit/42c784dc7) Backport Allgamescoin PR#9289: net: drop boost::thread_group (#1568)
+- [`b9c67258b`](https://github.com/allgamescoindev/allgamescoin/commit/b9c67258b) Backport Allgamescoin PR#9609: net: fix remaining net assertions (#1575) + Allgamescoinify
+- [`2472999da`](https://github.com/allgamescoindev/allgamescoin/commit/2472999da) Backport Allgamescoin PR#9441: Net: Massive speedup. Net locks overhaul (#1586)
+- [`ccee103a0`](https://github.com/allgamescoindev/allgamescoin/commit/ccee103a0) Backport "assumed valid blocks" feature from Allgamescoin 0.13 (#1582)
+- [`105122181`](https://github.com/allgamescoindev/allgamescoin/commit/105122181) Partially backport Allgamescoin PR#9626: Clean up a few CConnman cs_vNodes/CNode things (#1591)
 - [`76181f575`](https://github.com/allgamescoindev/allgamescoin/commit/76181f575) Do not add random inbound peers to addrman. (#1593)
 - [`589d22f2c`](https://github.com/allgamescoindev/allgamescoin/commit/589d22f2c) net: No longer send local address in addrMe (#1600)
-- [`b41d9eac2`](https://github.com/allgamescoindev/allgamescoin/commit/b41d9eac2) Backport Bitcoin PR#7868: net: Split DNS resolving functionality out of net structures (#1601)
-- [`b82b9787d`](https://github.com/allgamescoindev/allgamescoin/commit/b82b9787d) Backport Bitcoin PR#8128: Net: Turn net structures into dumb storage classes (#1604)
-- [`690cb58f8`](https://github.com/allgamescoindev/allgamescoin/commit/690cb58f8) Backport Bitcoin Qt/Gui changes up to 0.14.x part 1 (#1614)
-- [`9707ca5ce`](https://github.com/allgamescoindev/allgamescoin/commit/9707ca5ce) Backport Bitcoin Qt/Gui changes up to 0.14.x part 2 (#1615)
-- [`91d99fcd3`](https://github.com/allgamescoindev/allgamescoin/commit/91d99fcd3) Backport Bitcoin Qt/Gui changes up to 0.14.x part 3 (#1617)
+- [`b41d9eac2`](https://github.com/allgamescoindev/allgamescoin/commit/b41d9eac2) Backport Allgamescoin PR#7868: net: Split DNS resolving functionality out of net structures (#1601)
+- [`b82b9787d`](https://github.com/allgamescoindev/allgamescoin/commit/b82b9787d) Backport Allgamescoin PR#8128: Net: Turn net structures into dumb storage classes (#1604)
+- [`690cb58f8`](https://github.com/allgamescoindev/allgamescoin/commit/690cb58f8) Backport Allgamescoin Qt/Gui changes up to 0.14.x part 1 (#1614)
+- [`9707ca5ce`](https://github.com/allgamescoindev/allgamescoin/commit/9707ca5ce) Backport Allgamescoin Qt/Gui changes up to 0.14.x part 2 (#1615)
+- [`91d99fcd3`](https://github.com/allgamescoindev/allgamescoin/commit/91d99fcd3) Backport Allgamescoin Qt/Gui changes up to 0.14.x part 3 (#1617)
 - [`4cac044d9`](https://github.com/allgamescoindev/allgamescoin/commit/4cac044d9) Merge #8944: Remove bogus assert on number of oubound connections. (#1685)
 - [`d23adcc0f`](https://github.com/allgamescoindev/allgamescoin/commit/d23adcc0f) Merge #10231: [Qt] Reduce a significant cs_main lock freeze (#1704)
 
@@ -374,7 +374,7 @@ Thanks to everyone who directly contributed to this release:
 - UdjinM6
 - Will Wray
 
-As well as Bitcoin Core Developers and everyone that submitted issues or helped translating on [Transifex](https://www.transifex.com/projects/p/allgamescoin/).
+As well as Allgamescoin Core Developers and everyone that submitted issues or helped translating on [Transifex](https://www.transifex.com/projects/p/allgamescoin/).
 
 
 Older releases
@@ -391,12 +391,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Allgamescoin Core tree 0.11.x was a fork of Bitcoin Core tree 0.9, Darkcoin was rebranded
+Allgamescoin Core tree 0.11.x was a fork of Allgamescoin Core tree 0.9, Darkcoin was rebranded
 to Allgamescoin.
 
-Allgamescoin Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Allgamescoin Core tree 0.12.0.x was a fork of Allgamescoin Core tree 0.10.
 
-Allgamescoin Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Allgamescoin Core tree 0.12.1.x was a fork of Allgamescoin Core tree 0.12.
 
 These release are considered obsolete. Old changelogs can be found here:
 

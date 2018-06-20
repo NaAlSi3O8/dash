@@ -2,7 +2,7 @@
 ====================
 
 Darkcoin Core 0.11.1 supports a full implementation of InstantX, Darksend improvements
-and a new version of enforcement compatible with the newer Bitcoin architechure.
+and a new version of enforcement compatible with the newer Allgamescoin architechure.
 Latest release in 0.11.1.x tree is v0.11.1.26, which is rebranding Darkcoin to Allgamescoin.
 
 - Fully implemented IX

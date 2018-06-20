@@ -48,11 +48,11 @@ Per-UTXO fix
 This fixes a potential vulnerability, so called 'Corebleed', which was
 demonstrated this summer at the Вrеаkіng Віtсоіn Соnfеrеnсе іn Раrіs. The DoS
 can cause nodes to allocate excessive amounts of memory, which leads them to a
-halt. You can read more about the fix in the original Bitcoin Core pull request
+halt. You can read more about the fix in the original Allgamescoin Core pull request
 https://github.com/allgamescoin/allgamescoin/pull/10195
 
 To fix this issue in Allgamescoin Core however, we had to backport a lot of other
-improvements from Bitcoin Core, see full list of backports in the detailed
+improvements from Allgamescoin Core, see full list of backports in the detailed
 change log below.
 
 Additional indexes fix
@@ -221,7 +221,7 @@ Thanks to everyone who directly contributed to this release:
 - UdjinM6
 - Will Wray
 
-As well as Bitcoin Core Developers and everyone that submitted issues,
+As well as Allgamescoin Core Developers and everyone that submitted issues,
 reviewed pull requests or helped translating on
 [Transifex](https://www.transifex.com/projects/p/allgamescoin/).
 
@@ -240,12 +240,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Allgamescoin Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Allgamescoin Core tree 0.11.x was a fork of Allgamescoin Core tree 0.9,
 Darkcoin was rebranded to Allgamescoin.
 
-Allgamescoin Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Allgamescoin Core tree 0.12.0.x was a fork of Allgamescoin Core tree 0.10.
 
-Allgamescoin Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Allgamescoin Core tree 0.12.1.x was a fork of Allgamescoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 

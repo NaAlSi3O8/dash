@@ -115,7 +115,7 @@
          </widget>
         </item>
         <item row="5" column="2">
-         <widget class="BitcoinAmountField" name="reqAmount">
+         <widget class="AllgamescoinAmountField" name="reqAmount">
           <property name="minimumSize">
            <size>
             <width>80</width>
@@ -308,7 +308,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>BitcoinAmountField</class>
+   <class>AllgamescoinAmountField</class>
    <extends>QLineEdit</extends>
    <header>allgamescoinamountfield.h</header>
    <container>1</container>

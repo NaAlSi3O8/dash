@@ -38,7 +38,7 @@ The interface is defined in the C header `allgamescoinconsensus.h` located in  `
 - `allgamescoinconsensus_ERR_DESERIALIZE` - An error deserializing `txTo`
 
 ### Example Implementations
-- [NBitcoin](https://github.com/NicolasDorier/NBitcoin/blob/master/NBitcoin/Script.cs#L814) (.NET Bindings)
+- [NAllgamescoin](https://github.com/NicolasDorier/NAllgamescoin/blob/master/NAllgamescoin/Script.cs#L814) (.NET Bindings)
 - [node-liballgamescoinconsensus](https://github.com/bitpay/node-liballgamescoinconsensus) (Node.js Bindings)
 - [java-liballgamescoinconsensus](https://github.com/dexX7/java-liballgamescoinconsensus) (Java Bindings)
 - [allgamescoinconsensus-php](https://github.com/Bit-Wasp/allgamescoinconsensus-php) (PHP Bindings)

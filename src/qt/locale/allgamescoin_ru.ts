@@ -240,7 +240,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</source>
         <translation>Произошла критическая ошибка. Дальнейшая безопасная работа Allgamescoin Core невозможна, программа будет закрыта.</translation>
@@ -3187,8 +3187,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Версия %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Разработчики Bitcoin Core</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Разработчики Allgamescoin Core</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -4141,8 +4141,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Соединяться c KeePassHttp по порту &lt;port&gt; (по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Allgamescoin Core Developers</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>

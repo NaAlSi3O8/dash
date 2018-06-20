@@ -240,7 +240,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</source>
         <translation>Ein kritischer Fehler ist aufgetreten. Allgamescoin Core kann nicht mehr ausgeführt werden und wird nun beendet.</translation>
@@ -3190,8 +3190,8 @@ Dies kann passieren, wenn einige Allgamescoin aus ihrer Wallet bereits ausgegebe
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Die "Bitcoin Core"-Entwickler</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Die "Allgamescoin Core"-Entwickler</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -4144,8 +4144,8 @@ Dies kann passieren, wenn einige Allgamescoin aus ihrer Wallet bereits ausgegebe
         <translation>Mit KeePassHttp auf &lt;port&gt; verbinden (Standard: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Die "Bitcoin Core"-Entwickler</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Die "Allgamescoin Core"-Entwickler</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>

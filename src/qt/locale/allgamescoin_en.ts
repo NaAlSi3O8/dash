@@ -307,7 +307,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <location filename="../allgamescoin.cpp" line="+542"/>
         <source>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</source>
@@ -4133,8 +4133,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>The Bitcoin Core developers</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>The Allgamescoin Core developers</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5349,8 +5349,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Allgamescoin Core Developers</translation>
     </message>
     <message>
         <location line="+1"/>

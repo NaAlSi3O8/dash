@@ -240,7 +240,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</source>
         <translation>Vakava virhe tapahtunut. Allgamescoin Core ei voi enää toimia turvallisesti ja sulkeutuu.</translation>
@@ -3192,8 +3192,8 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
         <translation>Versio %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Bitcoin Core kehittäjät</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Allgamescoin Core kehittäjät</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -4146,8 +4146,8 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
         <translation>Yhdistä KeePassHttp porttiin &lt;port&gt; (oletus: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Bitcoin Core Kehittäjät</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Allgamescoin Core Kehittäjät</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>

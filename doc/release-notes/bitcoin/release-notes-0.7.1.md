@@ -1,5 +1,5 @@
-Bitcoin version 0.7.1 is now available from:
-  http://sourceforge.net/projects/allgamescoin/files/Bitcoin/allgamescoin-0.7.1/
+Allgamescoin version 0.7.1 is now available from:
+  http://sourceforge.net/projects/allgamescoin/files/Allgamescoin/allgamescoin-0.7.1/
 
 This is a bug-fix minor release.
 
@@ -30,7 +30,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Bitcoin-Qt (on Mac) or allgamescoind/allgamescoin-qt (on Linux).
+/Applications/Allgamescoin-Qt (on Mac) or allgamescoind/allgamescoin-qt (on Linux).
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -75,7 +75,7 @@ Dependency changes
 Bug fixes
 ---------
 
-* Clicking on a allgamescoin: URI on Windows should now launch Bitcoin-Qt properly.
+* Clicking on a allgamescoin: URI on Windows should now launch Allgamescoin-Qt properly.
 
 * When running -testnet, use RPC port 19998 by default.
 

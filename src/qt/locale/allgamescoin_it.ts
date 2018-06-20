@@ -229,7 +229,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>Allgamescoin Core</source>
         <translation>Allgamescoin Core</translation>
@@ -2586,8 +2586,8 @@ Più URL vengono separati da una barra verticale |.</translation>
         <translation>Versione%1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Gli sviluppatori di Bitcoin Core</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Gli sviluppatori di Allgamescoin Core</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -3653,8 +3653,8 @@ Più URL vengono separati da una barra verticale |.</translation>
 </translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opzioni RPC SSL: (consulta la Bitcoin Wiki per le istruzioni relative alla configurazione SSL)</translation>
+        <source>RPC SSL options: (see the Allgamescoin Wiki for SSL setup instructions)</source>
+        <translation>Opzioni RPC SSL: (consulta la Allgamescoin Wiki per le istruzioni relative alla configurazione SSL)</translation>
     </message>
     <message>
         <source>RPC server options:</source>

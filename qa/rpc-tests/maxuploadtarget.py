@@ -5,7 +5,7 @@
 #
 
 from test_framework.mininode import *
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AllgamescoinTestFramework
 from test_framework.util import *
 import time
 
@@ -80,7 +80,7 @@ class TestNode(NodeConnCB):
         self.ping_counter += 1
         return success
 
-class MaxUploadTest(BitcoinTestFramework):
+class MaxUploadTest(AllgamescoinTestFramework):
     def __init__(self):
         self.utxo = []
         self.txouts = gen_return_txouts()

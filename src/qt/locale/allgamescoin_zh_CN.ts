@@ -229,7 +229,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>Allgamescoin Core</source>
         <translation>达世币核心</translation>
@@ -2737,8 +2737,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>版本 %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Bitcoin Core 的开发者</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Allgamescoin Core 的开发者</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -3649,8 +3649,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>连接至 KeePassHttp 端口 &lt;port&gt; (默认: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>版权(C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>版权(C) 2009-%i The Allgamescoin Core Developers</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>
@@ -4059,7 +4059,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>JSON-RPC连接密码</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <source>RPC SSL options: (see the Allgamescoin Wiki for SSL setup instructions)</source>
         <translation>RPC SSL选项： (请在比特币维基百科查看SSL建立说明)</translation>
     </message>
     <message>

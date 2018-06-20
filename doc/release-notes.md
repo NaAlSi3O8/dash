@@ -105,7 +105,7 @@ Thanks to everyone who directly contributed to this release:
 - lodgepole
 - UdjinM6
 
-As well as Bitcoin Core Developers and everyone that submitted issues,
+As well as Allgamescoin Core Developers and everyone that submitted issues,
 reviewed pull requests or helped translating on
 [Transifex](https://www.transifex.com/projects/p/allgamescoin/).
 
@@ -124,12 +124,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Allgamescoin Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Allgamescoin Core tree 0.11.x was a fork of Allgamescoin Core tree 0.9,
 Darkcoin was rebranded to Allgamescoin.
 
-Allgamescoin Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Allgamescoin Core tree 0.12.0.x was a fork of Allgamescoin Core tree 0.10.
 
-Allgamescoin Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Allgamescoin Core tree 0.12.1.x was a fork of Allgamescoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 

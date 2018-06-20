@@ -50,7 +50,7 @@ This does not affect wallet forward or backward compatibility.
 0.12.0 changelog
 ----------------
 
-Switched to Bitcoin Core version 0.10 - https://allgamescoin.org/en/release/v0.10.0
+Switched to Allgamescoin Core version 0.10 - https://allgamescoin.org/en/release/v0.10.0
 - Implemented decentralized budget system 
 - Removed reference node
 - Implemented new decentralized masternode payment consensus system

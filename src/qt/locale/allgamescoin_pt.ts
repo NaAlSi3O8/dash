@@ -229,7 +229,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>Allgamescoin Core</source>
         <translation>Allgamescoin Core</translation>
@@ -2728,8 +2728,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Versão %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Os programadores Bitcoin Core</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Os programadores Allgamescoin Core</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -3692,8 +3692,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Conectar a KeePassHttp na porta &lt;port&gt; (default: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Allgamescoin Core Developers</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>
@@ -4184,7 +4184,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Palavra-passe para as ligações JSON-RPC</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <source>RPC SSL options: (see the Allgamescoin Wiki for SSL setup instructions)</source>
         <translation>Opções RPC SSL: (para instruções de configuração SSL dirija-se à Allgamescoin Wiki)</translation>
     </message>
     <message>

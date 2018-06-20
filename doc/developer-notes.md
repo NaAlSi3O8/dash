@@ -169,7 +169,7 @@ Threads
 
 - ThreadRPCServer : Remote procedure call handler, listens on port 9998 for connections and services them.
 
-- BitcoinMiner : Generates coins (if wallet is enabled).
+- AllgamescoinMiner : Generates coins (if wallet is enabled).
 
 - ThreadCheckDarkSendPool : Runs masternode list and sync data update loops
 

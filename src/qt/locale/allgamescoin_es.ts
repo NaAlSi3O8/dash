@@ -229,7 +229,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>AllgamescoinGUI</name>
     <message>
         <source>Allgamescoin Core</source>
         <translation>Allgamescoin Core</translation>
@@ -2744,8 +2744,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Versión %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Los desarrolladores de Bitcoin Core</translation>
+        <source>The Allgamescoin Core developers</source>
+        <translation>Los desarrolladores de Allgamescoin Core</translation>
     </message>
     <message>
         <source>The Allgamescoin Core developers</source>
@@ -3797,8 +3797,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Alerta de Allgamescoin" admin@foo.c
         <translation>Conectarse a KeePassHttp a través del puerto &lt;port&gt; (predeterminado: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Los Desarrolladores de Bitcoin Core</translation>
+        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Los Desarrolladores de Allgamescoin Core</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>
@@ -4297,8 +4297,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Alerta de Allgamescoin" admin@foo.c
         <translation>Contraseña para las conexiones JSON-RPC</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opciones SSL de RPC: (véase la wiki de Bitcoin para las instrucciones de instalación de SSL)</translation>
+        <source>RPC SSL options: (see the Allgamescoin Wiki for SSL setup instructions)</source>
+        <translation>Opciones SSL de RPC: (véase la wiki de Allgamescoin para las instrucciones de instalación de SSL)</translation>
     </message>
     <message>
         <source>RPC server options:</source>

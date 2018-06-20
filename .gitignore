@@ -114,7 +114,7 @@ qa/pull-tester/cache/*
 qa/pull-tester/test.*/*
 qa/tmp
 cache/
-share/BitcoindComparisonTool.jar
+share/AllgamescoindComparisonTool.jar
 
 !src/leveldb*/Makefile
 
