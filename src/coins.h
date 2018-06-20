@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COINS_H
-#define BITCOIN_COINS_H
+#ifndef ALLGAMESCOIN_COINS_H
+#define ALLGAMESCOIN_COINS_H
 
 #include "compressor.h"
 #include "core_memusage.h"
@@ -310,4 +310,4 @@ void AddCoins(CCoinsViewCache& cache, const CTransaction& tx, int nHeight);
 // lookups to database, so it should be used with care.
 const Coin& AccessByTxid(const CCoinsViewCache& cache, const uint256& txid);
 
-#endif // BITCOIN_COINS_H
+#endif // ALLGAMESCOIN_COINS_H

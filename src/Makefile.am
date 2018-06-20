@@ -14,19 +14,19 @@ else
 LIBUNIVALUE = $(UNIVALUE_LIBS)
 endif
 
-BITCOIN_CONFIG_INCLUDES=-I$(builddir)/config
-BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
+ALLGAMESCOIN_CONFIG_INCLUDES=-I$(builddir)/config
+ALLGAMESCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
-BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
-BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
+ALLGAMESCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
+ALLGAMESCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBBITCOIN_SERVER=liballgamescoin_server.a
-LIBBITCOIN_WALLET=liballgamescoin_wallet.a
-LIBBITCOIN_COMMON=liballgamescoin_common.a
-LIBBITCOIN_CLI=liballgamescoin_cli.a
-LIBBITCOIN_UTIL=liballgamescoin_util.a
-LIBBITCOIN_CRYPTO=crypto/liballgamescoin_crypto.a
-LIBBITCOINQT=qt/liballgamescoinqt.a
+LIBALLGAMESCOIN_SERVER=liballgamescoin_server.a
+LIBALLGAMESCOIN_WALLET=liballgamescoin_wallet.a
+LIBALLGAMESCOIN_COMMON=liballgamescoin_common.a
+LIBALLGAMESCOIN_CLI=liballgamescoin_cli.a
+LIBALLGAMESCOIN_UTIL=liballgamescoin_util.a
+LIBALLGAMESCOIN_CRYPTO=crypto/liballgamescoin_crypto.a
+LIBALLGAMESCOINQT=qt/liballgamescoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -41,35 +41,35 @@ EXTRA_LIBRARIES += \
   liballgamescoin_server.a \
   liballgamescoin_cli.a
 if ENABLE_WALLET
-BITCOIN_INCLUDES += $(BDB_CPPFLAGS)
+ALLGAMESCOIN_INCLUDES += $(BDB_CPPFLAGS)
 EXTRA_LIBRARIES += liballgamescoin_wallet.a
 endif
 if ENABLE_ZMQ
 EXTRA_LIBRARIES += liballgamescoin_zmq.a
 endif
 
-if BUILD_BITCOIN_LIBS
+if BUILD_ALLGAMESCOIN_LIBS
 lib_LTLIBRARIES = liballgamescoinconsensus.la
-LIBBITCOIN_CONSENSUS=liballgamescoinconsensus.la
+LIBALLGAMESCOIN_CONSENSUS=liballgamescoinconsensus.la
 else
-LIBBITCOIN_CONSENSUS=
+LIBALLGAMESCOIN_CONSENSUS=
 endif
 
 bin_PROGRAMS =
 TESTS =
 BENCHMARKS =
 
-if BUILD_BITCOIND
+if BUILD_ALLGAMESCOIND
   bin_PROGRAMS += allgamescoind
 endif
 
-if BUILD_BITCOIN_UTILS
+if BUILD_ALLGAMESCOIN_UTILS
   bin_PROGRAMS += allgamescoin-cli allgamescoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
 # allgamescoin core #
-BITCOIN_CORE_H = \
+ALLGAMESCOIN_CORE_H = \
   addrdb.h \
   activemasternode.h \
   addressindex.h \
@@ -208,7 +208,7 @@ obj/build.h: FORCE
 liballgamescoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between allgamescoind and allgamescoin-qt
-liballgamescoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+liballgamescoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 liballgamescoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 liballgamescoin_server_a_SOURCES = \
   activemasternode.cpp \
@@ -266,12 +266,12 @@ liballgamescoin_server_a_SOURCES = \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(BITCOIN_CORE_H)
+  $(ALLGAMESCOIN_CORE_H)
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=liballgamescoin_zmq.a
+LIBALLGAMESCOIN_ZMQ=liballgamescoin_zmq.a
 
-liballgamescoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+liballgamescoin_zmq_a_CPPFLAGS = $(ALLGAMESCOIN_INCLUDES) $(ZMQ_CFLAGS)
 liballgamescoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 liballgamescoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
@@ -282,7 +282,7 @@ endif
 
 # wallet: shared between allgamescoind and allgamescoin-qt, but only linked
 # when wallet enabled
-liballgamescoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES)
 liballgamescoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 liballgamescoin_wallet_a_SOURCES = \
   keepass.cpp \
@@ -296,10 +296,10 @@ liballgamescoin_wallet_a_SOURCES = \
   wallet/wallet_ismine.cpp \
   wallet/walletdb.cpp \
   policy/rbf.cpp \
-  $(BITCOIN_CORE_H)
+  $(ALLGAMESCOIN_CORE_H)
 
 # crypto primitives library
-crypto_liballgamescoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES) $(PIC_FLAGS)
+crypto_liballgamescoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_CONFIG_INCLUDES) $(PIC_FLAGS)
 crypto_liballgamescoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(PIC_FLAGS)
 crypto_liballgamescoin_crypto_a_SOURCES = \
   crypto/common.h \
@@ -344,7 +344,7 @@ crypto_liballgamescoin_crypto_a_SOURCES += \
   crypto/sph_types.h
 
 # common: shared between allgamescoind, and allgamescoin-qt and non-server tools
-liballgamescoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES)
 liballgamescoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 liballgamescoin_common_a_SOURCES = \
   amount.cpp \
@@ -373,12 +373,12 @@ liballgamescoin_common_a_SOURCES = \
   script/script_error.cpp \
   script/sign.cpp \
   script/standard.cpp \
-  $(BITCOIN_CORE_H)
+  $(ALLGAMESCOIN_CORE_H)
 
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-liballgamescoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES)
 liballgamescoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 liballgamescoin_util_a_SOURCES = \
   support/pagelocker.cpp \
@@ -397,25 +397,25 @@ liballgamescoin_util_a_SOURCES = \
   utilmoneystr.cpp \
   utilstrencodings.cpp \
   utiltime.cpp \
-  $(BITCOIN_CORE_H)
+  $(ALLGAMESCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
 liballgamescoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
 # cli: shared between allgamescoin-cli and allgamescoin-qt
-liballgamescoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+liballgamescoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES)
 liballgamescoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 liballgamescoin_cli_a_SOURCES = \
   rpc/client.cpp \
-  $(BITCOIN_CORE_H)
+  $(ALLGAMESCOIN_CORE_H)
 
 nodist_liballgamescoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # allgamescoind binary #
 allgamescoind_SOURCES = allgamescoind.cpp
-allgamescoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+allgamescoind_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES)
 allgamescoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 allgamescoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
@@ -424,17 +424,17 @@ allgamescoind_SOURCES += allgamescoind-res.rc
 endif
 
 allgamescoind_LDADD = \
-  $(LIBBITCOIN_SERVER) \
-  $(LIBBITCOIN_COMMON) \
+  $(LIBALLGAMESCOIN_SERVER) \
+  $(LIBALLGAMESCOIN_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBALLGAMESCOIN_UTIL) \
+  $(LIBALLGAMESCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-allgamescoind_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+allgamescoind_LDADD += $(LIBALLGAMESCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
@@ -445,7 +445,7 @@ allgamescoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MI
 
 # allgamescoin-cli binary #
 allgamescoin_cli_SOURCES = allgamescoin-cli.cpp
-allgamescoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+allgamescoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES) $(EVENT_CFLAGS)
 allgamescoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 allgamescoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
@@ -454,15 +454,15 @@ allgamescoin_cli_SOURCES += allgamescoin-cli-res.rc
 endif
 
 allgamescoin_cli_LDADD = \
-  $(LIBBITCOIN_CLI) \
+  $(LIBALLGAMESCOIN_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_UTIL)
+  $(LIBALLGAMESCOIN_UTIL)
 allgamescoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # allgamescoin-tx binary #
 allgamescoin_tx_SOURCES = allgamescoin-tx.cpp
-allgamescoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+allgamescoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(ALLGAMESCOIN_INCLUDES)
 allgamescoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 allgamescoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
@@ -472,16 +472,16 @@ endif
 
 allgamescoin_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBALLGAMESCOIN_COMMON) \
+  $(LIBALLGAMESCOIN_UTIL) \
+  $(LIBALLGAMESCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
 allgamescoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # allgamescoinconsensus library #
-if BUILD_BITCOIN_LIBS
+if BUILD_ALLGAMESCOIN_LIBS
 include_HEADERS = script/allgamescoinconsensus.h
 liballgamescoinconsensus_la_SOURCES = \
   crypto/hmac_sha512.cpp \
@@ -504,7 +504,7 @@ endif
 
 liballgamescoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
 liballgamescoinconsensus_la_LIBADD = $(LIBSECP256K1)
-liballgamescoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+liballgamescoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_ALLGAMESCOIN_INTERNAL
 liballgamescoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif

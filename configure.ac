@@ -575,7 +575,7 @@ AC_SUBST(LIBMEMENV)
 
 if test x$enable_wallet != xno; then
     dnl Check for libdb_cxx only if wallet enabled
-    BITCOIN_FIND_BDB48
+    ALLGAMESCOIN_FIND_BDB48
 fi
 
 dnl Check for libminiupnpc (optional)
@@ -587,10 +587,10 @@ if test x$use_upnp != xno; then
   )
 fi
 
-BITCOIN_QT_INIT
+ALLGAMESCOIN_QT_INIT
 
 dnl sets $allgamescoin_enable_qt, $allgamescoin_enable_qt_test, $allgamescoin_enable_qt_dbus
-BITCOIN_QT_CONFIGURE([$use_pkgconfig], [qt5])
+ALLGAMESCOIN_QT_CONFIGURE([$use_pkgconfig], [qt5])
 
 if test x$build_allgamescoin_utils$build_allgamescoind$allgamescoin_enable_qt$use_tests = xnononono; then
     use_boost=no
@@ -772,9 +772,9 @@ if test x$use_pkgconfig = xyes; then
     [
       PKG_CHECK_MODULES([SSL], [libssl],, [AC_MSG_ERROR(openssl  not found.)])
       PKG_CHECK_MODULES([CRYPTO], [libcrypto],,[AC_MSG_ERROR(libcrypto  not found.)])
-      BITCOIN_QT_CHECK([PKG_CHECK_MODULES([PROTOBUF], [protobuf], [have_protobuf=yes], [BITCOIN_QT_FAIL(libprotobuf not found)])])
+      ALLGAMESCOIN_QT_CHECK([PKG_CHECK_MODULES([PROTOBUF], [protobuf], [have_protobuf=yes], [ALLGAMESCOIN_QT_FAIL(libprotobuf not found)])])
       if test x$use_qr != xno; then
-        BITCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
+        ALLGAMESCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
       fi
       if test x$build_allgamescoin_utils$build_allgamescoind$allgamescoin_enable_qt$use_tests != xnononono; then
         PKG_CHECK_MODULES([EVENT], [libevent],, [AC_MSG_ERROR(libevent not found.)])
@@ -823,10 +823,10 @@ else
     AC_DEFINE_UNQUOTED([ENABLE_ZMQ],[0],[Define to 1 to enable ZMQ functions])
   fi
 
-  BITCOIN_QT_CHECK(AC_CHECK_LIB([protobuf] ,[main],[PROTOBUF_LIBS=-lprotobuf], BITCOIN_QT_FAIL(libprotobuf not found)))
+  ALLGAMESCOIN_QT_CHECK(AC_CHECK_LIB([protobuf] ,[main],[PROTOBUF_LIBS=-lprotobuf], ALLGAMESCOIN_QT_FAIL(libprotobuf not found)))
   if test x$use_qr != xno; then
-    BITCOIN_QT_CHECK([AC_CHECK_LIB([qrencode], [main],[QR_LIBS=-lqrencode], [have_qrencode=no])])
-    BITCOIN_QT_CHECK([AC_CHECK_HEADER([qrencode.h],, have_qrencode=no)])
+    ALLGAMESCOIN_QT_CHECK([AC_CHECK_LIB([qrencode], [main],[QR_LIBS=-lqrencode], [have_qrencode=no])])
+    ALLGAMESCOIN_QT_CHECK([AC_CHECK_HEADER([qrencode.h],, have_qrencode=no)])
   fi
 fi
 
@@ -876,18 +876,18 @@ AC_CHECK_HEADER([openssl/ec.h],, AC_MSG_ERROR(OpenSSL ec header missing),)
 CXXFLAGS="$CXXFLAGS_TEMP"
 LIBS="$LIBS_TEMP"
 
-BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
+ALLGAMESCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
 AC_MSG_CHECKING([whether to build allgamescoind])
-AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_allgamescoind = xyes])
+AM_CONDITIONAL([BUILD_ALLGAMESCOIND], [test x$build_allgamescoind = xyes])
 AC_MSG_RESULT($build_allgamescoind)
 
 AC_MSG_CHECKING([whether to build utils (allgamescoin-cli allgamescoin-tx)])
-AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_allgamescoin_utils = xyes])
+AM_CONDITIONAL([BUILD_ALLGAMESCOIN_UTILS], [test x$build_allgamescoin_utils = xyes])
 AC_MSG_RESULT($build_allgamescoin_utils)
 
 AC_MSG_CHECKING([whether to build libraries])
-AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_allgamescoin_libs = xyes])
+AM_CONDITIONAL([BUILD_ALLGAMESCOIN_LIBS], [test x$build_allgamescoin_libs = xyes])
 if test x$build_allgamescoin_libs = xyes; then
   AC_DEFINE(HAVE_CONSENSUS_LIB, 1, [Define this symbol if the consensus lib has been built])
   AC_CONFIG_FILES([liballgamescoinconsensus.pc:liballgamescoinconsensus.pc.in])

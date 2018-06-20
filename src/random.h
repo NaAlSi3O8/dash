@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RANDOM_H
-#define BITCOIN_RANDOM_H
+#ifndef ALLGAMESCOIN_RANDOM_H
+#define ALLGAMESCOIN_RANDOM_H
 
 #include "uint256.h"
 
@@ -74,4 +74,4 @@ public:
     }
 };
 
-#endif // BITCOIN_RANDOM_H
+#endif // ALLGAMESCOIN_RANDOM_H

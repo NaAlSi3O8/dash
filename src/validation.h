@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_VALIDATION_H
-#define BITCOIN_VALIDATION_H
+#ifndef ALLGAMESCOIN_VALIDATION_H
+#define ALLGAMESCOIN_VALIDATION_H
 
 #if defined(HAVE_CONFIG_H)
 #include "config/allgamescoin-config.h"
@@ -503,4 +503,4 @@ static const unsigned int REJECT_ALREADY_KNOWN = 0x101;
 /** Transaction conflicts with a transaction already known */
 static const unsigned int REJECT_CONFLICT = 0x102;
 
-#endif // BITCOIN_VALIDATION_H
+#endif // ALLGAMESCOIN_VALIDATION_H

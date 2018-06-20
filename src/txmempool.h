@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TXMEMPOOL_H
-#define BITCOIN_TXMEMPOOL_H
+#ifndef ALLGAMESCOIN_TXMEMPOOL_H
+#define ALLGAMESCOIN_TXMEMPOOL_H
 
 #include <list>
 #include <set>
@@ -679,4 +679,4 @@ struct TxCoinAgePriorityCompare
     }
 };
 
-#endif // BITCOIN_TXMEMPOOL_H
+#endif // ALLGAMESCOIN_TXMEMPOOL_H

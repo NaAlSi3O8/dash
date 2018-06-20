@@ -34,8 +34,8 @@ from tests_config import *
 #If imported values are not defined then set to zero (or disabled)
 if 'ENABLE_WALLET' not in vars():
     ENABLE_WALLET=0
-if 'ENABLE_BITCOIND' not in vars():
-    ENABLE_BITCOIND=0
+if 'ENABLE_ALLGAMESCOIND' not in vars():
+    ENABLE_ALLGAMESCOIND=0
 if 'ENABLE_UTILS' not in vars():
     ENABLE_UTILS=0
 if 'ENABLE_ZMQ' not in vars():
@@ -73,7 +73,7 @@ if EXEEXT == ".exe" and "-win" not in opts:
     print "Win tests currently disabled by default.  Use -win option to enable"
     sys.exit(0)
 
-if not (ENABLE_WALLET == 1 and ENABLE_UTILS == 1 and ENABLE_BITCOIND == 1):
+if not (ENABLE_WALLET == 1 and ENABLE_UTILS == 1 and ENABLE_ALLGAMESCOIND == 1):
     print "No rpc tests to run. Wallet, utils, and allgamescoind must all be enabled"
     sys.exit(0)
 

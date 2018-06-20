@@ -94,5 +94,5 @@ int allgamescoinconsensus_verify_script(const unsigned char *scriptPubKey, unsig
 unsigned int allgamescoinconsensus_version()
 {
     // Just use the API version for now
-    return BITCOINCONSENSUS_API_VER;
+    return ALLGAMESCOINCONSENSUS_API_VER;
 }

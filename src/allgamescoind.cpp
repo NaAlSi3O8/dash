@@ -86,7 +86,7 @@ bool AppInit(int argc, char* argv[])
             strUsage += "\n" + _("Usage:") + "\n" +
                   "  allgamescoind [options]                     " + _("Start Allgamescoin Core Daemon") + "\n";
 
-            strUsage += "\n" + HelpMessage(HMM_BITCOIND);
+            strUsage += "\n" + HelpMessage(HMM_ALLGAMESCOIND);
         }
 
         fprintf(stdout, "%s", strUsage.c_str());

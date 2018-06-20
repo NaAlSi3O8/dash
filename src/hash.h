@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_HASH_H
-#define BITCOIN_HASH_H
+#ifndef ALLGAMESCOIN_HASH_H
+#define ALLGAMESCOIN_HASH_H
 
 #include "crypto/ripemd160.h"
 #include "crypto/sha256.h"
@@ -396,4 +396,4 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     return hash[10].trim256();
 }
 
-#endif // BITCOIN_HASH_H
+#endif // ALLGAMESCOIN_HASH_H

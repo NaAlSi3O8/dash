@@ -4,15 +4,15 @@ SUBDIRS = src
 
 GZIP_ENV="-9n"
 
-if BUILD_BITCOIN_LIBS
+if BUILD_ALLGAMESCOIN_LIBS
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = liballgamescoinconsensus.pc
 endif
 
-BITCOIND_BIN=$(top_builddir)/src/allgamescoind$(EXEEXT)
-BITCOIN_QT_BIN=$(top_builddir)/src/qt/allgamescoin-qt$(EXEEXT)
-BITCOIN_CLI_BIN=$(top_builddir)/src/allgamescoin-cli$(EXEEXT)
-BITCOIN_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
+ALLGAMESCOIND_BIN=$(top_builddir)/src/allgamescoind$(EXEEXT)
+ALLGAMESCOIN_QT_BIN=$(top_builddir)/src/qt/allgamescoin-qt$(EXEEXT)
+ALLGAMESCOIN_CLI_BIN=$(top_builddir)/src/allgamescoin-cli$(EXEEXT)
+ALLGAMESCOIN_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
 
 OSX_APP=Allgamescoin-Qt.app
 OSX_DMG=Allgamescoin-Core.dmg
@@ -58,11 +58,11 @@ distcheck-hook:
 distcleancheck:
 	@:
 
-$(BITCOIN_WIN_INSTALLER): all-recursive
+$(ALLGAMESCOIN_WIN_INSTALLER): all-recursive
 	$(MKDIR_P) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(BITCOIND_BIN) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(BITCOIN_QT_BIN) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(BITCOIN_CLI_BIN) $(top_builddir)/release
+	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(ALLGAMESCOIND_BIN) $(top_builddir)/release
+	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(ALLGAMESCOIN_QT_BIN) $(top_builddir)/release
+	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(ALLGAMESCOIN_CLI_BIN) $(top_builddir)/release
 	@test -f $(MAKENSIS) && $(MAKENSIS) -V2 $(top_builddir)/share/setup.nsi || \
 	  echo error: could not build $@
 	@echo built $@
@@ -86,7 +86,7 @@ $(OSX_APP)/Contents/Resources/allgamescoin.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/MacOS/Allgamescoin-Qt: $(BITCOIN_QT_BIN)
+$(OSX_APP)/Contents/MacOS/Allgamescoin-Qt: $(ALLGAMESCOIN_QT_BIN)
 	$(MKDIR_P) $(@D)
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $< $@
 
@@ -133,16 +133,16 @@ appbundle: $(OSX_APP_BUILT)
 deploy: $(OSX_DMG)
 endif
 if TARGET_WINDOWS
-deploy: $(BITCOIN_WIN_INSTALLER)
+deploy: $(ALLGAMESCOIN_WIN_INSTALLER)
 endif
 
-$(BITCOIN_QT_BIN): FORCE
+$(ALLGAMESCOIN_QT_BIN): FORCE
 	$(MAKE) -C src qt/$(@F)
 
-$(BITCOIND_BIN): FORCE
+$(ALLGAMESCOIND_BIN): FORCE
 	$(MAKE) -C src $(@F)
 
-$(BITCOIN_CLI_BIN): FORCE
+$(ALLGAMESCOIN_CLI_BIN): FORCE
 	$(MAKE) -C src $(@F)
 
 if USE_LCOV
@@ -220,7 +220,7 @@ dist_noinst_SCRIPTS = autogen.sh
 
 EXTRA_DIST = $(top_srcdir)/share/genbuild.sh qa/pull-tester/rpc-tests.py qa/rpc-tests $(DIST_DOCS) $(WINDOWS_PACKAGING) $(OSX_PACKAGING) $(BIN_CHECKS)
 
-CLEANFILES = $(OSX_DMG) $(BITCOIN_WIN_INSTALLER)
+CLEANFILES = $(OSX_DMG) $(ALLGAMESCOIN_WIN_INSTALLER)
 
 .INTERMEDIATE: $(COVERAGE_INFO)
 

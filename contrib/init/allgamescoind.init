@@ -19,14 +19,14 @@ fi
 RETVAL=0
 
 prog=allgamescoind
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/allgamescoind
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/allgamescoind}
+# you can override the lockfile via ALLGAMESCOIND_LOCKFILE in /etc/sysconfig/allgamescoind
+lockfile=${ALLGAMESCOIND_LOCKFILE-/var/lock/subsys/allgamescoind}
 
-# allgamescoind defaults to /usr/bin/allgamescoind, override with BITCOIND_BIN
-allgamescoind=${BITCOIND_BIN-/usr/bin/allgamescoind}
+# allgamescoind defaults to /usr/bin/allgamescoind, override with ALLGAMESCOIND_BIN
+allgamescoind=${ALLGAMESCOIND_BIN-/usr/bin/allgamescoind}
 
-# allgamescoind opts default to -disablewallet, override with BITCOIND_OPTS
-allgamescoind_opts=${BITCOIND_OPTS--disablewallet}
+# allgamescoind opts default to -disablewallet, override with ALLGAMESCOIND_OPTS
+allgamescoind_opts=${ALLGAMESCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "

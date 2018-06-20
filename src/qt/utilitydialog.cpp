@@ -75,7 +75,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, HelpMode helpMode) :
         cursor.insertText(header);
         cursor.insertBlock();
 
-        std::string strUsage = HelpMessage(HMM_BITCOIN_QT);
+        std::string strUsage = HelpMessage(HMM_ALLGAMESCOIN_QT);
         const bool showDebug = GetBoolArg("-help-debug", false);
         strUsage += HelpMessageGroup(tr("UI Options:").toStdString());
         if (showDebug) {

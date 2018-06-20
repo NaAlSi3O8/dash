@@ -1,33 +1,33 @@
 # /etc/conf.d/allgamescoind: config file for /etc/init.d/allgamescoind
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/allgamescoincore/allgamescoin.conf"
+#ALLGAMESCOIND_CONFIGFILE="/etc/allgamescoincore/allgamescoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/allgamescoind"
+# What directory to write pidfile to?  (created and owned by $ALLGAMESCOIND_USER)
+#ALLGAMESCOIND_PIDDIR="/var/run/allgamescoind"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/allgamescoind.pid"
+#ALLGAMESCOIND_PIDFILE="${ALLGAMESCOIND_PIDDIR}/allgamescoind.pid"
 
 # Where to write allgamescoind data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/allgamescoind"
+#ALLGAMESCOIND_DATADIR="/var/lib/allgamescoind"
 
 # User and group to own allgamescoind process
-#BITCOIND_USER="allgamescoincore"
-#BITCOIND_GROUP="allgamescoincore"
+#ALLGAMESCOIND_USER="allgamescoincore"
+#ALLGAMESCOIND_GROUP="allgamescoincore"
 
 # Path to allgamescoind executable
-#BITCOIND_BIN="/usr/bin/allgamescoind"
+#ALLGAMESCOIND_BIN="/usr/bin/allgamescoind"
 
 # Nice value to run allgamescoind under
-#BITCOIND_NICE=0
+#ALLGAMESCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-BITCOIND_OPTS="-disablewallet"
+ALLGAMESCOIND_OPTS="-disablewallet"
 
 # The timeout in seconds OpenRC will wait for allgamescoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-BITCOIND_SIGTERM_TIMEOUT=60
+ALLGAMESCOIND_SIGTERM_TIMEOUT=60

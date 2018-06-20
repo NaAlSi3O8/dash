@@ -3,40 +3,40 @@
 # backward compatibility for existing gentoo layout 
 #
 if [ -d "/var/lib/allgamescoincore/.allgamescoincore" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/allgamescoincore/.allgamescoincore"
+	ALLGAMESCOIND_DEFAULT_DATADIR="/var/lib/allgamescoincore/.allgamescoincore"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/allgamescoind"
+	ALLGAMESCOIND_DEFAULT_DATADIR="/var/lib/allgamescoind"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/allgamescoincore/allgamescoin.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/allgamescoind}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/allgamescoind.pid}
-BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-allgamescoincore}}
-BITCOIND_GROUP=${BITCOIND_GROUP:-allgamescoincore}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/allgamescoind}
-BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
-BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
+ALLGAMESCOIND_CONFIGFILE=${ALLGAMESCOIND_CONFIGFILE:-/etc/allgamescoincore/allgamescoin.conf}
+ALLGAMESCOIND_PIDDIR=${ALLGAMESCOIND_PIDDIR:-/var/run/allgamescoind}
+ALLGAMESCOIND_PIDFILE=${ALLGAMESCOIND_PIDFILE:-${ALLGAMESCOIND_PIDDIR}/allgamescoind.pid}
+ALLGAMESCOIND_DATADIR=${ALLGAMESCOIND_DATADIR:-${ALLGAMESCOIND_DEFAULT_DATADIR}}
+ALLGAMESCOIND_USER=${ALLGAMESCOIND_USER:-${ALLGAMESCOIN_USER:-allgamescoincore}}
+ALLGAMESCOIND_GROUP=${ALLGAMESCOIND_GROUP:-allgamescoincore}
+ALLGAMESCOIND_BIN=${ALLGAMESCOIND_BIN:-/usr/bin/allgamescoind}
+ALLGAMESCOIND_NICE=${ALLGAMESCOIND_NICE:-${NICELEVEL:-0}}
+ALLGAMESCOIND_OPTS="${ALLGAMESCOIND_OPTS:-${ALLGAMESCOIN_OPTS}}"
 
 name="Allgamescoin Core Daemon"
 description="Allgamescoin cryptocurrency P2P network daemon"
 
 command="/usr/bin/allgamescoind"
-command_args="-pid=\"${BITCOIND_PIDFILE}\" \
-		-conf=\"${BITCOIND_CONFIGFILE}\" \
-		-datadir=\"${BITCOIND_DATADIR}\" \
+command_args="-pid=\"${ALLGAMESCOIND_PIDFILE}\" \
+		-conf=\"${ALLGAMESCOIND_CONFIGFILE}\" \
+		-datadir=\"${ALLGAMESCOIND_DATADIR}\" \
 		-daemon \
-		${BITCOIND_OPTS}"
+		${ALLGAMESCOIND_OPTS}"
 
-required_files="${BITCOIND_CONFIGFILE}"
-start_stop_daemon_args="-u ${BITCOIND_USER} \
-			-N ${BITCOIND_NICE} -w 2000"
-pidfile="${BITCOIND_PIDFILE}"
+required_files="${ALLGAMESCOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${ALLGAMESCOIND_USER} \
+			-N ${ALLGAMESCOIND_NICE} -w 2000"
+pidfile="${ALLGAMESCOIND_PIDFILE}"
 
 # The retry schedule to use when stopping the daemon. Could be either
 # a timeout in seconds or multiple signal/timeout pairs (like
 # "SIGKILL/180 SIGTERM/300")
-retry="${BITCOIND_SIGTERM_TIMEOUT}"
+retry="${ALLGAMESCOIND_SIGTERM_TIMEOUT}"
 
 depend() {
 	need localmount net
@@ -50,29 +50,29 @@ start_pre() {
 	checkpath \
 	-d \
 	--mode 0750 \
-	--owner "${BITCOIND_USER}:${BITCOIND_GROUP}" \
-	"${BITCOIND_DATADIR}"
+	--owner "${ALLGAMESCOIND_USER}:${ALLGAMESCOIND_GROUP}" \
+	"${ALLGAMESCOIND_DATADIR}"
 
 	checkpath \
 	-d \
 	--mode 0755 \
-	--owner "${BITCOIND_USER}:${BITCOIND_GROUP}" \
-	"${BITCOIND_PIDDIR}"
+	--owner "${ALLGAMESCOIND_USER}:${ALLGAMESCOIND_GROUP}" \
+	"${ALLGAMESCOIND_PIDDIR}"
 
 	checkpath -f \
-	-o ${BITCOIND_USER}:${BITCOIND_GROUP} \
+	-o ${ALLGAMESCOIND_USER}:${ALLGAMESCOIND_GROUP} \
 	-m 0660 \
-	${BITCOIND_CONFIGFILE}
+	${ALLGAMESCOIND_CONFIGFILE}
 
 	checkconfig || return 1
 }
 
 checkconfig()
 {
-	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
+	if ! grep -qs '^rpcpassword=' "${ALLGAMESCOIND_CONFIGFILE}" ; then
 		eerror ""
 		eerror "ERROR: You must set a secure rpcpassword to run allgamescoind."
-		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
+		eerror "The setting must appear in ${ALLGAMESCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
 		eerror "and must not be the same as the rpcuser setting."

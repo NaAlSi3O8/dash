@@ -7,8 +7,8 @@
 #error This header can only be compiled as C++.
 #endif
 
-#ifndef BITCOIN_PROTOCOL_H
-#define BITCOIN_PROTOCOL_H
+#ifndef ALLGAMESCOIN_PROTOCOL_H
+#define ALLGAMESCOIN_PROTOCOL_H
 
 #include "netaddress.h"
 #include "serialize.h"
@@ -365,4 +365,4 @@ enum {
     MSG_MASTERNODE_VERIFY,
 };
 
-#endif // BITCOIN_PROTOCOL_H
+#endif // ALLGAMESCOIN_PROTOCOL_H
