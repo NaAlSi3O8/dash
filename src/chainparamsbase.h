@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between allgamescoin-cli and allgamescoind)
- * of a given instance of the Dash system.
+ * of a given instance of the Allgamescoin system.
  */
 class CBaseChainParams
 {

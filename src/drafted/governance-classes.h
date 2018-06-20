@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Allgamescoin Core developers
 
 /*
  * FIELDS AND CLASSIFICATION
@@ -45,7 +45,7 @@
  * =========================
  *
  *   // network
- *   CDashNetwork lvl, network-type, network-status, network-error, milestone-status*
+ *   CAllgamescoinNetwork lvl, network-type, network-status, network-error, milestone-status*
  *   CCategory lvl, category-type, status, status-error
  *   CNetworkGlobalVariable lvl, global-type, status, status-error
  *   // base: actor
@@ -130,7 +130,7 @@ public:
 };
 
 // // root node
-class CDashNetwork : public CGovernanceObject
+class CAllgamescoinNetwork : public CGovernanceObject
 {
 private:
     std::string strName;
@@ -138,7 +138,7 @@ private:
 
 
 public:
-    CDashNetwork(UniValue objIn)
+    CAllgamescoinNetwork(UniValue objIn)
     {
         strName = objIn["name"].get_str();
         strURL = objIn["name"].get_str();
@@ -174,9 +174,9 @@ public:
 
 };
 
-// // can be under: DashNetwork
+// // can be under: AllgamescoinNetwork
 // //   -- signature requirements : Key1(User)
-// class CDashNetworkVariable : public CGovernanceObject
+// class CAllgamescoinNetworkVariable : public CGovernanceObject
 // {
 // private:
 
@@ -279,7 +279,7 @@ public:
 //     // isRootCategory()
 //     // {
 //     //     // root categories won't have categories as parents
-//     //     return (IsType() == DashNetwork);
+//     //     return (IsType() == AllgamescoinNetwork);
 //     // }
 
 //     // isSubcategoryOf(std::string strParentName)

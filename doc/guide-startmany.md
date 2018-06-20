@@ -89,7 +89,7 @@ You can confirm that remote server is on the correct block by issuing
 
 ```allgamescoin-cli getinfo```
 
-and comparing with the official explorer at https://explorer.allgamescoin.org/chain/Dash
+and comparing with the official explorer at https://explorer.allgamescoin.org/chain/Allgamescoin
 
 ### Local
 

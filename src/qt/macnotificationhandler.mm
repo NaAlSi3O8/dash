@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.allgamescoin.Dash-Qt";
+        return @"org.allgamescoin.Allgamescoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

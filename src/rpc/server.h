@@ -123,7 +123,7 @@ public:
 };
 
 /**
- * Dash RPC command dispatcher.
+ * Allgamescoin RPC command dispatcher.
  */
 class CRPCTable
 {

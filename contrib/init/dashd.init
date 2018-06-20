@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  allgamescoind The Dash Core server.
+#  allgamescoind The Allgamescoin Core server.
 #
 #
 # chkconfig: 345 80 20

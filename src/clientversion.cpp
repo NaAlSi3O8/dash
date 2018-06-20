@@ -13,7 +13,7 @@
  * for both allgamescoind and allgamescoin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Dash Core");
+const std::string CLIENT_NAME("Allgamescoin Core");
 
 /**
  * Client version number

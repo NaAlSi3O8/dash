@@ -117,7 +117,7 @@ Forrest Voight
 Gavin Andresen
 Gregory Maxwell
 Jeff Garzik
-Luke Dashjr
+Luke Allgamescoinjr
 Matt Corallo
 Mike Cassano
 Mike Hearn
