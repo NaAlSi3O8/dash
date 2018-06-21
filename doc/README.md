@@ -24,9 +24,9 @@ Drag AllGamesCoin-Qt to your applications folder, and then run AllGamesCoin-Qt.
 
 ### Need Help?
 
-* See the [AllGamesCoin documentation](https://allgamescoinpay.atlassian.net/wiki/display/DOC)
+* See the [AllGamesCoin documentation](https://allgamescoindev.atlassian.net/wiki/display/DOC)
 for help and more information.
-* Ask for help on [#allgamescoinpay](http://webchat.freenode.net?channels=allgamescoinpay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=allgamescoinpay).
+* Ask for help on [#allgamescoindev](http://webchat.freenode.net?channels=allgamescoindev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=allgamescoindev).
 * Ask for help on the [AllGamesCoinTalk](https://allgamescointalk.org/) forums.
 
 Building
@@ -58,7 +58,7 @@ The AllGamesCoin Core repo's [root README](/README.md) contains relevant informa
 
 ### Resources
 * Discuss on the [AllGamesCoinTalk](https://allgamescointalk.org/) forums, in the Development & Technical Discussion board.
-* Discuss on [#allgamescoinpay](http://webchat.freenode.net/?channels=allgamescoinpay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=allgamescoinpay).
+* Discuss on [#allgamescoindev](http://webchat.freenode.net/?channels=allgamescoindev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=allgamescoindev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

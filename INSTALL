@@ -21,7 +21,7 @@ use the autogen script to prepare the build environment.
     make
 
 Precompiled binaries are available at github, see
-https://github.com/allgamescoinpay/allgamescoin-binaries
+https://github.com/allgamescoindev/allgamescoin-binaries
 
 Always verify the signatures and checksums.
 

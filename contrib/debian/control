@@ -25,8 +25,8 @@ Build-Depends: debhelper,
  python
 Standards-Version: 3.9.2
 Homepage: https://www.allgamescoin.org/
-Vcs-Git: git://github.com/allgamescoinpay/allgamescoin.git
-Vcs-Browser: https://github.com/allgamescoinpay/allgamescoin
+Vcs-Git: git://github.com/allgamescoindev/allgamescoin.git
+Vcs-Browser: https://github.com/allgamescoindev/allgamescoin
 
 Package: allgamescoind
 Architecture: any

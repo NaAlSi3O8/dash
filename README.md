@@ -1,7 +1,7 @@
 AllGamesCoin Core staging tree 0.12.2
 ===============================
 
-`master:` [![Build Status](https://travis-ci.org/allgamescoinpay/allgamescoin.svg?branch=master)](https://travis-ci.org/allgamescoinpay/allgamescoin) `develop:` [![Build Status](https://travis-ci.org/allgamescoinpay/allgamescoin.svg?branch=develop)](https://travis-ci.org/allgamescoinpay/allgamescoin/branches)
+`master:` [![Build Status](https://travis-ci.org/allgamescoindev/allgamescoin.svg?branch=master)](https://travis-ci.org/allgamescoindev/allgamescoin) `develop:` [![Build Status](https://travis-ci.org/allgamescoindev/allgamescoin.svg?branch=develop)](https://travis-ci.org/allgamescoindev/allgamescoin/branches)
 
 https://www.allgamescoin.org
 
@@ -29,7 +29,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
-[Tags](https://github.com/allgamescoinpay/allgamescoin/tags) are created to indicate new official,
+[Tags](https://github.com/allgamescoindev/allgamescoin/tags) are created to indicate new official,
 stable release versions of AllGamesCoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

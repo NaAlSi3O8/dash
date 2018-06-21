@@ -71,7 +71,7 @@
         <string>application/x-allgamescoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>allgamescoinpaymentrequest</string>
+          <string>allgamescoindevmentrequest</string>
         </array>
       </dict>
     </dict>
