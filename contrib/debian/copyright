@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Allgamescoin
+Upstream-Name: AllGamesCoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
  irc://#allgamescoin@freenode.net
 Source: https://github.com/allgamescoin/allgamescoin
 
 Files: *
-Copyright: 2009-2016, Allgamescoin Core Developers
+Copyright: 2009-2016, Bitcoin Core Developers
 License: Expat
-Comment: The Allgamescoin Core Developers encompasses the current developers listed on allgamescoin.org,
+Comment: The AllGamesCoin Core Developers encompasses the current developers listed on allgamescoin.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*
@@ -54,7 +54,7 @@ Files: src/qt/res/icons/connect*.png
        src/qt/res/icons/*/network_disabled.png
        src/qt/res/src/network_disabled.svg
 Copyright: Marco Falke
-           Luke Allgamescoinjr
+           Luke AllGamesCoinjr
 License: Expat
 Comment: Inspired by Stephan Hutchings Typicons
 

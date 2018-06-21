@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,7 +17,7 @@ QT_END_NAMESPACE
 
 /** Widget for entering allgamescoin amounts.
   */
-class AllgamescoinAmountField: public QWidget
+class AllGamesCoinAmountField: public QWidget
 {
     Q_OBJECT
 
@@ -26,7 +26,7 @@ class AllgamescoinAmountField: public QWidget
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit AllgamescoinAmountField(QWidget *parent = 0);
+    explicit AllGamesCoinAmountField(QWidget *parent = 0);
 
     CAmount value(bool *value=0) const;
     void setValue(const CAmount& value);

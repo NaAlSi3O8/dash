@@ -236,7 +236,7 @@ allgamescoin (0.5.3-natty0) natty; urgency=low
 
   * New upstream release.
 
- -- Luke Allgamescoinjr <luke+allgamescoin+deb@allgamescoinjr.org>  Tue, 10 Jan 2012 15:57:00 -0500
+ -- Luke AllGamesCoinjr <luke+allgamescoin+deb@allgamescoinjr.org>  Tue, 10 Jan 2012 15:57:00 -0500
 
 allgamescoin (0.5.2-natty1) natty; urgency=low
 
@@ -251,7 +251,7 @@ allgamescoin (0.5.2-natty0) natty; urgency=low
 
   * New upstream release.
 
- -- Luke Allgamescoinjr <luke+allgamescoin+deb@allgamescoinjr.org>  Fri, 16 Dec 2011 17:57:00 -0500
+ -- Luke AllGamesCoinjr <luke+allgamescoin+deb@allgamescoinjr.org>  Fri, 16 Dec 2011 17:57:00 -0500
 
 allgamescoin (0.5.1-natty0) natty; urgency=low
 
@@ -321,7 +321,7 @@ allgamescoin (0.4.0-1) unstable; urgency=low
   * Drop dpkg-source local-options hint: Declared options are default
     since dpkg-source 1.16.1.
     + Add irc URL to Upstream-Contact.
-    + Add comment on Allgamescoin Developers to catch-all Files section.
+    + Add comment on AllGamesCoin Developers to catch-all Files section.
     + Add Files sections for newly readded src/cryptopp/* (new custom
       BSD-like license), and newly added doc/build-osx.txt and
       src/makefile.osx (Expat).

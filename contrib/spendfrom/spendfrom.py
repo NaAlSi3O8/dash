@@ -7,7 +7,7 @@
 #  spendfrom.py  # Lists available funds
 #  spendfrom.py --from=ADDRESS --to=ADDRESS --amount=11.00
 #
-# Assumes it will talk to a allgamescoind or Allgamescoin-Qt running
+# Assumes it will talk to a allgamescoind or AllGamesCoin-Qt running
 # on localhost.
 #
 # Depends on jsonrpc
@@ -33,11 +33,11 @@ def check_json_precision():
         raise RuntimeError("JSON encode/decode loses precision")
 
 def determine_db_dir():
-    """Return the default location of the Allgamescoin Core data directory"""
+    """Return the default location of the AllGamesCoin Core data directory"""
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/AllgamescoinCore/")
+        return os.path.expanduser("~/Library/Application Support/AllGamesCoinCore/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "AllgamescoinCore")
+        return os.path.join(os.environ['APPDATA'], "AllGamesCoinCore")
     return os.path.expanduser("~/.allgamescoincore")
 
 def read_allgamescoin_config(dbdir):
@@ -63,11 +63,11 @@ def read_allgamescoin_config(dbdir):
     return dict(config_parser.items("all"))
 
 def connect_JSON(config):
-    """Connect to a Allgamescoin Core JSON-RPC server"""
+    """Connect to a AllGamesCoin Core JSON-RPC server"""
     testnet = config.get('testnet', '0')
     testnet = (int(testnet) > 0)  # 0/1 in config file, convert to True/False
     if not 'rpcport' in config:
-        config['rpcport'] = 19998 if testnet else 9998
+        config['rpcport'] = 13385 if testnet else 3385
     connect = "http://%s:%s@127.0.0.1:%s"%(config['rpcuser'], config['rpcpassword'], config['rpcport'])
     try:
         result = ServiceProxy(connect)

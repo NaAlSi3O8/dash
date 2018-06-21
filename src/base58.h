@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Allgamescoin Core developers
+// Copyright (c) 2009-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -95,13 +95,13 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded Allgamescoin addresses.
+/** base58-encoded AllGamesCoin addresses.
  * Public-key-hash-addresses have version 76 (or 140 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 16 (or 19 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CAllgamescoinAddress : public CBase58Data {
+class CAllGamesCoinAddress : public CBase58Data {
 public:
     bool Set(const CKeyID &id);
     bool Set(const CScriptID &id);
@@ -109,10 +109,10 @@ public:
     bool IsValid() const;
     bool IsValid(const CChainParams &params) const;
 
-    CAllgamescoinAddress() {}
-    CAllgamescoinAddress(const CTxDestination &dest) { Set(dest); }
-    CAllgamescoinAddress(const std::string& strAddress) { SetString(strAddress); }
-    CAllgamescoinAddress(const char* pszAddress) { SetString(pszAddress); }
+    CAllGamesCoinAddress() {}
+    CAllGamesCoinAddress(const CTxDestination &dest) { Set(dest); }
+    CAllGamesCoinAddress(const std::string& strAddress) { SetString(strAddress); }
+    CAllGamesCoinAddress(const char* pszAddress) { SetString(pszAddress); }
 
     CTxDestination Get() const;
     bool GetKeyID(CKeyID &keyID) const;
@@ -123,7 +123,7 @@ public:
 /**
  * A base58-encoded secret key
  */
-class CAllgamescoinSecret : public CBase58Data
+class CAllGamesCoinSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret);
@@ -132,11 +132,11 @@ public:
     bool SetString(const char* pszSecret);
     bool SetString(const std::string& strSecret);
 
-    CAllgamescoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
-    CAllgamescoinSecret() {}
+    CAllGamesCoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CAllGamesCoinSecret() {}
 };
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CAllgamescoinExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CAllGamesCoinExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -154,18 +154,18 @@ public:
         return ret;
     }
 
-    CAllgamescoinExtKeyBase(const K &key) {
+    CAllGamesCoinExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CAllgamescoinExtKeyBase(const std::string& strBase58c) {
+    CAllGamesCoinExtKeyBase(const std::string& strBase58c) {
         SetString(strBase58c.c_str(), Params().Base58Prefix(Type).size());
     }
 
-    CAllgamescoinExtKeyBase() {}
+    CAllGamesCoinExtKeyBase() {}
 };
 
-typedef CAllgamescoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CAllgamescoinExtKey;
-typedef CAllgamescoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CAllgamescoinExtPubKey;
+typedef CAllGamesCoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CAllGamesCoinExtKey;
+typedef CAllGamesCoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CAllGamesCoinExtPubKey;
 
 #endif // ALLGAMESCOIN_BASE58_H

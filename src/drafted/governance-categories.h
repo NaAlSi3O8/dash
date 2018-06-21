@@ -4,15 +4,15 @@
 
 	* means the category has an associated class
 	
-	CAllgamescoinNetwork: ALLGAMESCOIN NETWORK (ROOT)
+	CAllGamesCoinNetwork: ALLGAMESCOIN NETWORK (ROOT)
 	has:
 		vector<CNetworkVariable> vecNetworkVariables;
-		vector<CAllgamescoinProject> vecProjects;
+		vector<CAllGamesCoinProject> vecProjects;
 		vector<CGovernanceObject> vecProposals;
 		vector<CBudgetContract> vecContracts;
 		vector<CBudgetUsers> vecUsers;
 
-	CAllgamescoinProject:
+	CAllGamesCoinProject:
 	has:
 		name
 		employees

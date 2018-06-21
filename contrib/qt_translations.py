@@ -2,7 +2,7 @@
 
 # Helpful little script that spits out a comma-separated list of
 # language codes for Qt icons that should be included
-# in binary Allgamescoin Core distributions
+# in binary AllGamesCoin Core distributions
 
 import glob
 import os

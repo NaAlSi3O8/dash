@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Allgamescoin
-Comment=Allgamescoin P2P Cryptocurrency
-Comment[fr]=Allgamescoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Allgamescoin, eşten eşe kriptografik sanal para birimi
+Name=AllGamesCoin
+Comment=AllGamesCoin P2P Cryptocurrency
+Comment[fr]=AllGamesCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=AllGamesCoin, eşten eşe kriptografik sanal para birimi
 Exec=allgamescoin-qt %u
 Terminal=false
 Type=Application

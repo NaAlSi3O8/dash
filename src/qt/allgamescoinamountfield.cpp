@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -24,7 +24,7 @@ class AmountSpinBox: public QAbstractSpinBox
 public:
     explicit AmountSpinBox(QWidget *parent):
         QAbstractSpinBox(parent),
-        currentUnit(AllgamescoinUnits::ALLGAMESCOIN),
+        currentUnit(AllGamesCoinUnits::ALLGAMESCOIN),
         singleStep(100000) // satoshis
     {
         setAlignment(Qt::AlignRight);
@@ -48,7 +48,7 @@ public:
         CAmount val = parse(input, &valid);
         if(valid)
         {
-            input = AllgamescoinUnits::format(currentUnit, val, false, AllgamescoinUnits::separatorAlways);
+            input = AllGamesCoinUnits::format(currentUnit, val, false, AllGamesCoinUnits::separatorAlways);
             lineEdit()->setText(input);
         }
     }
@@ -60,7 +60,7 @@ public:
 
     void setValue(const CAmount& value)
     {
-        lineEdit()->setText(AllgamescoinUnits::format(currentUnit, value, false, AllgamescoinUnits::separatorAlways));
+        lineEdit()->setText(AllGamesCoinUnits::format(currentUnit, value, false, AllGamesCoinUnits::separatorAlways));
         Q_EMIT valueChanged();
     }
 
@@ -69,7 +69,7 @@ public:
         bool valid = false;
         CAmount val = value(&valid);
         val = val + steps * singleStep;
-        val = qMin(qMax(val, CAmount(0)), AllgamescoinUnits::maxMoney());
+        val = qMin(qMax(val, CAmount(0)), AllGamesCoinUnits::maxMoney());
         setValue(val);
     }
 
@@ -99,7 +99,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = fm.width(AllgamescoinUnits::format(AllgamescoinUnits::ALLGAMESCOIN, AllgamescoinUnits::maxMoney(), false, AllgamescoinUnits::separatorAlways));
+            int w = fm.width(AllGamesCoinUnits::format(AllGamesCoinUnits::ALLGAMESCOIN, AllGamesCoinUnits::maxMoney(), false, AllGamesCoinUnits::separatorAlways));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -137,10 +137,10 @@ private:
     CAmount parse(const QString &text, bool *valid_out=0) const
     {
         CAmount val = 0;
-        bool valid = AllgamescoinUnits::parse(currentUnit, text, &val);
+        bool valid = AllGamesCoinUnits::parse(currentUnit, text, &val);
         if(valid)
         {
-            if(val < 0 || val > AllgamescoinUnits::maxMoney())
+            if(val < 0 || val > AllGamesCoinUnits::maxMoney())
                 valid = false;
         }
         if(valid_out)
@@ -178,7 +178,7 @@ protected:
         {
             if(val > 0)
                 rv |= StepDownEnabled;
-            if(val < AllgamescoinUnits::maxMoney())
+            if(val < AllGamesCoinUnits::maxMoney())
                 rv |= StepUpEnabled;
         }
         return rv;
@@ -190,7 +190,7 @@ Q_SIGNALS:
 
 #include "allgamescoinamountfield.moc"
 
-AllgamescoinAmountField::AllgamescoinAmountField(QWidget *parent) :
+AllGamesCoinAmountField::AllGamesCoinAmountField(QWidget *parent) :
     QWidget(parent),
     amount(0)
 {
@@ -202,7 +202,7 @@ AllgamescoinAmountField::AllgamescoinAmountField(QWidget *parent) :
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new AllgamescoinUnits(this));
+    unit->setModel(new AllGamesCoinUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -220,19 +220,19 @@ AllgamescoinAmountField::AllgamescoinAmountField(QWidget *parent) :
     unitChanged(unit->currentIndex());
 }
 
-void AllgamescoinAmountField::clear()
+void AllGamesCoinAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-void AllgamescoinAmountField::setEnabled(bool fEnabled)
+void AllGamesCoinAmountField::setEnabled(bool fEnabled)
 {
     amount->setEnabled(fEnabled);
     unit->setEnabled(fEnabled);
 }
 
-bool AllgamescoinAmountField::validate()
+bool AllGamesCoinAmountField::validate()
 {
     bool valid = false;
     value(&valid);
@@ -240,7 +240,7 @@ bool AllgamescoinAmountField::validate()
     return valid;
 }
 
-void AllgamescoinAmountField::setValid(bool valid)
+void AllGamesCoinAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -248,7 +248,7 @@ void AllgamescoinAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-bool AllgamescoinAmountField::eventFilter(QObject *object, QEvent *event)
+bool AllGamesCoinAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -258,45 +258,45 @@ bool AllgamescoinAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *AllgamescoinAmountField::setupTabChain(QWidget *prev)
+QWidget *AllGamesCoinAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     QWidget::setTabOrder(amount, unit);
     return unit;
 }
 
-CAmount AllgamescoinAmountField::value(bool *valid_out) const
+CAmount AllGamesCoinAmountField::value(bool *valid_out) const
 {
     return amount->value(valid_out);
 }
 
-void AllgamescoinAmountField::setValue(const CAmount& value)
+void AllGamesCoinAmountField::setValue(const CAmount& value)
 {
     amount->setValue(value);
 }
 
-void AllgamescoinAmountField::setReadOnly(bool fReadOnly)
+void AllGamesCoinAmountField::setReadOnly(bool fReadOnly)
 {
     amount->setReadOnly(fReadOnly);
 }
 
-void AllgamescoinAmountField::unitChanged(int idx)
+void AllGamesCoinAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, AllgamescoinUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, AllGamesCoinUnits::UnitRole).toInt();
 
     amount->setDisplayUnit(newUnit);
 }
 
-void AllgamescoinAmountField::setDisplayUnit(int newUnit)
+void AllGamesCoinAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }
 
-void AllgamescoinAmountField::setSingleStep(const CAmount& step)
+void AllGamesCoinAmountField::setSingleStep(const CAmount& step)
 {
     amount->setSingleStep(step);
 }

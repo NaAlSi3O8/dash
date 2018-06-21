@@ -82,7 +82,7 @@ libconftest.dylib*
 *.qm
 Makefile
 allgamescoin-qt
-Allgamescoin-Qt.app
+AllGamesCoin-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -114,7 +114,7 @@ qa/pull-tester/cache/*
 qa/pull-tester/test.*/*
 qa/tmp
 cache/
-share/AllgamescoindComparisonTool.jar
+share/AllGamesCoindComparisonTool.jar
 
 !src/leveldb*/Makefile
 

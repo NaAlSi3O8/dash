@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2015 The Allgamescoin Core developers
+// Copyright (c) 2009-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +52,7 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Allgamescoin Core allgamescoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("AllGamesCoin Core allgamescoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
               "  allgamescoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded allgamescoin transaction") + "\n" +
               "  allgamescoin-tx [options] -create [commands]   " + _("Create hex-encoded allgamescoin transaction") + "\n" +
@@ -230,7 +230,7 @@ static void MutateTxAddOutAddr(CMutableTransaction& tx, const string& strInput)
 
     // extract and validate ADDRESS
     string strAddr = strInput.substr(pos + 1, string::npos);
-    CAllgamescoinAddress addr(strAddr);
+    CAllGamesCoinAddress addr(strAddr);
     if (!addr.IsValid())
         throw runtime_error("invalid TX output address");
 
@@ -391,7 +391,7 @@ static void MutateTxSign(CMutableTransaction& tx, const string& flagStr)
     for (unsigned int kidx = 0; kidx < keysObj.size(); kidx++) {
         if (!keysObj[kidx].isStr())
             throw runtime_error("privatekey not a string");
-        CAllgamescoinSecret vchSecret;
+        CAllGamesCoinSecret vchSecret;
         bool fGood = vchSecret.SetString(keysObj[kidx].getValStr());
         if (!fGood)
             throw runtime_error("privatekey not valid");

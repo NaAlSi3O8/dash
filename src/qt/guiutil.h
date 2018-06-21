@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -30,7 +30,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Allgamescoin Qt UI.
+/** Utility functions used by the AllGamesCoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -46,9 +46,9 @@ namespace GUIUtil
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
     // Parse "allgamescoin:" URI into recipient object, return true on successful parsing
-    bool parseAllgamescoinURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseAllgamescoinURI(QString uri, SendCoinsRecipient *out);
-    QString formatAllgamescoinURI(const SendCoinsRecipient &info);
+    bool parseAllGamesCoinURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseAllGamesCoinURI(QString uri, SendCoinsRecipient *out);
+    QString formatAllGamesCoinURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(const QString& address, const CAmount& amount);

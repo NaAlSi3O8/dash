@@ -853,7 +853,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="AllgamescoinAmountField" name="customFee"/>
+                  <widget class="AllGamesCoinAmountField" name="customFee"/>
                  </item>
                  <item>
                   <spacer name="horizontalSpacer_6">
@@ -1357,7 +1357,7 @@
    <header>qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>AllgamescoinAmountField</class>
+   <class>AllGamesCoinAmountField</class>
    <extends>QLineEdit</extends>
    <header>allgamescoinamountfield.h</header>
    <container>1</container>

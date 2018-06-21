@@ -1,11 +1,11 @@
 #!/usr/bin/env python2
-# Copyright (c) 2015 The Allgamescoin Core developers
+# Copyright (c) 2015 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 import socket
 
 from test_framework.socks5 import Socks5Configuration, Socks5Command, Socks5Server, AddressType
-from test_framework.test_framework import AllgamescoinTestFramework
+from test_framework.test_framework import AllGamesCoinTestFramework
 from test_framework.util import *
 from test_framework.netutil import test_ipv6_local
 '''
@@ -33,7 +33,7 @@ addnode connect to generic DNS name
 '''
 
 
-class ProxyTest(AllgamescoinTestFramework):
+class ProxyTest(AllGamesCoinTestFramework):
     def __init__(self):
         self.have_ipv6 = test_ipv6_local()
         # Create two proxies on different ports

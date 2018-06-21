@@ -16,9 +16,9 @@ enum GovernanceObjectType {
     ValueOverride = 1, 
 
     // -------------------------------
-    // AllgamescoinNetwork - is the root node
-    AllgamescoinNetwork = 1000,
-    AllgamescoinNetworkVariable = 1001,
+    // AllGamesCoinNetwork - is the root node
+    AllGamesCoinNetwork = 1000,
+    AllGamesCoinNetworkVariable = 1001,
     Category = 1002,
 
     // Actors

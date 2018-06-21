@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,7 +36,7 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// AllgamescoinMiner
+// AllGamesCoinMiner
 //
 
 //
@@ -343,7 +343,7 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
 // Internal miner
 //
 
-// ***TODO*** ScanHash is not yet used in Allgamescoin
+// ***TODO*** ScanHash is not yet used in AllGamesCoin
 //
 // ScanHash scans nonces looking for a hash with at least some zero bits.
 // The nonce is usually preserved between calls, but periodically or if the
@@ -400,9 +400,9 @@ static bool ProcessBlockFound(const CBlock* pblock, const CChainParams& chainpar
 }
 
 // ***TODO*** that part changed in allgamescoin, we are using a mix with old one here for now
-void static AllgamescoinMiner(const CChainParams& chainparams, CConnman& connman)
+void static AllGamesCoinMiner(const CChainParams& chainparams, CConnman& connman)
 {
-    LogPrintf("AllgamescoinMiner -- started\n");
+    LogPrintf("AllGamesCoinMiner -- started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("allgamescoin-miner");
 
@@ -441,13 +441,13 @@ void static AllgamescoinMiner(const CChainParams& chainparams, CConnman& connman
             std::unique_ptr<CBlockTemplate> pblocktemplate(CreateNewBlock(chainparams, coinbaseScript->reserveScript));
             if (!pblocktemplate.get())
             {
-                LogPrintf("AllgamescoinMiner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
+                LogPrintf("AllGamesCoinMiner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
                 return;
             }
             CBlock *pblock = &pblocktemplate->block;
             IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-            LogPrintf("AllgamescoinMiner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+            LogPrintf("AllGamesCoinMiner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
                 ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
             //
@@ -467,7 +467,7 @@ void static AllgamescoinMiner(const CChainParams& chainparams, CConnman& connman
                     {
                         // Found a solution
                         SetThreadPriority(THREAD_PRIORITY_NORMAL);
-                        LogPrintf("AllgamescoinMiner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
+                        LogPrintf("AllGamesCoinMiner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
                         ProcessBlockFound(pblock, chainparams);
                         SetThreadPriority(THREAD_PRIORITY_LOWEST);
                         coinbaseScript->KeepScript();
@@ -511,17 +511,17 @@ void static AllgamescoinMiner(const CChainParams& chainparams, CConnman& connman
     }
     catch (const boost::thread_interrupted&)
     {
-        LogPrintf("AllgamescoinMiner -- terminated\n");
+        LogPrintf("AllGamesCoinMiner -- terminated\n");
         throw;
     }
     catch (const std::runtime_error &e)
     {
-        LogPrintf("AllgamescoinMiner -- runtime error: %s\n", e.what());
+        LogPrintf("AllGamesCoinMiner -- runtime error: %s\n", e.what());
         return;
     }
 }
 
-void GenerateAllgamescoins(bool fGenerate, int nThreads, const CChainParams& chainparams, CConnman& connman)
+void GenerateAllGamesCoins(bool fGenerate, int nThreads, const CChainParams& chainparams, CConnman& connman)
 {
     static boost::thread_group* minerThreads = NULL;
 
@@ -540,5 +540,5 @@ void GenerateAllgamescoins(bool fGenerate, int nThreads, const CChainParams& cha
 
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++)
-        minerThreads->create_thread(boost::bind(&AllgamescoinMiner, boost::cref(chainparams), boost::ref(connman)));
+        minerThreads->create_thread(boost::bind(&AllGamesCoinMiner, boost::cref(chainparams), boost::ref(connman)));
 }

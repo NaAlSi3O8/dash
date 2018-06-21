@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,15 +10,15 @@
 #include <QSettings>
 #include <QStringList>
 
-AllgamescoinUnits::AllgamescoinUnits(QObject *parent):
+AllGamesCoinUnits::AllGamesCoinUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<AllgamescoinUnits::Unit> AllgamescoinUnits::availableUnits()
+QList<AllGamesCoinUnits::Unit> AllGamesCoinUnits::availableUnits()
 {
-    QList<AllgamescoinUnits::Unit> unitlist;
+    QList<AllGamesCoinUnits::Unit> unitlist;
     unitlist.append(ALLGAMESCOIN);
     unitlist.append(mALLGAMESCOIN);
     unitlist.append(uALLGAMESCOIN);
@@ -26,7 +26,7 @@ QList<AllgamescoinUnits::Unit> AllgamescoinUnits::availableUnits()
     return unitlist;
 }
 
-bool AllgamescoinUnits::valid(int unit)
+bool AllGamesCoinUnits::valid(int unit)
 {
     switch(unit)
     {
@@ -40,7 +40,7 @@ bool AllgamescoinUnits::valid(int unit)
     }
 }
 
-QString AllgamescoinUnits::name(int unit)
+QString AllGamesCoinUnits::name(int unit)
 {
     if(Params().NetworkIDString() == CBaseChainParams::MAIN)
     {
@@ -66,16 +66,16 @@ QString AllgamescoinUnits::name(int unit)
     }
 }
 
-QString AllgamescoinUnits::description(int unit)
+QString AllGamesCoinUnits::description(int unit)
 {
     if(Params().NetworkIDString() == CBaseChainParams::MAIN)
     {
         switch(unit)
         {
-            case ALLGAMESCOIN: return QString("Allgamescoin");
-            case mALLGAMESCOIN: return QString("Milli-Allgamescoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uALLGAMESCOIN: return QString("Micro-Allgamescoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-Allgamescoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case ALLGAMESCOIN: return QString("AllGamesCoin");
+            case mALLGAMESCOIN: return QString("Milli-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uALLGAMESCOIN: return QString("Micro-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-AllGamesCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -83,16 +83,16 @@ QString AllgamescoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case ALLGAMESCOIN: return QString("TestAllgamescoins");
-            case mALLGAMESCOIN: return QString("Milli-TestAllgamescoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uALLGAMESCOIN: return QString("Micro-TestAllgamescoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestAllgamescoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case ALLGAMESCOIN: return QString("TestAllGamesCoins");
+            case mALLGAMESCOIN: return QString("Milli-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uALLGAMESCOIN: return QString("Micro-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-TestAllGamesCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
 }
 
-qint64 AllgamescoinUnits::factor(int unit)
+qint64 AllGamesCoinUnits::factor(int unit)
 {
     switch(unit)
     {
@@ -104,7 +104,7 @@ qint64 AllgamescoinUnits::factor(int unit)
     }
 }
 
-int AllgamescoinUnits::decimals(int unit)
+int AllGamesCoinUnits::decimals(int unit)
 {
     switch(unit)
     {
@@ -116,7 +116,7 @@ int AllgamescoinUnits::decimals(int unit)
     }
 }
 
-QString AllgamescoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
+QString AllGamesCoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -159,19 +159,19 @@ QString AllgamescoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Sepa
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString AllgamescoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString AllGamesCoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + name(unit);
 }
 
-QString AllgamescoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString AllGamesCoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-QString AllgamescoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString AllGamesCoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QSettings settings;
     int digits = settings.value("digits").toInt();
@@ -182,14 +182,14 @@ QString AllgamescoinUnits::floorWithUnit(int unit, const CAmount& amount, bool p
     return result + QString(" ") + name(unit);
 }
 
-QString AllgamescoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString AllGamesCoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(floorWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-bool AllgamescoinUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool AllGamesCoinUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -228,23 +228,23 @@ bool AllgamescoinUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-QString AllgamescoinUnits::getAmountColumnTitle(int unit)
+QString AllGamesCoinUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (AllgamescoinUnits::valid(unit))
+    if (AllGamesCoinUnits::valid(unit))
     {
-        amountTitle += " ("+AllgamescoinUnits::name(unit) + ")";
+        amountTitle += " ("+AllGamesCoinUnits::name(unit) + ")";
     }
     return amountTitle;
 }
 
-int AllgamescoinUnits::rowCount(const QModelIndex &parent) const
+int AllGamesCoinUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant AllgamescoinUnits::data(const QModelIndex &index, int role) const
+QVariant AllGamesCoinUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -264,7 +264,7 @@ QVariant AllgamescoinUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount AllgamescoinUnits::maxMoney()
+CAmount AllGamesCoinUnits::maxMoney()
 {
     return MAX_MONEY;
 }

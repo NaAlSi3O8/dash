@@ -68,9 +68,9 @@ can then be controlled by group membership.
 3b) Mac OS X
 
 Binary:              `/usr/local/bin/allgamescoind`  
-Configuration file:  `~/Library/Application Support/AllgamescoinCore/allgamescoin.conf`  
-Data directory:      `~/Library/Application Support/AllgamescoinCore`
-Lock file:           `~/Library/Application Support/AllgamescoinCore/.lock`
+Configuration file:  `~/Library/Application Support/AllGamesCoinCore/allgamescoin.conf`  
+Data directory:      `~/Library/Application Support/AllGamesCoinCore`
+Lock file:           `~/Library/Application Support/AllGamesCoinCore/.lock`
 
 4. Installing Service Configuration
 -----------------------------------

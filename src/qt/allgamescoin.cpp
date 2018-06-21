@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -167,14 +167,14 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating Allgamescoin Core startup and shutdown.
+/** Class encapsulating AllGamesCoin Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class AllgamescoinCore: public QObject
+class AllGamesCoinCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit AllgamescoinCore();
+    explicit AllGamesCoinCore();
 
 public Q_SLOTS:
     void initialize();
@@ -197,13 +197,13 @@ private:
     void handleRunawayException(const std::exception *e);
 };
 
-/** Main Allgamescoin application object */
-class AllgamescoinApplication: public QApplication
+/** Main AllGamesCoin application object */
+class AllGamesCoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit AllgamescoinApplication(int &argc, char **argv);
-    ~AllgamescoinApplication();
+    explicit AllGamesCoinApplication(int &argc, char **argv);
+    ~AllGamesCoinApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -226,7 +226,7 @@ public:
     /// Get process return value
     int getReturnValue() { return returnValue; }
 
-    /// Get window identifier of QMainWindow (AllgamescoinGUI)
+    /// Get window identifier of QMainWindow (AllGamesCoinGUI)
     WId getMainWinId() const;
 
 public Q_SLOTS:
@@ -246,7 +246,7 @@ private:
     QThread *coreThread;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    AllgamescoinGUI *window;
+    AllGamesCoinGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer;
@@ -261,18 +261,18 @@ private:
 
 #include "allgamescoin.moc"
 
-AllgamescoinCore::AllgamescoinCore():
+AllGamesCoinCore::AllGamesCoinCore():
     QObject()
 {
 }
 
-void AllgamescoinCore::handleRunawayException(const std::exception *e)
+void AllGamesCoinCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(strMiscWarning));
 }
 
-void AllgamescoinCore::initialize()
+void AllGamesCoinCore::initialize()
 {
     execute_restart = true;
 
@@ -288,7 +288,7 @@ void AllgamescoinCore::initialize()
     }
 }
 
-void AllgamescoinCore::restart(QStringList args)
+void AllGamesCoinCore::restart(QStringList args)
 {
     if(execute_restart) { // Only restart 1x, no matter how often a user clicks on a restart-button
         execute_restart = false;
@@ -312,7 +312,7 @@ void AllgamescoinCore::restart(QStringList args)
     }
 }
 
-void AllgamescoinCore::shutdown()
+void AllGamesCoinCore::shutdown()
 {
     try
     {
@@ -329,7 +329,7 @@ void AllgamescoinCore::shutdown()
     }
 }
 
-AllgamescoinApplication::AllgamescoinApplication(int &argc, char **argv):
+AllGamesCoinApplication::AllGamesCoinApplication(int &argc, char **argv):
     QApplication(argc, argv),
     coreThread(0),
     optionsModel(0),
@@ -345,17 +345,17 @@ AllgamescoinApplication::AllgamescoinApplication(int &argc, char **argv):
     setQuitOnLastWindowClosed(false);
 
     // UI per-platform customization
-    // This must be done inside the AllgamescoinApplication constructor, or after it, because
+    // This must be done inside the AllGamesCoinApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
-    platformName = GetArg("-uiplatform", AllgamescoinGUI::DEFAULT_UIPLATFORM);
+    platformName = GetArg("-uiplatform", AllGamesCoinGUI::DEFAULT_UIPLATFORM);
     platformStyle = PlatformStyle::instantiate(QString::fromStdString(platformName));
     if (!platformStyle) // Fall back to "other" if specified name not found
         platformStyle = PlatformStyle::instantiate("other");
     assert(platformStyle);
 }
 
-AllgamescoinApplication::~AllgamescoinApplication()
+AllGamesCoinApplication::~AllGamesCoinApplication()
 {
     if(coreThread)
     {
@@ -384,27 +384,27 @@ AllgamescoinApplication::~AllgamescoinApplication()
 }
 
 #ifdef ENABLE_WALLET
-void AllgamescoinApplication::createPaymentServer()
+void AllGamesCoinApplication::createPaymentServer()
 {
     paymentServer = new PaymentServer(this);
 }
 #endif
 
-void AllgamescoinApplication::createOptionsModel(bool resetSettings)
+void AllGamesCoinApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(NULL, resetSettings);
 }
 
-void AllgamescoinApplication::createWindow(const NetworkStyle *networkStyle)
+void AllGamesCoinApplication::createWindow(const NetworkStyle *networkStyle)
 {
-    window = new AllgamescoinGUI(platformStyle, networkStyle, 0);
+    window = new AllGamesCoinGUI(platformStyle, networkStyle, 0);
 
     pollShutdownTimer = new QTimer(window);
     connect(pollShutdownTimer, SIGNAL(timeout()), window, SLOT(detectShutdown()));
     pollShutdownTimer->start(200);
 }
 
-void AllgamescoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void AllGamesCoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
     SplashScreen *splash = new SplashScreen(0, networkStyle);
     // We don't hold a direct pointer to the splash screen after creation, but the splash
@@ -414,12 +414,12 @@ void AllgamescoinApplication::createSplashScreen(const NetworkStyle *networkStyl
     connect(this, SIGNAL(requestedShutdown()), splash, SLOT(close()));
 }
 
-void AllgamescoinApplication::startThread()
+void AllGamesCoinApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    AllgamescoinCore *executor = new AllgamescoinCore();
+    AllGamesCoinCore *executor = new AllGamesCoinCore();
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
@@ -436,20 +436,20 @@ void AllgamescoinApplication::startThread()
     coreThread->start();
 }
 
-void AllgamescoinApplication::parameterSetup()
+void AllGamesCoinApplication::parameterSetup()
 {
     InitLogging();
     InitParameterInteraction();
 }
 
-void AllgamescoinApplication::requestInitialize()
+void AllGamesCoinApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void AllgamescoinApplication::requestShutdown()
+void AllGamesCoinApplication::requestShutdown()
 {
     // Show a simple window indicating shutdown status
     // Do this first as some of the steps may take some time below,
@@ -474,7 +474,7 @@ void AllgamescoinApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void AllgamescoinApplication::initializeResult(int retval)
+void AllGamesCoinApplication::initializeResult(int retval)
 {
     qDebug() << __func__ << ": Initialization result: " << retval;
     // Set exit result: 0 if successful, 1 if failure
@@ -496,8 +496,8 @@ void AllgamescoinApplication::initializeResult(int retval)
         {
             walletModel = new WalletModel(platformStyle, pwalletMain, optionsModel);
 
-            window->addWallet(AllgamescoinGUI::DEFAULT_WALLET, walletModel);
-            window->setCurrentWallet(AllgamescoinGUI::DEFAULT_WALLET);
+            window->addWallet(AllGamesCoinGUI::DEFAULT_WALLET, walletModel);
+            window->setCurrentWallet(AllGamesCoinGUI::DEFAULT_WALLET);
 
             connect(walletModel, SIGNAL(coinsSent(CWallet*,SendCoinsRecipient,QByteArray)),
                              paymentServer, SLOT(fetchPaymentACK(CWallet*,const SendCoinsRecipient&,QByteArray)));
@@ -531,19 +531,19 @@ void AllgamescoinApplication::initializeResult(int retval)
     }
 }
 
-void AllgamescoinApplication::shutdownResult(int retval)
+void AllGamesCoinApplication::shutdownResult(int retval)
 {
     qDebug() << __func__ << ": Shutdown result: " << retval;
     quit(); // Exit main loop after shutdown finished
 }
 
-void AllgamescoinApplication::handleRunawayException(const QString &message)
+void AllGamesCoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", AllgamescoinGUI::tr("A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", AllGamesCoinGUI::tr("A fatal error occurred. AllGamesCoin Core can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
-WId AllgamescoinApplication::getMainWinId() const
+WId AllGamesCoinApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -572,7 +572,7 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(allgamescoin);
     Q_INIT_RESOURCE(allgamescoin_locale);
 
-    AllgamescoinApplication app(argc, argv);
+    AllGamesCoinApplication app(argc, argv);
 #if QT_VERSION > 0x050100
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
@@ -626,14 +626,14 @@ int main(int argc, char *argv[])
     /// - Do not call GetDataDir(true) before this step finishes
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
-        QMessageBox::critical(0, QObject::tr("Allgamescoin Core"),
+        QMessageBox::critical(0, QObject::tr("AllGamesCoin Core"),
                               QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return EXIT_FAILURE;
     }
     try {
         ReadConfigFile(mapArgs, mapMultiArgs);
     } catch (const std::exception& e) {
-        QMessageBox::critical(0, QObject::tr("Allgamescoin Core"),
+        QMessageBox::critical(0, QObject::tr("AllGamesCoin Core"),
                               QObject::tr("Error: Cannot parse configuration file: %1. Only use key=value syntax.").arg(e.what()));
         return EXIT_FAILURE;
     }
@@ -648,7 +648,7 @@ int main(int argc, char *argv[])
     try {
         SelectParams(ChainNameFromCommandLine());
     } catch(std::exception &e) {
-        QMessageBox::critical(0, QObject::tr("Allgamescoin Core"), QObject::tr("Error: %1").arg(e.what()));
+        QMessageBox::critical(0, QObject::tr("AllGamesCoin Core"), QObject::tr("Error: %1").arg(e.what()));
         return EXIT_FAILURE;
     }
 #ifdef ENABLE_WALLET
@@ -667,7 +667,7 @@ int main(int argc, char *argv[])
     /// 7a. parse masternode.conf
     std::string strErr;
     if(!masternodeConfig.read(strErr)) {
-        QMessageBox::critical(0, QObject::tr("Allgamescoin Core"),
+        QMessageBox::critical(0, QObject::tr("AllGamesCoin Core"),
                               QObject::tr("Error reading masternode configuration file: %1").arg(strErr.c_str()));
         return EXIT_FAILURE;
     }
@@ -716,7 +716,7 @@ int main(int argc, char *argv[])
         app.createWindow(networkStyle.data());
         app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000
-        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("Allgamescoin Core didn't yet exit safely..."), (HWND)app.getMainWinId());
+        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("AllGamesCoin Core didn't yet exit safely..."), (HWND)app.getMainWinId());
 #endif
         app.exec();
         app.requestShutdown();

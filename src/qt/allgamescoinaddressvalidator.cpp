@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2014 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2011-2014 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,12 +16,12 @@
   - All lower-case letters except for 'l'
 */
 
-AllgamescoinAddressEntryValidator::AllgamescoinAddressEntryValidator(QObject *parent) :
+AllGamesCoinAddressEntryValidator::AllGamesCoinAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State AllgamescoinAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State AllGamesCoinAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -81,16 +81,16 @@ QValidator::State AllgamescoinAddressEntryValidator::validate(QString &input, in
     return state;
 }
 
-AllgamescoinAddressCheckValidator::AllgamescoinAddressCheckValidator(QObject *parent) :
+AllGamesCoinAddressCheckValidator::AllGamesCoinAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State AllgamescoinAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State AllGamesCoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed Allgamescoin address
-    CAllgamescoinAddress addr(input.toStdString());
+    // Validate the passed AllGamesCoin address
+    CAllGamesCoinAddress addr(input.toStdString());
     if (addr.IsValid())
         return QValidator::Acceptable;
 

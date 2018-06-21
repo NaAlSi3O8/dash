@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -63,9 +63,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                 sub.involvesWatchAddress = mine & ISMINE_WATCH_ONLY;
                 if (ExtractDestination(txout.scriptPubKey, address) && IsMine(*wallet, address))
                 {
-                    // Received by Allgamescoin Address
+                    // Received by AllGamesCoin Address
                     sub.type = TransactionRecord::RecvWithAddress;
-                    sub.address = CAllgamescoinAddress(address).ToString();
+                    sub.address = CAllGamesCoinAddress(address).ToString();
                 }
                 else
                 {
@@ -134,8 +134,8 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                 CTxDestination address;
                 if (ExtractDestination(wtx.vout[0].scriptPubKey, address))
                 {
-                    // Sent to Allgamescoin Address
-                    sub.address = CAllgamescoinAddress(address).ToString();
+                    // Sent to AllGamesCoin Address
+                    sub.address = CAllGamesCoinAddress(address).ToString();
                 }
                 else
                 {
@@ -187,9 +187,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                 CTxDestination address;
                 if (ExtractDestination(txout.scriptPubKey, address))
                 {
-                    // Sent to Allgamescoin Address
+                    // Sent to AllGamesCoin Address
                     sub.type = TransactionRecord::SendToAddress;
-                    sub.address = CAllgamescoinAddress(address).ToString();
+                    sub.address = CAllGamesCoinAddress(address).ToString();
                 }
                 else
                 {

@@ -1,4 +1,4 @@
-Allgamescoin Core version 0.12.2.3
+AllGamesCoin Core version 0.12.2.3
 ==========================
 
 Release is now available from:
@@ -10,7 +10,7 @@ improvements.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/allgamescoindev/allgamescoin/issues>
+  <https://github.com/allgamescoinpay/allgamescoin/issues>
 
 
 Upgrading and downgrading
@@ -21,7 +21,7 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Allgamescoin-Qt (on Mac) or
+installer (on Windows) or just copy over /Applications/AllGamesCoin-Qt (on Mac) or
 allgamescoind/allgamescoin-qt (on Linux).
 
 Downgrade warning
@@ -76,25 +76,25 @@ This release also fixes a few crashes and compatibility issues.
 0.12.2.3 Change log
 ===================
 
-See detailed [change log](https://github.com/allgamescoindev/allgamescoin/compare/v0.12.2.2...allgamescoindev:v0.12.2.3) below.
+See detailed [change log](https://github.com/allgamescoinpay/allgamescoin/compare/v0.12.2.2...allgamescoinpay:v0.12.2.3) below.
 
 ### Backports:
-- [`068b20bc7`](https://github.com/allgamescoindev/allgamescoin/commit/068b20bc7) Merge #8256: BUG: allgamescoin-qt crash
-- [`f71ab1daf`](https://github.com/allgamescoindev/allgamescoin/commit/f71ab1daf) Merge #11847: Fixes compatibility with boost 1.66 (#1836)
+- [`068b20bc7`](https://github.com/allgamescoinpay/allgamescoin/commit/068b20bc7) Merge #8256: BUG: allgamescoin-qt crash
+- [`f71ab1daf`](https://github.com/allgamescoinpay/allgamescoin/commit/f71ab1daf) Merge #11847: Fixes compatibility with boost 1.66 (#1836)
 
 ### PrivateSend:
-- [`fa5fc418a`](https://github.com/allgamescoindev/allgamescoin/commit/fa5fc418a) Fix -liquidityprovider option (#1829)
-- [`d261575b4`](https://github.com/allgamescoindev/allgamescoin/commit/d261575b4) Skip existing masternode conections on mixing (#1833)
-- [`21a10057d`](https://github.com/allgamescoindev/allgamescoin/commit/21a10057d) Protect CKeyHolderStorage via mutex (#1834)
-- [`476888683`](https://github.com/allgamescoindev/allgamescoin/commit/476888683) Avoid reference leakage in CKeyHolderStorage::AddKey (#1840)
+- [`fa5fc418a`](https://github.com/allgamescoinpay/allgamescoin/commit/fa5fc418a) Fix -liquidityprovider option (#1829)
+- [`d261575b4`](https://github.com/allgamescoinpay/allgamescoin/commit/d261575b4) Skip existing masternode conections on mixing (#1833)
+- [`21a10057d`](https://github.com/allgamescoinpay/allgamescoin/commit/21a10057d) Protect CKeyHolderStorage via mutex (#1834)
+- [`476888683`](https://github.com/allgamescoinpay/allgamescoin/commit/476888683) Avoid reference leakage in CKeyHolderStorage::AddKey (#1840)
 
 ### InstantSend:
-- [`d6e2aa843`](https://github.com/allgamescoindev/allgamescoin/commit/d6e2aa843) Swap iterations and fUseInstantSend parameters in ApproximateBestSubset (#1819)
-- [`c9bafe154`](https://github.com/allgamescoindev/allgamescoin/commit/c9bafe154) Vote on IS only if it was accepted to mempool (#1826)
+- [`d6e2aa843`](https://github.com/allgamescoinpay/allgamescoin/commit/d6e2aa843) Swap iterations and fUseInstantSend parameters in ApproximateBestSubset (#1819)
+- [`c9bafe154`](https://github.com/allgamescoinpay/allgamescoin/commit/c9bafe154) Vote on IS only if it was accepted to mempool (#1826)
 
 ### Other:
-- [`ada41c3af`](https://github.com/allgamescoindev/allgamescoin/commit/ada41c3af) Fix crash on exit when -createwalletbackups=0 (#1810)
-- [`63e0e30e3`](https://github.com/allgamescoindev/allgamescoin/commit/63e0e30e3) bump version to 0.12.2.3 (#1827)
+- [`ada41c3af`](https://github.com/allgamescoinpay/allgamescoin/commit/ada41c3af) Fix crash on exit when -createwalletbackups=0 (#1810)
+- [`63e0e30e3`](https://github.com/allgamescoinpay/allgamescoin/commit/63e0e30e3) bump version to 0.12.2.3 (#1827)
 
 Credits
 =======
@@ -105,7 +105,7 @@ Thanks to everyone who directly contributed to this release:
 - lodgepole
 - UdjinM6
 
-As well as Allgamescoin Core Developers and everyone that submitted issues,
+As well as AllGamesCoin Core Developers and everyone that submitted issues,
 reviewed pull requests or helped translating on
 [Transifex](https://www.transifex.com/projects/p/allgamescoin/).
 
@@ -113,7 +113,7 @@ reviewed pull requests or helped translating on
 Older releases
 ==============
 
-Allgamescoin was previously known as Darkcoin.
+AllGamesCoin was previously known as Darkcoin.
 
 Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
@@ -124,12 +124,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Allgamescoin Core tree 0.11.x was a fork of Allgamescoin Core tree 0.9,
-Darkcoin was rebranded to Allgamescoin.
+AllGamesCoin Core tree 0.11.x was a fork of AllGamesCoin Core tree 0.9,
+Darkcoin was rebranded to AllGamesCoin.
 
-Allgamescoin Core tree 0.12.0.x was a fork of Allgamescoin Core tree 0.10.
+AllGamesCoin Core tree 0.12.0.x was a fork of AllGamesCoin Core tree 0.10.
 
-Allgamescoin Core tree 0.12.1.x was a fork of Allgamescoin Core tree 0.12.
+AllGamesCoin Core tree 0.12.1.x was a fork of AllGamesCoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 

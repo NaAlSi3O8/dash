@@ -17,7 +17,7 @@ packages:
 - "binutils-gold"
 reference_datetime: "2017-01-01 00:00:00"
 remotes:
-- "url": "https://github.com/allgamescoindev/allgamescoin.git"
+- "url": "https://github.com/allgamescoinpay/allgamescoin.git"
   "dir": "allgamescoin"
 files:
 - "raspberrypi-tools.tar.gz"

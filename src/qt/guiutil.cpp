@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -117,10 +117,10 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Allgamescoin address (e.g. %1)").arg("XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"));
+    widget->setPlaceholderText(QObject::tr("Enter a AllGamesCoin address (e.g. %1)").arg("XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"));
 #endif
-    widget->setValidator(new AllgamescoinAddressEntryValidator(parent));
-    widget->setCheckValidator(new AllgamescoinAddressCheckValidator(parent));
+    widget->setValidator(new AllGamesCoinAddressEntryValidator(parent));
+    widget->setCheckValidator(new AllGamesCoinAddressCheckValidator(parent));
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -132,7 +132,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseAllgamescoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseAllGamesCoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no allgamescoin: URI
     if(!uri.isValid() || uri.scheme() != QString("allgamescoin"))
@@ -184,7 +184,7 @@ bool parseAllgamescoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!AllgamescoinUnits::parse(AllgamescoinUnits::ALLGAMESCOIN, i->second, &rv.amount))
+                if(!AllGamesCoinUnits::parse(AllGamesCoinUnits::ALLGAMESCOIN, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -202,7 +202,7 @@ bool parseAllgamescoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseAllgamescoinURI(QString uri, SendCoinsRecipient *out)
+bool parseAllGamesCoinURI(QString uri, SendCoinsRecipient *out)
 {
     // Convert allgamescoin:// to allgamescoin:
     //
@@ -213,17 +213,17 @@ bool parseAllgamescoinURI(QString uri, SendCoinsRecipient *out)
         uri.replace(0, 7, "allgamescoin:");
     }
     QUrl uriInstance(uri);
-    return parseAllgamescoinURI(uriInstance, out);
+    return parseAllGamesCoinURI(uriInstance, out);
 }
 
-QString formatAllgamescoinURI(const SendCoinsRecipient &info)
+QString formatAllGamesCoinURI(const SendCoinsRecipient &info)
 {
     QString ret = QString("allgamescoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(AllgamescoinUnits::format(AllgamescoinUnits::ALLGAMESCOIN, info.amount, false, AllgamescoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(AllGamesCoinUnits::format(AllGamesCoinUnits::ALLGAMESCOIN, info.amount, false, AllGamesCoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -252,7 +252,7 @@ QString formatAllgamescoinURI(const SendCoinsRecipient &info)
 
 bool isDust(const QString& address, const CAmount& amount)
 {
-    CTxDestination dest = CAllgamescoinAddress(address.toStdString()).Get();
+    CTxDestination dest = CAllGamesCoinAddress(address.toStdString()).Get();
     CScript script = GetScriptForDestination(dest);
     CTxOut txOut(amount, script);
     return txOut.IsDust(::minRelayTxFee);
@@ -634,15 +634,15 @@ boost::filesystem::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Allgamescoin Core.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "AllGamesCoin Core.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Allgamescoin Core (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Allgamescoin Core (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "AllGamesCoin Core (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("AllGamesCoin Core (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for "Allgamescoin Core*.lnk"
+    // check for "AllGamesCoin Core*.lnk"
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -778,9 +778,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Allgamescoin Core\n";
+            optionFile << "Name=AllGamesCoin Core\n";
         else
-            optionFile << strprintf("Name=Allgamescoin Core (%s)\n", chain);
+            optionFile << strprintf("Name=AllGamesCoin Core (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", GetBoolArg("-testnet", false), GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -799,7 +799,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the Allgamescoin Core app
+    // loop through the list of startup items and try to find the AllGamesCoin Core app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -844,7 +844,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, allgamescoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add Allgamescoin Core app to startup item list
+        // add AllGamesCoin Core app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, allgamescoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {

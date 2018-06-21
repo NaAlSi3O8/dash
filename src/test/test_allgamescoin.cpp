@@ -1,8 +1,8 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#define BOOST_TEST_MODULE Allgamescoin Test Suite
+#define BOOST_TEST_MODULE AllGamesCoin Test Suite
 
 #include "test_allgamescoin.h"
 

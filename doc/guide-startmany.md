@@ -53,7 +53,7 @@ Issue the following:
 Make note of the hash (which is your collateral_output) and index.
 
 ### Enter your Masternode details into your masternode.conf file
-[From the allgamescoin github repo](https://github.com/allgamescoindev/allgamescoin/blob/master/doc/masternode_conf.md)
+[From the allgamescoin github repo](https://github.com/allgamescoinpay/allgamescoin/blob/master/doc/masternode_conf.md)
 
 `masternode.conf` format is a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id and collateral output index.
 
@@ -89,7 +89,7 @@ You can confirm that remote server is on the correct block by issuing
 
 ```allgamescoin-cli getinfo```
 
-and comparing with the official explorer at https://explorer.allgamescoin.org/chain/Allgamescoin
+and comparing with the official explorer at https://explorer.allgamescoin.org/chain/AllGamesCoin
 
 ### Local
 

@@ -1,9 +1,9 @@
 Gitian building
 ================
 
-*Setup instructions for a Gitian build of Allgamescoin Core using a Debian VM or physical system.*
+*Setup instructions for a Gitian build of AllGamesCoin Core using a Debian VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the Allgamescoin
+Gitian is the deterministic build process that is used to build the AllGamesCoin
 Core executables. It provides a way to be reasonably sure that the
 executables are really built from the source on GitHub. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.
@@ -26,7 +26,7 @@ Table of Contents
 - [Installing Gitian](#installing-gitian)
 - [Setting up the Gitian image](#setting-up-the-gitian-image)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Allgamescoin Core](#building-allgamescoin-core)
+- [Building AllGamesCoin Core](#building-allgamescoin-core)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -300,11 +300,11 @@ cd ..
 
 **Note**: When sudo asks for a password, enter the password for the user *debian* not for *root*.
 
-Clone the git repositories for Allgamescoin Core and Gitian.
+Clone the git repositories for AllGamesCoin Core and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/allgamescoindev/allgamescoin
+git clone https://github.com/allgamescoinpay/allgamescoin
 ```
 
 Setting up the Gitian image
@@ -339,16 +339,16 @@ Getting and building the inputs
 --------------------------------
 
 Follow the instructions in [doc/release-process.md](release-process.md#fetch-and-build-inputs-first-time-or-when-dependency-versions-change)
-in the Allgamescoin Core repository under 'Fetch and build inputs' to install sources which require
+in the AllGamesCoin Core repository under 'Fetch and build inputs' to install sources which require
 manual intervention. Also optionally follow the next step: 'Seed the Gitian sources cache
 and offline git repositories' which will fetch the remaining files required for building
 offline.
 
-Building Allgamescoin Core
+Building AllGamesCoin Core
 ----------------
 
-To build Allgamescoin Core (for Linux, OS X and Windows) just follow the steps under 'perform
-Gitian builds' in [doc/release-process.md](release-process.md#perform-gitian-builds) in the Allgamescoin Core repository.
+To build AllGamesCoin Core (for Linux, OS X and Windows) just follow the steps under 'perform
+Gitian builds' in [doc/release-process.md](release-process.md#perform-gitian-builds) in the AllGamesCoin Core repository.
 
 This may take some time as it will build all the dependencies needed for each descriptor.
 These dependencies will be cached after a successful build to avoid rebuilding them when possible.
@@ -368,7 +368,7 @@ Output from `gbuild` will look something like
     remote: Total 57959 (delta 0), reused 0 (delta 0), pack-reused 57958
     Receiving objects: 100% (57959/57959), 53.76 MiB | 484.00 KiB/s, done.
     Resolving deltas: 100% (41590/41590), done.
-    From https://github.com/allgamescoindev/allgamescoin
+    From https://github.com/allgamescoinpay/allgamescoin
     ... (new tags, new branch etc)
     --- Building for precise amd64 ---
     Stopping target if it is up
@@ -444,7 +444,7 @@ Then when building, override the remote URLs that gbuild would otherwise pull fr
 ```bash
 
 cd /some/root/path/
-git clone https://github.com/allgamescoindev/allgamescoin-detached-sigs.git
+git clone https://github.com/allgamescoinpay/allgamescoin-detached-sigs.git
 
 AGCPATH=/some/root/path/allgamescoin.git
 SIGPATH=/some/root/path/allgamescoin-detached-sigs.git
@@ -476,6 +476,6 @@ Uploading signatures (not yet implemented)
 ---------------------
 
 In the future it will be possible to push your signatures (both the `.assert` and `.assert.sig` files) to the
-[allgamescoin/gitian.sigs](https://github.com/allgamescoindev/gitian.sigs/) repository, or if that's not possible to create a pull
+[allgamescoin/gitian.sigs](https://github.com/allgamescoinpay/gitian.sigs/) repository, or if that's not possible to create a pull
 request.
 There will be an official announcement when this repository is online.

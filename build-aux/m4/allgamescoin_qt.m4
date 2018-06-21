@@ -235,7 +235,7 @@ AC_DEFUN([ALLGAMESCOIN_QT_CONFIGURE],[
 
 
   dnl enable qt support
-  AC_MSG_CHECKING(whether to build Allgamescoin Core GUI)
+  AC_MSG_CHECKING(whether to build AllGamesCoin Core GUI)
   ALLGAMESCOIN_QT_CHECK([
     allgamescoin_enable_qt=yes
     allgamescoin_enable_qt_test=yes

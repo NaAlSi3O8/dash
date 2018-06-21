@@ -18,14 +18,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Allgamescoin"
-            VALUE "FileDescription",    "Allgamescoin Core (GUI node for Allgamescoin)"
+            VALUE "CompanyName",        "AllGamesCoin"
+            VALUE "FileDescription",    "AllGamesCoin Core (GUI node for AllGamesCoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "allgamescoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "allgamescoin-qt.exe"
-            VALUE "ProductName",        "Allgamescoin Core"
+            VALUE "ProductName",        "AllGamesCoin Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

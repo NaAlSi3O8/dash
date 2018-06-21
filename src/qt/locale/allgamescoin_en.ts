@@ -80,13 +80,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Allgamescoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your Allgamescoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your AllGamesCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your AllGamesCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Allgamescoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your Allgamescoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your AllGamesCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your AllGamesCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -237,8 +237,8 @@
     </message>
     <message>
         <location line="-57"/>
-        <source>Allgamescoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</source>
-        <translation>Allgamescoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</translation>
+        <source>AllGamesCoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</source>
+        <translation>AllGamesCoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -307,17 +307,17 @@
     </message>
 </context>
 <context>
-    <name>AllgamescoinGUI</name>
+    <name>AllGamesCoinGUI</name>
     <message>
         <location filename="../allgamescoin.cpp" line="+542"/>
-        <source>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. Allgamescoin Core can no longer continue safely and will quit.</translation>
+        <source>A fatal error occurred. AllGamesCoin Core can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. AllGamesCoin Core can no longer continue safely and will quit.</translation>
     </message>
     <message>
         <location filename="../allgamescoingui.cpp" line="+130"/>
         <location line="+988"/>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core</translation>
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="-979"/>
@@ -346,8 +346,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Allgamescoin address</source>
-        <translation>Send coins to a Allgamescoin address</translation>
+        <source>Send coins to a AllGamesCoin address</source>
+        <translation>Send coins to a AllGamesCoin address</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -391,13 +391,13 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;About Allgamescoin Core</source>
-        <translation>&amp;About Allgamescoin Core</translation>
+        <source>&amp;About AllGamesCoin Core</source>
+        <translation>&amp;About AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Allgamescoin Core</source>
-        <translation>Show information about Allgamescoin Core</translation>
+        <source>Show information about AllGamesCoin Core</source>
+        <translation>Show information about AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -416,8 +416,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Modify configuration options for Allgamescoin Core</source>
-        <translation>Modify configuration options for Allgamescoin Core</translation>
+        <source>Modify configuration options for AllGamesCoin Core</source>
+        <translation>Modify configuration options for AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -481,8 +481,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Allgamescoin addresses to prove you own them</source>
-        <translation>Sign messages with your Allgamescoin addresses to prove you own them</translation>
+        <source>Sign messages with your AllGamesCoin addresses to prove you own them</source>
+        <translation>Sign messages with your AllGamesCoin addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -491,8 +491,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Allgamescoin addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Allgamescoin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified AllGamesCoin addresses</source>
+        <translation>Verify messages to ensure they were signed with specified AllGamesCoin addresses</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -611,8 +611,8 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>Show the Allgamescoin Core help message to get a list with possible Allgamescoin Core command-line options</source>
-        <translation>Show the Allgamescoin Core help message to get a list with possible Allgamescoin Core command-line options</translation>
+        <source>Show the AllGamesCoin Core help message to get a list with possible AllGamesCoin Core command-line options</source>
+        <translation>Show the AllGamesCoin Core help message to get a list with possible AllGamesCoin Core command-line options</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -651,15 +651,15 @@
     </message>
     <message>
         <location line="+168"/>
-        <source>Allgamescoin Core client</source>
-        <translation>Allgamescoin Core client</translation>
+        <source>AllGamesCoin Core client</source>
+        <translation>AllGamesCoin Core client</translation>
     </message>
     <message numerus="yes">
         <location line="+200"/>
-        <source>%n active connection(s) to Allgamescoin network</source>
+        <source>%n active connection(s) to AllGamesCoin network</source>
         <translation>
-            <numerusform>%n active connection to Allgamescoin network</numerusform>
-            <numerusform>%n active connections to Allgamescoin network</numerusform>
+            <numerusform>%n active connection to AllGamesCoin network</numerusform>
+            <numerusform>%n active connections to AllGamesCoin network</numerusform>
         </translation>
     </message>
     <message>
@@ -1125,18 +1125,18 @@
     </message>
     <message>
         <location line="-29"/>
-        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Allgamescoin&apos;s configuration screen.</source>
-        <translation>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Allgamescoin&apos;s configuration screen.</translation>
+        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening AllGamesCoin&apos;s configuration screen.</source>
+        <translation>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening AllGamesCoin&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Allgamescoin&apos;s configuration screen.</source>
-        <translation>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Allgamescoin&apos;s configuration screen.</translation>
+        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening AllGamesCoin&apos;s configuration screen.</source>
+        <translation>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening AllGamesCoin&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Allgamescoin&apos;s configuration screen.</source>
-        <translation>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Allgamescoin&apos;s configuration screen.</translation>
+        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening AllGamesCoin&apos;s configuration screen.</source>
+        <translation>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening AllGamesCoin&apos;s configuration screen.</translation>
     </message>
 </context>
 <context>
@@ -1188,8 +1188,8 @@
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Allgamescoin address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid Allgamescoin address.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid AllGamesCoin address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid AllGamesCoin address.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1239,8 +1239,8 @@
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+37"/>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core</translation>
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1255,8 +1255,8 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>About Allgamescoin Core</source>
-        <translation>About Allgamescoin Core</translation>
+        <source>About AllGamesCoin Core</source>
+        <translation>About AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1315,8 +1315,8 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Allgamescoin in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 ALLGAMESCOIN, 0.1 ALLGAMESCOIN, 1 ALLGAMESCOIN and 10 ALLGAMESCOIN -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://allgamescoindev.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://allgamescoindev.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
-        <translation>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Allgamescoin in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 ALLGAMESCOIN, 0.1 ALLGAMESCOIN, 1 ALLGAMESCOIN and 10 ALLGAMESCOIN -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://allgamescoindev.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://allgamescoindev.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
+        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the AllGamesCoin in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 ALLGAMESCOIN, 0.1 ALLGAMESCOIN, 1 ALLGAMESCOIN and 10 ALLGAMESCOIN -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://allgamescoinpay.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://allgamescoinpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
+        <translation>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the AllGamesCoin in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 ALLGAMESCOIN, 0.1 ALLGAMESCOIN, 1 ALLGAMESCOIN and 10 ALLGAMESCOIN -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://allgamescoinpay.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://allgamescoinpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
     </message>
 </context>
 <context>
@@ -1328,18 +1328,18 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Allgamescoin Core.</source>
-        <translation>Welcome to Allgamescoin Core.</translation>
+        <source>Welcome to AllGamesCoin Core.</source>
+        <translation>Welcome to AllGamesCoin Core.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Allgamescoin Core will store its data.</source>
-        <translation>As this is the first time the program is launched, you can choose where Allgamescoin Core will store its data.</translation>
+        <source>As this is the first time the program is launched, you can choose where AllGamesCoin Core will store its data.</source>
+        <translation>As this is the first time the program is launched, you can choose where AllGamesCoin Core will store its data.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Allgamescoin Core will download and store a copy of the Allgamescoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Allgamescoin Core will download and store a copy of the Allgamescoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
+        <source>AllGamesCoin Core will download and store a copy of the AllGamesCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>AllGamesCoin Core will download and store a copy of the AllGamesCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1353,8 +1353,8 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+88"/>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core</translation>
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1541,13 +1541,13 @@
     </message>
     <message>
         <location line="+117"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Allgamescoin network, as detailed below.</source>
-        <translation>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Allgamescoin network, as detailed below.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the AllGamesCoin network, as detailed below.</source>
+        <translation>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the AllGamesCoin network, as detailed below.</translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend Allgamescoin that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Attempting to spend Allgamescoin that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+        <source>Attempting to spend AllGamesCoin that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Attempting to spend AllGamesCoin that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
     </message>
     <message>
         <location line="+63"/>
@@ -1665,8 +1665,8 @@
     </message>
     <message>
         <location line="+155"/>
-        <source>Amount of Allgamescoin to keep anonymized</source>
-        <translation>Amount of Allgamescoin to keep anonymized</translation>
+        <source>Amount of AllGamesCoin to keep anonymized</source>
+        <translation>Amount of AllGamesCoin to keep anonymized</translation>
     </message>
     <message>
         <location line="-119"/>
@@ -1675,13 +1675,13 @@
     </message>
     <message>
         <location line="-104"/>
-        <source>Automatically start Allgamescoin Core after logging in to the system.</source>
-        <translation>Automatically start Allgamescoin Core after logging in to the system.</translation>
+        <source>Automatically start AllGamesCoin Core after logging in to the system.</source>
+        <translation>Automatically start AllGamesCoin Core after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Allgamescoin Core on system login</source>
-        <translation>&amp;Start Allgamescoin Core on system login</translation>
+        <source>&amp;Start AllGamesCoin Core on system login</source>
+        <translation>&amp;Start AllGamesCoin Core on system login</translation>
     </message>
     <message>
         <location line="+123"/>
@@ -1740,8 +1740,8 @@
     </message>
     <message>
         <location line="+60"/>
-        <source>Automatically open the Allgamescoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Allgamescoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the AllGamesCoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the AllGamesCoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1755,8 +1755,8 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Allgamescoin network through a SOCKS5 proxy.</source>
-        <translation>Connect to the Allgamescoin network through a SOCKS5 proxy.</translation>
+        <source>Connect to the AllGamesCoin network through a SOCKS5 proxy.</source>
+        <translation>Connect to the AllGamesCoin network through a SOCKS5 proxy.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1770,8 +1770,8 @@
     </message>
     <message>
         <location line="+45"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Allgamescoin Core.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting Allgamescoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting AllGamesCoin Core.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting AllGamesCoin Core.</translation>
     </message>
     <message>
         <location line="+99"/>
@@ -1867,8 +1867,8 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the Allgamescoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connect to the Allgamescoin network through a separate SOCKS5 proxy for Tor hidden services.</translation>
+        <source>Connect to the AllGamesCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connect to the AllGamesCoin network through a separate SOCKS5 proxy for Tor hidden services.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2020,8 +2020,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <location line="+53"/>
         <location line="+355"/>
         <location line="+258"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Allgamescoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Allgamescoin network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AllGamesCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the AllGamesCoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-364"/>
@@ -2410,8 +2410,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Allgamescoin address or malformed URI parameters.</source>
-        <translation>URI cannot be parsed! This can be caused by an invalid Allgamescoin address or malformed URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid AllGamesCoin address or malformed URI parameters.</source>
+        <translation>URI cannot be parsed! This can be caused by an invalid AllGamesCoin address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -2530,8 +2530,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <location line="+7"/>
         <location line="+15"/>
         <location line="+19"/>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core</translation>
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="-40"/>
@@ -2555,8 +2555,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+48"/>
-        <source>Allgamescoin Core didn&apos;t yet exit safely...</source>
-        <translation>Allgamescoin Core didn&apos;t yet exit safely...</translation>
+        <source>AllGamesCoin Core didn&apos;t yet exit safely...</source>
+        <translation>AllGamesCoin Core didn&apos;t yet exit safely...</translation>
     </message>
     <message>
         <location filename="../allgamescoinunits.cpp" line="+233"/>
@@ -2565,8 +2565,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+120"/>
-        <source>Enter a Allgamescoin address (e.g. %1)</source>
-        <translation>Enter a Allgamescoin address (e.g. %1)</translation>
+        <source>Enter a AllGamesCoin address (e.g. %1)</source>
+        <translation>Enter a AllGamesCoin address (e.g. %1)</translation>
     </message>
     <message>
         <location line="+855"/>
@@ -2821,8 +2821,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+48"/>
-        <source>Open the Allgamescoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the Allgamescoin Core debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+        <source>Open the AllGamesCoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open the AllGamesCoin Core debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -3099,8 +3099,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+188"/>
-        <source>Welcome to the Allgamescoin Core RPC console.</source>
-        <translation>Welcome to the Allgamescoin Core RPC console.</translation>
+        <source>Welcome to the AllGamesCoin Core RPC console.</source>
+        <translation>Welcome to the AllGamesCoin Core RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3204,8 +3204,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Allgamescoin network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Allgamescoin network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AllGamesCoin network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AllGamesCoin network.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3220,8 +3220,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Allgamescoin network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Allgamescoin network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the AllGamesCoin network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the AllGamesCoin network.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3796,8 +3796,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+100"/>
-        <source>Warning: Invalid Allgamescoin address</source>
-        <translation>Warning: Invalid Allgamescoin address</translation>
+        <source>Warning: Invalid AllGamesCoin address</source>
+        <translation>Warning: Invalid AllGamesCoin address</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3824,8 +3824,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Allgamescoin address to send the payment to</source>
-        <translation>The Allgamescoin address to send the payment to</translation>
+        <source>The AllGamesCoin address to send the payment to</source>
+        <translation>The AllGamesCoin address to send the payment to</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3873,8 +3873,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="-1046"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Allgamescoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Allgamescoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of AllGamesCoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of AllGamesCoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3888,8 +3888,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Allgamescoin network.</source>
-        <translation>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Allgamescoin network.</translation>
+        <source>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AllGamesCoin network.</source>
+        <translation>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AllGamesCoin network.</translation>
     </message>
     <message>
         <location line="+433"/>
@@ -3923,8 +3923,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+71"/>
-        <source>Allgamescoin Core is shutting down...</source>
-        <translation>Allgamescoin Core is shutting down...</translation>
+        <source>AllGamesCoin Core is shutting down...</source>
+        <translation>AllGamesCoin Core is shutting down...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3946,13 +3946,13 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Allgamescoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>You can sign messages/agreements with your addresses to prove you can receive Allgamescoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive AllGamesCoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive AllGamesCoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Allgamescoin address to sign the message with</source>
-        <translation>The Allgamescoin address to sign the message with</translation>
+        <source>The AllGamesCoin address to sign the message with</source>
+        <translation>The AllGamesCoin address to sign the message with</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3993,8 +3993,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Sign the message to prove you own this Allgamescoin address</source>
-        <translation>Sign the message to prove you own this Allgamescoin address</translation>
+        <source>Sign the message to prove you own this AllGamesCoin address</source>
+        <translation>Sign the message to prove you own this AllGamesCoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4024,13 +4024,13 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Allgamescoin address the message was signed with</source>
-        <translation>The Allgamescoin address the message was signed with</translation>
+        <source>The AllGamesCoin address the message was signed with</source>
+        <translation>The AllGamesCoin address the message was signed with</translation>
     </message>
     <message>
         <location line="+33"/>
-        <source>Verify the message to ensure it was signed with the specified Allgamescoin address</source>
-        <translation>Verify the message to ensure it was signed with the specified Allgamescoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified AllGamesCoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified AllGamesCoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4123,8 +4123,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location filename="../splashscreen.cpp" line="+45"/>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core</translation>
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4133,13 +4133,13 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Allgamescoin Core developers</source>
-        <translation>The Allgamescoin Core developers</translation>
+        <source>The AllGamesCoin Core developers</source>
+        <translation>The AllGamesCoin Core developers</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Allgamescoin Core developers</source>
-        <translation>The Allgamescoin Core developers</translation>
+        <source>The AllGamesCoin Core developers</source>
+        <translation>The AllGamesCoin Core developers</translation>
     </message>
 </context>
 <context>
@@ -4909,8 +4909,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Cannot obtain a lock on data directory %s. Allgamescoin Core is probably already running.</source>
-        <translation>Cannot obtain a lock on data directory %s. Allgamescoin Core is probably already running.</translation>
+        <source>Cannot obtain a lock on data directory %s. AllGamesCoin Core is probably already running.</source>
+        <translation>Cannot obtain a lock on data directory %s. AllGamesCoin Core is probably already running.</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -4959,8 +4959,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Unable to bind to %s on this computer. Allgamescoin Core is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. Allgamescoin Core is probably already running.</translation>
+        <source>Unable to bind to %s on this computer. AllGamesCoin Core is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. AllGamesCoin Core is probably already running.</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -5349,13 +5349,13 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Allgamescoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2014-%i The Allgamescoin Core Developers</source>
-        <translation>Copyright (C) 2014-%i The Allgamescoin Core Developers</translation>
+        <source>Copyright (C) 2014-%i The Bitcoin Core Developers</source>
+        <translation>Copyright (C) 2014-%i The Bitcoin Core Developers</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5379,8 +5379,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Allgamescoin Core</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of Allgamescoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of AllGamesCoin Core</source>
+        <translation>Error loading wallet.dat: Wallet requires newer version of AllGamesCoin Core</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5454,8 +5454,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Initialization sanity check failed. Allgamescoin Core is shutting down.</source>
-        <translation>Initialization sanity check failed. Allgamescoin Core is shutting down.</translation>
+        <source>Initialization sanity check failed. AllGamesCoin Core is shutting down.</source>
+        <translation>Initialization sanity check failed. AllGamesCoin Core is shutting down.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5774,8 +5774,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Wallet needed to be rewritten: restart Allgamescoin Core to complete</source>
-        <translation>Wallet needed to be rewritten: restart Allgamescoin Core to complete</translation>
+        <source>Wallet needed to be rewritten: restart AllGamesCoin Core to complete</source>
+        <translation>Wallet needed to be rewritten: restart AllGamesCoin Core to complete</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5839,8 +5839,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="-354"/>
-        <source>Disable all Allgamescoin specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
-        <translation>Disable all Allgamescoin specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</translation>
+        <source>Disable all AllGamesCoin specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
+        <translation>Disable all AllGamesCoin specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5939,8 +5939,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong Allgamescoin Core will not work properly.</source>
-        <translation>Please check that your computer&apos;s date and time are correct! If your clock is wrong Allgamescoin Core will not work properly.</translation>
+        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong AllGamesCoin Core will not work properly.</source>
+        <translation>Please check that your computer&apos;s date and time are correct! If your clock is wrong AllGamesCoin Core will not work properly.</translation>
     </message>
     <message>
         <location line="+3"/>

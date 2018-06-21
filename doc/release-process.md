@@ -1,7 +1,7 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://github.com/allgamescoindev/allgamescoin/blob/master/doc/translation_process.md#syncing-with-transifex)
+* Update translations, see [translation_process.md](https://github.com/allgamescoinpay/allgamescoin/blob/master/doc/translation_process.md#syncing-with-transifex)
 * Update hardcoded [seeds](/contrib/seeds)
 
 * * *
@@ -10,12 +10,12 @@ Release Process
 Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
-	git clone https://github.com/allgamescoindev/gitian.sigs.git
-	git clone https://github.com/allgamescoindev/allgamescoin-detached-sigs.git
+	git clone https://github.com/allgamescoinpay/gitian.sigs.git
+	git clone https://github.com/allgamescoinpay/allgamescoin-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://github.com/allgamescoindev/allgamescoin.git
+	git clone https://github.com/allgamescoinpay/allgamescoin.git
 
-### Allgamescoin Core maintainers/release engineers, update (commit) version in sources
+### AllGamesCoin Core maintainers/release engineers, update (commit) version in sources
 
 	pushd ./allgamescoin
 	contrib/verifysfbinaries/verify.sh
@@ -86,7 +86,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 ```
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Allgamescoin Core for Linux, Windows, and OS X:
+### Build and sign AllGamesCoin Core for Linux, Windows, and OS X:
 
 	./bin/gbuild --commit allgamescoin=v${VERSION} ../allgamescoin/contrib/gitian-descriptors/gitian-linux.yml
 	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../allgamescoin/contrib/gitian-descriptors/gitian-linux.yml
@@ -139,7 +139,7 @@ Commit your signature to gitian.sigs:
 
   Wait for Windows/OS X detached signatures:
 	Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-	Detached signatures will then be committed to the [allgamescoin-detached-sigs](https://github.com/allgamescoindev/allgamescoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+	Detached signatures will then be committed to the [allgamescoin-detached-sigs](https://github.com/allgamescoinpay/allgamescoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
   Create (and optionally verify) the signed OS X binary:
 
@@ -188,13 +188,13 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
 - Announce the release:
 
-  - Release on Allgamescoin forum: https://www.allgamescoin.org/forum/topic/official-announcements.54/
+  - Release on AllGamesCoin forum: https://www.allgamescoin.org/forum/topic/official-announcements.54/
 
-  - Allgamescoin-development mailing list
+  - AllGamesCoin-development mailing list
 
-  - Update title of #allgamescoindev on Freenode IRC
+  - Update title of #allgamescoinpay on Freenode IRC
 
-  - Optionally reddit /r/AllGamesCoinDev, ... but this will usually sort out itself
+  - Optionally reddit /r/AllGamesCoinpay, ... but this will usually sort out itself
 
 - Notify flare so that he can start building [the PPAs](https://launchpad.net/~allgamescoin.org/+archive/ubuntu/allgamescoin)
 

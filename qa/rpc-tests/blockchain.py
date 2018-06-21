@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-# Copyright (c) 2014-2015 The Allgamescoin Core developers
+# Copyright (c) 2014-2015 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@
 
 from decimal import Decimal
 
-from test_framework.test_framework import AllgamescoinTestFramework
+from test_framework.test_framework import AllGamesCoinTestFramework
 from test_framework.authproxy import JSONRPCException
 from test_framework.util import (
     initialize_chain,
@@ -23,7 +23,7 @@ from test_framework.util import (
 )
 
 
-class BlockchainTest(AllgamescoinTestFramework):
+class BlockchainTest(AllGamesCoinTestFramework):
     """
     Test blockchain-related RPC calls:
 

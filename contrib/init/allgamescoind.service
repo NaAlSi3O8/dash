@@ -1,5 +1,5 @@
 [Unit]
-Description=Allgamescoin's distributed currency daemon
+Description=AllGamesCoin's distributed currency daemon
 After=network.target
 
 [Service]

@@ -1,13 +1,13 @@
 #!/usr/bin/env python2
-# Copyright (c) 2015 The Allgamescoin Core developers
+# Copyright (c) 2015 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import AllgamescoinTestFramework
+from test_framework.test_framework import AllGamesCoinTestFramework
 from test_framework.util import *
 
 
-class SignRawTransactionsTest(AllgamescoinTestFramework):
+class SignRawTransactionsTest(AllGamesCoinTestFramework):
     """Tests transaction signing via RPC command "signrawtransaction"."""
 
     def setup_chain(self):

@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Allgamescoin"
-            VALUE "FileDescription",    "allgamescoin-tx (CLI Allgamescoin transaction editor utility)"
+            VALUE "CompanyName",        "AllGamesCoin"
+            VALUE "FileDescription",    "allgamescoin-tx (CLI AllGamesCoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "allgamescoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

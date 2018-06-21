@@ -58,12 +58,12 @@
         <translation>Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your Allgamescoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>De här är dina Allgamescoin-adresser för att skicka betalningar. Kontrollera alltid mängden och mottagaradressen innan du skickar mynt.</translation>
+        <source>These are your AllGamesCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>De här är dina AllGamesCoin-adresser för att skicka betalningar. Kontrollera alltid mängden och mottagaradressen innan du skickar mynt.</translation>
     </message>
     <message>
-        <source>These are your Allgamescoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>De här är dina Allgamescoin-adresser för betalningsmottagningar. Det rekommenderas att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your AllGamesCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>De här är dina AllGamesCoin-adresser för betalningsmottagningar. Det rekommenderas att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Plånbok krypterad</translation>
     </message>
     <message>
-        <source>Allgamescoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</source>
-        <translation>Allgamescoin kommer nu att färdigställa krypteringsprocessen. Kom ihåg att krypteringen av din plånbok inte kan skydda dig helt och hållet från att dina Allgamescoin stjäls av skadeprogram som har infekterat din dator.</translation>
+        <source>AllGamesCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your allgamescoins from being stolen by malware infecting your computer.</source>
+        <translation>AllGamesCoin kommer nu att färdigställa krypteringsprocessen. Kom ihåg att krypteringen av din plånbok inte kan skydda dig helt och hållet från att dina AllGamesCoin stjäls av skadeprogram som har infekterat din dator.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -217,10 +217,10 @@
     </message>
 </context>
 <context>
-    <name>AllgamescoinGUI</name>
+    <name>AllGamesCoinGUI</name>
     <message>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core
 </translation>
     </message>
     <message>
@@ -244,8 +244,8 @@
         <translation>&amp;Skicka</translation>
     </message>
     <message>
-        <source>Send coins to a Allgamescoin address</source>
-        <translation>Skicka mynt till en Allgamescoin-adress</translation>
+        <source>Send coins to a AllGamesCoin address</source>
+        <translation>Skicka mynt till en AllGamesCoin-adress</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
@@ -253,7 +253,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and allgamescoin: URIs)</source>
-        <translation>Begär betalningar (genererar QR-koder och Allgamescoin:-URI:s)</translation>
+        <translation>Begär betalningar (genererar QR-koder och AllGamesCoin:-URI:s)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -272,8 +272,8 @@
         <translation>Avsluta applikationen</translation>
     </message>
     <message>
-        <source>&amp;About Allgamescoin Core</source>
-        <translation>&amp;Om Allgamescoin Core</translation>
+        <source>&amp;About AllGamesCoin Core</source>
+        <translation>&amp;Om AllGamesCoin Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -288,8 +288,8 @@
         <translation>&amp;Alternativ...</translation>
     </message>
     <message>
-        <source>Modify configuration options for Allgamescoin</source>
-        <translation>Anpassa konfigurationsalternatv för Allgamescoin</translation>
+        <source>Modify configuration options for AllGamesCoin</source>
+        <translation>Anpassa konfigurationsalternatv för AllGamesCoin</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -340,16 +340,16 @@
         <translation>Signera &amp;meddelande...</translation>
     </message>
     <message>
-        <source>Sign messages with your Allgamescoin addresses to prove you own them</source>
-        <translation>Signera meddelanden med dina Allgamescoin-adresser för att bevisa att du äger dem</translation>
+        <source>Sign messages with your AllGamesCoin addresses to prove you own them</source>
+        <translation>Signera meddelanden med dina AllGamesCoin-adresser för att bevisa att du äger dem</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Bekräfta meddelande...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Allgamescoin addresses</source>
-        <translation>Bekräfta meddelanden för att garantera att de signerades med de angivna Allgamescoin-adresserna</translation>
+        <source>Verify messages to ensure they were signed with specified AllGamesCoin addresses</source>
+        <translation>Bekräfta meddelanden för att garantera att de signerades med de angivna AllGamesCoin-adresserna</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -405,15 +405,15 @@
     </message>
     <message>
         <source>Open a allgamescoin: URI or payment request</source>
-        <translation>Öppna en Allgamescoin-URI eller betalningsbegäran</translation>
+        <translation>Öppna en AllGamesCoin-URI eller betalningsbegäran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Kommandoradalternativ</translation>
     </message>
     <message>
-        <source>Show the Allgamescoin Core help message to get a list with possible Allgamescoin command-line options</source>
-        <translation>Visa Allgamescoin Core-hjälpmeddelandet för att få en lista med möjliga Allgamescoin-kommandoradalternativ</translation>
+        <source>Show the AllGamesCoin Core help message to get a list with possible AllGamesCoin command-line options</source>
+        <translation>Visa AllGamesCoin Core-hjälpmeddelandet för att få en lista med möjliga AllGamesCoin-kommandoradalternativ</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -790,16 +790,16 @@ Adress: %4
         <translation>Darksend-konfiguration</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Allgamescoin's configuration screen.</source>
-        <translation>Darksend ställdes framgångsrikt om till grundläggande (%1 och 2 omgångar). Du kan ändra detta när som helst genom att öppna Allgamescoin:s konfigurationsskärm.</translation>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening AllGamesCoin's configuration screen.</source>
+        <translation>Darksend ställdes framgångsrikt om till grundläggande (%1 och 2 omgångar). Du kan ändra detta när som helst genom att öppna AllGamesCoin:s konfigurationsskärm.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Allgamescoin's configuration screen.</source>
-        <translation>Darksend ställdes framgångsrikt in på hög (%1 och 8 omgångar). Du kan ändra detta när som helst genom att öppna Allgamescoin:s konfigurationsskärm.</translation>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening AllGamesCoin's configuration screen.</source>
+        <translation>Darksend ställdes framgångsrikt in på hög (%1 och 8 omgångar). Du kan ändra detta när som helst genom att öppna AllGamesCoin:s konfigurationsskärm.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Allgamescoin's configuration screen.</source>
-        <translation>Darksend ställdes framgångsrikt in på maximal (%1 och 16 omgångar). Du kan ändra detta när som helst genom att öppna Allgamescoin:s konfigurationsskärm</translation>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening AllGamesCoin's configuration screen.</source>
+        <translation>Darksend ställdes framgångsrikt in på maximal (%1 och 16 omgångar). Du kan ändra detta när som helst genom att öppna AllGamesCoin:s konfigurationsskärm</translation>
     </message>
 </context>
 <context>
@@ -841,8 +841,8 @@ Adress: %4
         <translation>Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Allgamescoin address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig Allgamescoin-adress.</translation>
+        <source>The entered address "%1" is not a valid AllGamesCoin address.</source>
+        <translation>Den angivna adressen "%1" är inte en giltig AllGamesCoin-adress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -883,8 +883,8 @@ Adress: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core
 </translation>
     </message>
     <message>
@@ -931,16 +931,16 @@ Adress: %4
         <translation>Välkommen</translation>
     </message>
     <message>
-        <source>Welcome to Allgamescoin Core.</source>
-        <translation>Välkommen till Allgamescoin Core.</translation>
+        <source>Welcome to AllGamesCoin Core.</source>
+        <translation>Välkommen till AllGamesCoin Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Allgamescoin Core will store its data.</source>
-        <translation>Då detta är första gången programmet startas kan du välja var Allgamescoin Core ska lagra sin data.</translation>
+        <source>As this is the first time the program is launched, you can choose where AllGamesCoin Core will store its data.</source>
+        <translation>Då detta är första gången programmet startas kan du välja var AllGamesCoin Core ska lagra sin data.</translation>
     </message>
     <message>
-        <source>Allgamescoin Core will download and store a copy of the Allgamescoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Allgamescoin Core kommer att laddas ned och lagra en kopia av Allgamescoin:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
+        <source>AllGamesCoin Core will download and store a copy of the AllGamesCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>AllGamesCoin Core kommer att laddas ned och lagra en kopia av AllGamesCoin:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -989,12 +989,12 @@ Adress: %4
         <translation>&amp;Huvud</translation>
     </message>
     <message>
-        <source>Automatically start Allgamescoin after logging in to the system.</source>
-        <translation>Starta Allgamescoin automatiskt efter systeminloggning.</translation>
+        <source>Automatically start AllGamesCoin after logging in to the system.</source>
+        <translation>Starta AllGamesCoin automatiskt efter systeminloggning.</translation>
     </message>
     <message>
-        <source>&amp;Start Allgamescoin on system login</source>
-        <translation>&amp;Starta Allgamescoin vid systeminloggning</translation>
+        <source>&amp;Start AllGamesCoin on system login</source>
+        <translation>&amp;Starta AllGamesCoin vid systeminloggning</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -1021,8 +1021,8 @@ Adress: %4
         <translation>Denna mängd fungerar som en tröskel att stänga av Darksend då det har uppnåtts.</translation>
     </message>
     <message>
-        <source>Amount of Allgamescoin to keep anonymized</source>
-        <translation>Mängd Allgamescoin att bibehålla anonymiserade</translation>
+        <source>Amount of AllGamesCoin to keep anonymized</source>
+        <translation>Mängd AllGamesCoin att bibehålla anonymiserade</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1049,8 +1049,8 @@ Adress: %4
         <translation>&amp;Nätverk</translation>
     </message>
     <message>
-        <source>Automatically open the Allgamescoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna Allgamescoin:s klientport automatiskt på routern. Detta fungerar bara om din router stöder UPnP och är aktiverad.</translation>
+        <source>Automatically open the AllGamesCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna AllGamesCoin:s klientport automatiskt på routern. Detta fungerar bara om din router stöder UPnP och är aktiverad.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1101,8 +1101,8 @@ Adress: %4
         <translation>Användargränssnitt&amp;språk: </translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Allgamescoin.</source>
-        <translation>Användargränssnittspråket kan ställas in här. Denna inställning träder i kraft efter att Allgamescoin startats om.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting AllGamesCoin.</source>
+        <translation>Användargränssnittspråket kan ställas in här. Denna inställning träder i kraft efter att AllGamesCoin startats om.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1182,8 +1182,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Allgamescoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara utdaterad. Din plånbok synkroniseras automatiskt med Allgamescoin-nätverket efter att en anslutning har etablerats men denna process har ännu inte slutförts.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AllGamesCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara utdaterad. Din plånbok synkroniseras automatiskt med AllGamesCoin-nätverket efter att en anslutning har etablerats men denna process har ännu inte slutförts.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1435,8 +1435,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Antal anslutningar</translation>
     </message>
     <message>
-        <source>Open the Allgamescoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Öppna Allgamescoins avsökningsloggfil från den nuvarande datakatalogen. Detta kan ta ett par sekunder för stora loggfiler.</translation>
+        <source>Open the AllGamesCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Öppna AllGamesCoins avsökningsloggfil från den nuvarande datakatalogen. Detta kan ta ett par sekunder för stora loggfiler.</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1507,8 +1507,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Ut:</translation>
     </message>
     <message>
-        <source>Welcome to the Allgamescoin RPC console.</source>
-        <translation>Välkommen till Allgamescoins RPC-konsol.</translation>
+        <source>Welcome to the AllGamesCoin RPC console.</source>
+        <translation>Välkommen till AllGamesCoins RPC-konsol.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1542,8 +1542,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Åt&amp;eranvänd en befintlig mottagaradress (rekommenderas inte)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Allgamescoin network.</source>
-        <translation>Ett valfritt meddelande att bifoga betalningsbegärandet vilket kommer att visas när begärandet öppnas. Observera: Meddelandet kommer inte att skickas med betalningen över Allgamescoin-nätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AllGamesCoin network.</source>
+        <translation>Ett valfritt meddelande att bifoga betalningsbegärandet vilket kommer att visas när begärandet öppnas. Observera: Meddelandet kommer inte att skickas med betalningen över AllGamesCoin-nätverket.</translation>
     </message>
     <message>
         <source>&amp;Message:</source>
@@ -1899,8 +1899,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Fel: Plånboken låstes upp enbart för att anonymisera mynt.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Allgamescoin address</source>
-        <translation>Varning: Ogiltig Allgamescoin-adress</translation>
+        <source>Warning: Invalid AllGamesCoin address</source>
+        <translation>Varning: Ogiltig AllGamesCoin-adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1958,8 +1958,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Meddelande:</translation>
     </message>
     <message>
-        <source>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Allgamescoin network.</source>
-        <translation>Ett meddelande som bifogades till Allgamescoin: URI vilket kommer att lagras med transaktionen så att du vet. Observera: Meddelandet kommer inte att skickas över Allgamescoin-nätverket.</translation>
+        <source>A message that was attached to the allgamescoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AllGamesCoin network.</source>
+        <translation>Ett meddelande som bifogades till AllGamesCoin: URI vilket kommer att lagras med transaktionen så att du vet. Observera: Meddelandet kommer inte att skickas över AllGamesCoin-nätverket.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -1985,8 +1985,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Allgamescoin Core is shutting down...</source>
-        <translation>Allgamescoin Core stängs ned...</translation>
+        <source>AllGamesCoin Core is shutting down...</source>
+        <translation>AllGamesCoin Core stängs ned...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2036,8 +2036,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Kopiera den nuvarande valda signaturen till systemurklippet</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Allgamescoin address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Allgamescoin-adress</translation>
+        <source>Sign the message to prove you own this AllGamesCoin address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna AllGamesCoin-adress</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2060,8 +2060,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Skriv in signeringsadressen, meddelandet, (försäkra dig om att du kopierar linjeavbrott, mellanslag, flikar med mera) och signera nedtill för att verifiera meddelandet. Var försiktig med att inte läsa in mer i signaturen än vad som finns i det signerade meddelandet för att undvika att bli lurad av en mellanhandattack.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Allgamescoin address</source>
-        <translation>Bekräfta meddelandet för att försäkra dig om att den signerades med den angivna Allgamescoin-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified AllGamesCoin address</source>
+        <translation>Bekräfta meddelandet för att försäkra dig om att den signerades med den angivna AllGamesCoin-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2127,8 +2127,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Allgamescoin Core</source>
-        <translation>Allgamescoin Core
+        <source>AllGamesCoin Core</source>
+        <translation>AllGamesCoin Core
 </translation>
     </message>
     <message>
@@ -2136,12 +2136,12 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Allgamescoin Core developers</source>
-        <translation>Allgamescoin Core-utvecklarna</translation>
+        <source>The AllGamesCoin Core developers</source>
+        <translation>AllGamesCoin Core-utvecklarna</translation>
     </message>
     <message>
-        <source>The Allgamescoin Core developers</source>
-        <translation>Allgamescoin Core-utvecklarna</translation>
+        <source>The AllGamesCoin Core developers</source>
+        <translation>AllGamesCoin Core-utvecklarna</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2662,8 +2662,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Sammanbind till fastställd adress och avlyssna alltid den. Använd [host]:port-notation för IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Allgamescoin Core is probably already running.</source>
-        <translation>Kan inte erhålla ett lås på datakatalog %s. Allgamescoin Core körs förmodligen redan.</translation>
+        <source>Cannot obtain a lock on data directory %s. AllGamesCoin Core is probably already running.</source>
+        <translation>Kan inte erhålla ett lås på datakatalog %s. AllGamesCoin Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -2718,8 +2718,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Detta är en förhandsutgiven testkompilering - använd på egen risk - använd inte för utvinning eller handlarapplikationer.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Allgamescoin Core is probably already running.</source>
-        <translation>Det går inte att binda till %s till denna dator. Allgamescoin Core körs förmodligen redan.</translation>
+        <source>Unable to bind to %s on this computer. AllGamesCoin Core is probably already running.</source>
+        <translation>Det går inte att binda till %s till denna dator. AllGamesCoin Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
@@ -2942,8 +2942,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Allgamescoin Core is shutting down.</source>
-        <translation>Initialiseringstillståndkontroll misslyckades. Allgamescoin Core stängs ned.</translation>
+        <source>Initialization sanity check failed. AllGamesCoin Core is shutting down.</source>
+        <translation>Initialiseringstillståndkontroll misslyckades. AllGamesCoin Core stängs ned.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -3066,8 +3066,8 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Lösenord för JSON-RPC-anslutningar</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Allgamescoin Wiki for SSL setup instructions)</source>
-        <translation>RPC SSL-alternativ: (Se Allgamescoin Wiki för SSL-inställningsinstruktioner)</translation>
+        <source>RPC SSL options: (see the AllGamesCoin Wiki for SSL setup instructions)</source>
+        <translation>RPC SSL-alternativ: (Se AllGamesCoin Wiki för SSL-inställningsinstruktioner)</translation>
     </message>
     <message>
         <source>RPC server options:</source>

@@ -1,4 +1,4 @@
-# mininode.py - Allgamescoin P2P network half-a-node
+# mininode.py - AllGamesCoin P2P network half-a-node
 #
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -41,7 +41,7 @@ MY_SUBVERSION = b"/python-mininode-tester:0.0.2/"
 MAX_INV_SZ = 50000
 MAX_BLOCK_SIZE = 1000000
 
-COIN = 100000000L # 1 btc in satoshis
+COIN = 100000000L # 1 AGC in satoshis
 
 # Keep our own socket map for asyncore, so that we can track disconnects
 # ourselves (to workaround an issue with closing an asyncore socket when 
@@ -1185,7 +1185,7 @@ class NodeConn(asyncore.dispatcher):
         vt.addrFrom.ip = "0.0.0.0"
         vt.addrFrom.port = 0
         self.send_message(vt, True)
-        print 'MiniNode: Connecting to Allgamescoin Node IP # ' + dstaddr + ':' \
+        print 'MiniNode: Connecting to AllGamesCoin Node IP # ' + dstaddr + ':' \
             + str(dstport)
 
         try:

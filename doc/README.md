@@ -1,11 +1,11 @@
-Allgamescoin Core 0.12.1
+AllGamesCoin Core 0.12.1
 =====================
 
-This is the official reference wallet for Allgamescoin digital currency and comprises the backbone of the Allgamescoin peer-to-peer network. You can [download Allgamescoin Core](https://www.allgamescoin.org/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for AllGamesCoin digital currency and comprises the backbone of the AllGamesCoin peer-to-peer network. You can [download AllGamesCoin Core](https://www.allgamescoin.org/downloads/) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Allgamescoin on your native platform.
+The following are some helpful notes on how to run AllGamesCoin on your native platform.
 
 ### Unix
 
@@ -20,18 +20,18 @@ Unpack the files into a directory, and then run allgamescoin-qt.exe.
 
 ### OS X
 
-Drag Allgamescoin-Qt to your applications folder, and then run Allgamescoin-Qt.
+Drag AllGamesCoin-Qt to your applications folder, and then run AllGamesCoin-Qt.
 
 ### Need Help?
 
-* See the [Allgamescoin documentation](https://allgamescoindev.atlassian.net/wiki/display/DOC)
+* See the [AllGamesCoin documentation](https://allgamescoinpay.atlassian.net/wiki/display/DOC)
 for help and more information.
-* Ask for help on [#allgamescoindev](http://webchat.freenode.net?channels=allgamescoindev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=allgamescoindev).
-* Ask for help on the [AllgamescoinTalk](https://allgamescointalk.org/) forums.
+* Ask for help on [#allgamescoinpay](http://webchat.freenode.net?channels=allgamescoinpay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=allgamescoinpay).
+* Ask for help on the [AllGamesCoinTalk](https://allgamescointalk.org/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Allgamescoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build AllGamesCoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -41,7 +41,7 @@ The following are developer notes on how to build Allgamescoin Core on your nati
 
 Development
 ---------------------
-The Allgamescoin Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The AllGamesCoin Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -57,8 +57,8 @@ The Allgamescoin Core repo's [root README](/README.md) contains relevant informa
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [AllgamescoinTalk](https://allgamescointalk.org/) forums, in the Development & Technical Discussion board.
-* Discuss on [#allgamescoindev](http://webchat.freenode.net/?channels=allgamescoindev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=allgamescoindev).
+* Discuss on the [AllGamesCoinTalk](https://allgamescointalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on [#allgamescoinpay](http://webchat.freenode.net/?channels=allgamescoinpay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=allgamescoinpay).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

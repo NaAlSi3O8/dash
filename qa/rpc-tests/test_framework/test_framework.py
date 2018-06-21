@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-# Copyright (c) 2014-2015 The Allgamescoin Core developers
+# Copyright (c) 2014-2015 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,7 +29,7 @@ from .util import (
 from .authproxy import AuthServiceProxy, JSONRPCException
 
 
-class AllgamescoinTestFramework(object):
+class AllGamesCoinTestFramework(object):
 
     # These may be over-ridden by subclasses:
     def run_test(self):
@@ -171,7 +171,7 @@ class AllgamescoinTestFramework(object):
 # 2 binaries: 1 test binary, 1 ref binary
 # n>2 binaries: 1 test binary, n-1 ref binaries
 
-class ComparisonTestFramework(AllgamescoinTestFramework):
+class ComparisonTestFramework(AllGamesCoinTestFramework):
 
     # Can override the num_nodes variable to indicate how many nodes to run.
     def __init__(self):

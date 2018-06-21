@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2015 The Allgamescoin Core developers
+// Copyright (c) 2014-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -212,13 +212,13 @@ int CBase58Data::CompareTo(const CBase58Data& b58) const
 
 namespace
 {
-class CAllgamescoinAddressVisitor : public boost::static_visitor<bool>
+class CAllGamesCoinAddressVisitor : public boost::static_visitor<bool>
 {
 private:
-    CAllgamescoinAddress* addr;
+    CAllGamesCoinAddress* addr;
 
 public:
-    CAllgamescoinAddressVisitor(CAllgamescoinAddress* addrIn) : addr(addrIn) {}
+    CAllGamesCoinAddressVisitor(CAllGamesCoinAddress* addrIn) : addr(addrIn) {}
 
     bool operator()(const CKeyID& id) const { return addr->Set(id); }
     bool operator()(const CScriptID& id) const { return addr->Set(id); }
@@ -227,29 +227,29 @@ public:
 
 } // anon namespace
 
-bool CAllgamescoinAddress::Set(const CKeyID& id)
+bool CAllGamesCoinAddress::Set(const CKeyID& id)
 {
     SetData(Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS), &id, 20);
     return true;
 }
 
-bool CAllgamescoinAddress::Set(const CScriptID& id)
+bool CAllGamesCoinAddress::Set(const CScriptID& id)
 {
     SetData(Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS), &id, 20);
     return true;
 }
 
-bool CAllgamescoinAddress::Set(const CTxDestination& dest)
+bool CAllGamesCoinAddress::Set(const CTxDestination& dest)
 {
-    return boost::apply_visitor(CAllgamescoinAddressVisitor(this), dest);
+    return boost::apply_visitor(CAllGamesCoinAddressVisitor(this), dest);
 }
 
-bool CAllgamescoinAddress::IsValid() const
+bool CAllGamesCoinAddress::IsValid() const
 {
     return IsValid(Params());
 }
 
-bool CAllgamescoinAddress::IsValid(const CChainParams& params) const
+bool CAllGamesCoinAddress::IsValid(const CChainParams& params) const
 {
     bool fCorrectSize = vchData.size() == 20;
     bool fKnownVersion = vchVersion == params.Base58Prefix(CChainParams::PUBKEY_ADDRESS) ||
@@ -257,7 +257,7 @@ bool CAllgamescoinAddress::IsValid(const CChainParams& params) const
     return fCorrectSize && fKnownVersion;
 }
 
-CTxDestination CAllgamescoinAddress::Get() const
+CTxDestination CAllGamesCoinAddress::Get() const
 {
     if (!IsValid())
         return CNoDestination();
@@ -271,7 +271,7 @@ CTxDestination CAllgamescoinAddress::Get() const
         return CNoDestination();
 }
 
-bool CAllgamescoinAddress::GetIndexKey(uint160& hashBytes, int& type) const
+bool CAllGamesCoinAddress::GetIndexKey(uint160& hashBytes, int& type) const
 {
     if (!IsValid()) {
         return false;
@@ -288,7 +288,7 @@ bool CAllgamescoinAddress::GetIndexKey(uint160& hashBytes, int& type) const
     return false;
 }
 
-bool CAllgamescoinAddress::GetKeyID(CKeyID& keyID) const
+bool CAllGamesCoinAddress::GetKeyID(CKeyID& keyID) const
 {
     if (!IsValid() || vchVersion != Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS))
         return false;
@@ -298,12 +298,12 @@ bool CAllgamescoinAddress::GetKeyID(CKeyID& keyID) const
     return true;
 }
 
-bool CAllgamescoinAddress::IsScript() const
+bool CAllGamesCoinAddress::IsScript() const
 {
     return IsValid() && vchVersion == Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS);
 }
 
-void CAllgamescoinSecret::SetKey(const CKey& vchSecret)
+void CAllGamesCoinSecret::SetKey(const CKey& vchSecret)
 {
     assert(vchSecret.IsValid());
     SetData(Params().Base58Prefix(CChainParams::SECRET_KEY), vchSecret.begin(), vchSecret.size());
@@ -311,7 +311,7 @@ void CAllgamescoinSecret::SetKey(const CKey& vchSecret)
         vchData.push_back(1);
 }
 
-CKey CAllgamescoinSecret::GetKey()
+CKey CAllGamesCoinSecret::GetKey()
 {
     CKey ret;
     assert(vchData.size() >= 32);
@@ -319,19 +319,19 @@ CKey CAllgamescoinSecret::GetKey()
     return ret;
 }
 
-bool CAllgamescoinSecret::IsValid() const
+bool CAllGamesCoinSecret::IsValid() const
 {
     bool fExpectedFormat = vchData.size() == 32 || (vchData.size() == 33 && vchData[32] == 1);
     bool fCorrectVersion = vchVersion == Params().Base58Prefix(CChainParams::SECRET_KEY);
     return fExpectedFormat && fCorrectVersion;
 }
 
-bool CAllgamescoinSecret::SetString(const char* pszSecret)
+bool CAllGamesCoinSecret::SetString(const char* pszSecret)
 {
     return CBase58Data::SetString(pszSecret) && IsValid();
 }
 
-bool CAllgamescoinSecret::SetString(const std::string& strSecret)
+bool CAllGamesCoinSecret::SetString(const std::string& strSecret)
 {
     return SetString(strSecret.c_str());
 }

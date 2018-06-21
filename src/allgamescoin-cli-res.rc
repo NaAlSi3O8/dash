@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Allgamescoin"
-            VALUE "FileDescription",    "allgamescoin-cli (JSON-RPC client for Allgamescoin Core)"
+            VALUE "CompanyName",        "AllGamesCoin"
+            VALUE "FileDescription",    "allgamescoin-cli (JSON-RPC client for AllGamesCoin Core)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "allgamescoin-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR

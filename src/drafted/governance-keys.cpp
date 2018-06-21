@@ -1,5 +1,5 @@
 
-// // Copyright (c) 2014-2017 The Allgamescoin Core developers
+// // Copyright (c) 2014-2017 The Dash Core developers
 // // Distributed under the MIT/X11 software license, see the accompanying
 // // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -31,7 +31,7 @@
 
 //     	if(vecTokenized.size() == 2) continue;
 
-// 	    CAllgamescoinSecret vchSecret;
+// 	    CAllGamesCoinSecret vchSecret;
 // 	    bool fGood = vchSecret.SetString(vecTokenized[0]);
 
 // 	    if(!fGood) {

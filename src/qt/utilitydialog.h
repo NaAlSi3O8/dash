@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@
 #include <QDialog>
 #include <QObject>
 
-class AllgamescoinGUI;
+class AllGamesCoinGUI;
 class ClientModel;
 
 namespace Ui {
@@ -49,7 +49,7 @@ class ShutdownWindow : public QWidget
 
 public:
     ShutdownWindow(QWidget *parent=0, Qt::WindowFlags f=0);
-    static QWidget *showShutdownWindow(AllgamescoinGUI *window);
+    static QWidget *showShutdownWindow(AllGamesCoinGUI *window);
 
 protected:
     void closeEvent(QCloseEvent *event);

@@ -3,7 +3,7 @@ Shared Libraries
 
 ## allgamescoinconsensus
 
-The purpose of this library is to make the verification functionality that is critical to Allgamescoin's consensus available to other applications, e.g. to language bindings.
+The purpose of this library is to make the verification functionality that is critical to AllGamesCoin's consensus available to other applications, e.g. to language bindings.
 
 ### API
 
@@ -38,7 +38,7 @@ The interface is defined in the C header `allgamescoinconsensus.h` located in  `
 - `allgamescoinconsensus_ERR_DESERIALIZE` - An error deserializing `txTo`
 
 ### Example Implementations
-- [NAllgamescoin](https://github.com/NicolasDorier/NAllgamescoin/blob/master/NAllgamescoin/Script.cs#L814) (.NET Bindings)
+- [NAllGamesCoin](https://github.com/NicolasDorier/NAllGamesCoin/blob/master/NAllGamesCoin/Script.cs#L814) (.NET Bindings)
 - [node-liballgamescoinconsensus](https://github.com/bitpay/node-liballgamescoinconsensus) (Node.js Bindings)
 - [java-liballgamescoinconsensus](https://github.com/dexX7/java-liballgamescoinconsensus) (Java Bindings)
 - [allgamescoinconsensus-php](https://github.com/Bit-Wasp/allgamescoinconsensus-php) (PHP Bindings)

@@ -1,5 +1,5 @@
-// Copyright (c) 2009-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -116,7 +116,7 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
     if (fRescan && fPruneMode)
         throw JSONRPCError(RPC_WALLET_ERROR, "Rescan is disabled in pruned mode");
 
-    CAllgamescoinSecret vchSecret;
+    CAllGamesCoinSecret vchSecret;
     bool fGood = vchSecret.SetString(strSecret);
 
     if (!fGood) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key encoding");
@@ -151,7 +151,7 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
     return NullUniValue;
 }
 
-void ImportAddress(const CAllgamescoinAddress& address, const string& strLabel);
+void ImportAddress(const CAllGamesCoinAddress& address, const string& strLabel);
 void ImportScript(const CScript& script, const string& strLabel, bool isRedeemScript)
 {
     if (!isRedeemScript && ::IsMine(*pwalletMain, script) == ISMINE_SPENDABLE)
@@ -165,11 +165,11 @@ void ImportScript(const CScript& script, const string& strLabel, bool isRedeemSc
     if (isRedeemScript) {
         if (!pwalletMain->HaveCScript(script) && !pwalletMain->AddCScript(script))
             throw JSONRPCError(RPC_WALLET_ERROR, "Error adding p2sh redeemScript to wallet");
-        ImportAddress(CAllgamescoinAddress(CScriptID(script)), strLabel);
+        ImportAddress(CAllGamesCoinAddress(CScriptID(script)), strLabel);
     }
 }
 
-void ImportAddress(const CAllgamescoinAddress& address, const string& strLabel)
+void ImportAddress(const CAllGamesCoinAddress& address, const string& strLabel)
 {
     CScript script = GetScriptForDestination(address.Get());
     ImportScript(script, strLabel, false);
@@ -223,7 +223,7 @@ UniValue importaddress(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CAllgamescoinAddress address(params[0].get_str());
+    CAllGamesCoinAddress address(params[0].get_str());
     if (address.IsValid()) {
         if (fP2SH)
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Cannot use the p2sh flag with an address - use a script instead");
@@ -232,7 +232,7 @@ UniValue importaddress(const UniValue& params, bool fHelp)
         std::vector<unsigned char> data(ParseHex(params[0].get_str()));
         ImportScript(CScript(data.begin(), data.end()), strLabel, fP2SH);
     } else {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Allgamescoin address or script");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid AllGamesCoin address or script");
     }
 
     if (fRescan)
@@ -289,7 +289,7 @@ UniValue importpubkey(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    ImportAddress(CAllgamescoinAddress(pubKey.GetID()), strLabel);
+    ImportAddress(CAllGamesCoinAddress(pubKey.GetID()), strLabel);
     ImportScript(GetScriptForRawPubKey(pubKey), strLabel, false);
 
     if (fRescan)
@@ -353,7 +353,7 @@ UniValue importwallet(const UniValue& params, bool fHelp)
         boost::split(vstr, line, boost::is_any_of(" "));
         if (vstr.size() < 2)
             continue;
-        CAllgamescoinSecret vchSecret;
+        CAllGamesCoinSecret vchSecret;
         if (!vchSecret.SetString(vstr[0]))
             continue;
         CKey key = vchSecret.GetKey();
@@ -361,7 +361,7 @@ UniValue importwallet(const UniValue& params, bool fHelp)
         assert(key.VerifyPubKey(pubkey));
         CKeyID keyid = pubkey.GetID();
         if (pwalletMain->HaveKey(keyid)) {
-            LogPrintf("Skipping import of %s (key already present)\n", CAllgamescoinAddress(keyid).ToString());
+            LogPrintf("Skipping import of %s (key already present)\n", CAllGamesCoinAddress(keyid).ToString());
             continue;
         }
         int64_t nTime = DecodeDumpTime(vstr[1]);
@@ -379,7 +379,7 @@ UniValue importwallet(const UniValue& params, bool fHelp)
                 fLabel = true;
             }
         }
-        LogPrintf("Importing %s...\n", CAllgamescoinAddress(keyid).ToString());
+        LogPrintf("Importing %s...\n", CAllGamesCoinAddress(keyid).ToString());
         if (!pwalletMain->AddKeyPubKey(key, pubkey)) {
             fGood = false;
             continue;
@@ -469,7 +469,7 @@ UniValue importelectrumwallet(const UniValue& params, bool fHelp)
             boost::split(vstr, line, boost::is_any_of(","));
             if (vstr.size() < 2)
                 continue;
-            CAllgamescoinSecret vchSecret;
+            CAllGamesCoinSecret vchSecret;
             if (!vchSecret.SetString(vstr[1]))
                 continue;
             CKey key = vchSecret.GetKey();
@@ -477,10 +477,10 @@ UniValue importelectrumwallet(const UniValue& params, bool fHelp)
             assert(key.VerifyPubKey(pubkey));
             CKeyID keyid = pubkey.GetID();
             if (pwalletMain->HaveKey(keyid)) {
-                LogPrintf("Skipping import of %s (key already present)\n", CAllgamescoinAddress(keyid).ToString());
+                LogPrintf("Skipping import of %s (key already present)\n", CAllGamesCoinAddress(keyid).ToString());
                 continue;
             }
-            LogPrintf("Importing %s...\n", CAllgamescoinAddress(keyid).ToString());
+            LogPrintf("Importing %s...\n", CAllGamesCoinAddress(keyid).ToString());
             if (!pwalletMain->AddKeyPubKey(key, pubkey)) {
                 fGood = false;
                 continue;
@@ -501,7 +501,7 @@ UniValue importelectrumwallet(const UniValue& params, bool fHelp)
             pwalletMain->ShowProgress("", std::max(1, std::min(99, int(i*100/data.size()))));
             if(!data[vKeys[i]].isStr())
                 continue;
-            CAllgamescoinSecret vchSecret;
+            CAllGamesCoinSecret vchSecret;
             if (!vchSecret.SetString(data[vKeys[i]].get_str()))
                 continue;
             CKey key = vchSecret.GetKey();
@@ -509,10 +509,10 @@ UniValue importelectrumwallet(const UniValue& params, bool fHelp)
             assert(key.VerifyPubKey(pubkey));
             CKeyID keyid = pubkey.GetID();
             if (pwalletMain->HaveKey(keyid)) {
-                LogPrintf("Skipping import of %s (key already present)\n", CAllgamescoinAddress(keyid).ToString());
+                LogPrintf("Skipping import of %s (key already present)\n", CAllGamesCoinAddress(keyid).ToString());
                 continue;
             }
-            LogPrintf("Importing %s...\n", CAllgamescoinAddress(keyid).ToString());
+            LogPrintf("Importing %s...\n", CAllGamesCoinAddress(keyid).ToString());
             if (!pwalletMain->AddKeyPubKey(key, pubkey)) {
                 fGood = false;
                 continue;
@@ -568,16 +568,16 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
     EnsureWalletIsUnlocked();
 
     string strAddress = params[0].get_str();
-    CAllgamescoinAddress address;
+    CAllGamesCoinAddress address;
     if (!address.SetString(strAddress))
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Allgamescoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid AllGamesCoin address");
     CKeyID keyID;
     if (!address.GetKeyID(keyID))
         throw JSONRPCError(RPC_TYPE_ERROR, "Address does not refer to a key");
     CKey vchSecret;
     if (!pwalletMain->GetKey(keyID, vchSecret))
         throw JSONRPCError(RPC_WALLET_ERROR, "Private key for address " + strAddress + " is not known");
-    return CAllgamescoinSecret(vchSecret).ToString();
+    return CAllGamesCoinSecret(vchSecret).ToString();
 }
 
 UniValue dumphdinfo(const UniValue& params, bool fHelp)
@@ -665,7 +665,7 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
     std::sort(vKeyBirth.begin(), vKeyBirth.end());
 
     // produce output
-    file << strprintf("# Wallet dump created by Allgamescoin Core %s (%s)\n", CLIENT_BUILD, CLIENT_DATE);
+    file << strprintf("# Wallet dump created by AllGamesCoin Core %s (%s)\n", CLIENT_BUILD, CLIENT_DATE);
     file << strprintf("# * Created on %s\n", EncodeDumpTime(GetTime()));
     file << strprintf("# * Best block at time of backup was %i (%s),\n", chainActive.Height(), chainActive.Tip()->GetBlockHash().ToString());
     file << strprintf("#   mined on %s\n", EncodeDumpTime(chainActive.Tip()->GetBlockTime()));
@@ -691,7 +691,7 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
         CExtKey masterKey;
         masterKey.SetMaster(&vchSeed[0], vchSeed.size());
 
-        CAllgamescoinExtKey b58extkey;
+        CAllGamesCoinExtKey b58extkey;
         b58extkey.SetKey(masterKey);
 
         file << "# extended private masterkey: " << b58extkey.ToString() << "\n";
@@ -699,7 +699,7 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
         CExtPubKey masterPubkey;
         masterPubkey = masterKey.Neuter();
 
-        CAllgamescoinExtPubKey b58extpubkey;
+        CAllGamesCoinExtPubKey b58extpubkey;
         b58extpubkey.SetKey(masterPubkey);
         file << "# extended public masterkey: " << b58extpubkey.ToString() << "\n\n";
 
@@ -718,10 +718,10 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
     for (std::vector<std::pair<int64_t, CKeyID> >::const_iterator it = vKeyBirth.begin(); it != vKeyBirth.end(); it++) {
         const CKeyID &keyid = it->second;
         std::string strTime = EncodeDumpTime(it->first);
-        std::string strAddr = CAllgamescoinAddress(keyid).ToString();
+        std::string strAddr = CAllGamesCoinAddress(keyid).ToString();
         CKey key;
         if (pwalletMain->GetKey(keyid, key)) {
-            file << strprintf("%s %s ", CAllgamescoinSecret(key).ToString(), strTime);
+            file << strprintf("%s %s ", CAllGamesCoinSecret(key).ToString(), strTime);
             if (pwalletMain->mapAddressBook.count(keyid)) {
                 file << strprintf("label=%s", EncodeDumpString(pwalletMain->mapAddressBook[keyid].name));
             } else if (setKeyPool.count(keyid)) {

@@ -201,7 +201,7 @@
     </message>
 </context>
 <context>
-    <name>AllgamescoinGUI</name>
+    <name>AllGamesCoinGUI</name>
     <message>
         <source>Wallet</source>
         <translation>ウォレット</translation>
@@ -2005,7 +2005,7 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>The Allgamescoin Core developers</source>
+        <source>The AllGamesCoin Core developers</source>
         <translation>ビットコインコアの開発者</translation>
     </message>
     <message>
@@ -2776,8 +2776,8 @@
         <translation>SOCKS5 プロキシ経由で接続する</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Allgamescoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Allgamescoin Core 開発者</translation>
+        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Bitcoin Core 開発者</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
@@ -2976,7 +2976,7 @@
         <translation>JSON-RPC 接続のパスワード</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Allgamescoin Wiki for SSL setup instructions)</source>
+        <source>RPC SSL options: (see the AllGamesCoin Wiki for SSL setup instructions)</source>
         <translation>RPC SSL オプション： (SSLのセットアップ手順はビットコインWikiを参照してください)</translation>
     </message>
     <message>

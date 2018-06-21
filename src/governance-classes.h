@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef GOVERNANCE_CLASSES_H
@@ -98,7 +98,7 @@ public:
          nAmount(0)
     {}
 
-    CGovernancePayment(CAllgamescoinAddress addrIn, CAmount nAmountIn)
+    CGovernancePayment(CAllGamesCoinAddress addrIn, CAmount nAmountIn)
         :fValid(false),
          script(),
          nAmount(0)

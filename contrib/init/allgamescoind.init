@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  allgamescoind The Allgamescoin Core server.
+#  allgamescoind The AllGamesCoin Core server.
 #
 #
 # chkconfig: 345 80 20

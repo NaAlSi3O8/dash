@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven Allgamescoin tests.
+Utilities to generate test vectors for the data-driven AllGamesCoin tests.
 
 Usage: 
 

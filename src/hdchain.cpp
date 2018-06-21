@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 
 #include "base58.h"
@@ -55,14 +55,14 @@ void CHDChain::Debug(std::string strName) const
             CExtKey extkey;
             extkey.SetMaster(&vchSeed[0], vchSeed.size());
 
-            CAllgamescoinExtKey b58extkey;
+            CAllGamesCoinExtKey b58extkey;
             b58extkey.SetKey(extkey);
             std::cout << "extended private masterkey: " << b58extkey.ToString().c_str() << std::endl;
 
             CExtPubKey extpubkey;
             extpubkey = extkey.Neuter();
 
-            CAllgamescoinExtPubKey b58extpubkey;
+            CAllGamesCoinExtPubKey b58extpubkey;
             b58extpubkey.SetKey(extpubkey);
             std::cout << "extended public masterkey: " << b58extpubkey.ToString().c_str() << std::endl;
         }

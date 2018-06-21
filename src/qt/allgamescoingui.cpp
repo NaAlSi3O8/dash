@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -63,7 +63,7 @@
 #include <QUrlQuery>
 #endif
 
-const std::string AllgamescoinGUI::DEFAULT_UIPLATFORM =
+const std::string AllGamesCoinGUI::DEFAULT_UIPLATFORM =
 #if defined(Q_OS_MAC)
         "macosx"
 #elif defined(Q_OS_WIN)
@@ -73,9 +73,9 @@ const std::string AllgamescoinGUI::DEFAULT_UIPLATFORM =
 #endif
         ;
 
-const QString AllgamescoinGUI::DEFAULT_WALLET = "~Default";
+const QString AllGamesCoinGUI::DEFAULT_WALLET = "~Default";
 
-AllgamescoinGUI::AllgamescoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
+AllGamesCoinGUI::AllGamesCoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
     QMainWindow(parent),
     clientModel(0),
     walletFrame(0),
@@ -127,7 +127,7 @@ AllgamescoinGUI::AllgamescoinGUI(const PlatformStyle *platformStyle, const Netwo
 
     GUIUtil::restoreWindowGeometry("nWindow", QSize(850, 550), this);
 
-    QString windowTitle = tr("Allgamescoin Core") + " - ";
+    QString windowTitle = tr("AllGamesCoin Core") + " - ";
 #ifdef ENABLE_WALLET
     /* if compiled with wallet support, -disablewallet can still disable the wallet */
     enableWallet = !GetBoolArg("-disablewallet", false);
@@ -264,7 +264,7 @@ AllgamescoinGUI::AllgamescoinGUI(const PlatformStyle *platformStyle, const Netwo
 #endif
 }
 
-AllgamescoinGUI::~AllgamescoinGUI()
+AllGamesCoinGUI::~AllGamesCoinGUI()
 {
     // Unsubscribe from notifications from core
     unsubscribeFromCoreSignals();
@@ -280,7 +280,7 @@ AllgamescoinGUI::~AllgamescoinGUI()
     delete rpcConsole;
 }
 
-void AllgamescoinGUI::createActions()
+void AllGamesCoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -297,7 +297,7 @@ void AllgamescoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/" + theme + "/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Allgamescoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a AllGamesCoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -374,15 +374,15 @@ void AllgamescoinGUI::createActions()
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&About Allgamescoin Core"), this);
-    aboutAction->setStatusTip(tr("Show information about Allgamescoin Core"));
+    aboutAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&About AllGamesCoin Core"), this);
+    aboutAction->setStatusTip(tr("Show information about AllGamesCoin Core"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutAction->setEnabled(false);
     aboutQtAction = new QAction(QIcon(":/icons/" + theme + "/about_qt"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/" + theme + "/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Allgamescoin Core"));
+    optionsAction->setStatusTip(tr("Modify configuration options for AllGamesCoin Core"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     optionsAction->setEnabled(false);
     toggleHideAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&Show / Hide"), this);
@@ -399,9 +399,9 @@ void AllgamescoinGUI::createActions()
     unlockWalletAction->setToolTip(tr("Unlock wallet"));
     lockWalletAction = new QAction(tr("&Lock Wallet"), this);
     signMessageAction = new QAction(QIcon(":/icons/" + theme + "/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Allgamescoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your AllGamesCoin addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/" + theme + "/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Allgamescoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified AllGamesCoin addresses"));
 
     openInfoAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Information"), this);
     openInfoAction->setStatusTip(tr("Show diagnostic information"));
@@ -436,7 +436,7 @@ void AllgamescoinGUI::createActions()
 
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the Allgamescoin Core help message to get a list with possible Allgamescoin Core command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the AllGamesCoin Core help message to get a list with possible AllGamesCoin Core command-line options"));
 
     showPrivateSendHelpAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&PrivateSend information"), this);
     showPrivateSendHelpAction->setMenuRole(QAction::NoRole);
@@ -491,7 +491,7 @@ void AllgamescoinGUI::createActions()
     new QShortcut(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_R), this, SLOT(showRepair()));
 }
 
-void AllgamescoinGUI::createMenuBar()
+void AllGamesCoinGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -549,7 +549,7 @@ void AllgamescoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
-void AllgamescoinGUI::createToolBars()
+void AllGamesCoinGUI::createToolBars()
 {
 #ifdef ENABLE_WALLET
     if(walletFrame)
@@ -583,7 +583,7 @@ void AllgamescoinGUI::createToolBars()
 #endif // ENABLE_WALLET
 }
 
-void AllgamescoinGUI::setClientModel(ClientModel *clientModel)
+void AllGamesCoinGUI::setClientModel(ClientModel *clientModel)
 {
     this->clientModel = clientModel;
     if(clientModel)
@@ -673,7 +673,7 @@ void AllgamescoinGUI::setClientModel(ClientModel *clientModel)
 }
 
 #ifdef ENABLE_WALLET
-bool AllgamescoinGUI::addWallet(const QString& name, WalletModel *walletModel)
+bool AllGamesCoinGUI::addWallet(const QString& name, WalletModel *walletModel)
 {
     if(!walletFrame)
         return false;
@@ -681,14 +681,14 @@ bool AllgamescoinGUI::addWallet(const QString& name, WalletModel *walletModel)
     return walletFrame->addWallet(name, walletModel);
 }
 
-bool AllgamescoinGUI::setCurrentWallet(const QString& name)
+bool AllGamesCoinGUI::setCurrentWallet(const QString& name)
 {
     if(!walletFrame)
         return false;
     return walletFrame->setCurrentWallet(name);
 }
 
-void AllgamescoinGUI::removeAllWallets()
+void AllGamesCoinGUI::removeAllWallets()
 {
     if(!walletFrame)
         return;
@@ -697,7 +697,7 @@ void AllgamescoinGUI::removeAllWallets()
 }
 #endif // ENABLE_WALLET
 
-void AllgamescoinGUI::setWalletActionsEnabled(bool enabled)
+void AllGamesCoinGUI::setWalletActionsEnabled(bool enabled)
 {
     overviewAction->setEnabled(enabled);
     sendCoinsAction->setEnabled(enabled);
@@ -719,17 +719,17 @@ void AllgamescoinGUI::setWalletActionsEnabled(bool enabled)
     openAction->setEnabled(enabled);
 }
 
-void AllgamescoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
+void AllGamesCoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
 {
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("Allgamescoin Core client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("AllGamesCoin Core client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getTrayAndWindowIcon());
     trayIcon->hide();
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-void AllgamescoinGUI::createIconMenu(QMenu *pmenu)
+void AllGamesCoinGUI::createIconMenu(QMenu *pmenu)
 {
     // Configuration of the tray icon (or dock icon) icon menu
     pmenu->addAction(toggleHideAction);
@@ -757,7 +757,7 @@ void AllgamescoinGUI::createIconMenu(QMenu *pmenu)
 }
 
 #ifndef Q_OS_MAC
-void AllgamescoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void AllGamesCoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -767,7 +767,7 @@ void AllgamescoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason
 }
 #endif
 
-void AllgamescoinGUI::optionsClicked()
+void AllGamesCoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -777,7 +777,7 @@ void AllgamescoinGUI::optionsClicked()
     dlg.exec();
 }
 
-void AllgamescoinGUI::aboutClicked()
+void AllGamesCoinGUI::aboutClicked()
 {
     if(!clientModel)
         return;
@@ -786,7 +786,7 @@ void AllgamescoinGUI::aboutClicked()
     dlg.exec();
 }
 
-void AllgamescoinGUI::showDebugWindow()
+void AllGamesCoinGUI::showDebugWindow()
 {
     rpcConsole->showNormal();
     rpcConsole->show();
@@ -794,57 +794,57 @@ void AllgamescoinGUI::showDebugWindow()
     rpcConsole->activateWindow();
 }
 
-void AllgamescoinGUI::showInfo()
+void AllGamesCoinGUI::showInfo()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_INFO);
     showDebugWindow();
 }
 
-void AllgamescoinGUI::showConsole()
+void AllGamesCoinGUI::showConsole()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_CONSOLE);
     showDebugWindow();
 }
 
-void AllgamescoinGUI::showGraph()
+void AllGamesCoinGUI::showGraph()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_GRAPH);
     showDebugWindow();
 }
 
-void AllgamescoinGUI::showPeers()
+void AllGamesCoinGUI::showPeers()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_PEERS);
     showDebugWindow();
 }
 
-void AllgamescoinGUI::showRepair()
+void AllGamesCoinGUI::showRepair()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_REPAIR);
     showDebugWindow();
 }
 
-void AllgamescoinGUI::showConfEditor()
+void AllGamesCoinGUI::showConfEditor()
 {
     GUIUtil::openConfigfile();
 }
 
-void AllgamescoinGUI::showMNConfEditor()
+void AllGamesCoinGUI::showMNConfEditor()
 {
     GUIUtil::openMNConfigfile();
 }
 
-void AllgamescoinGUI::showBackups()
+void AllGamesCoinGUI::showBackups()
 {
     GUIUtil::showBackups();
 }
 
-void AllgamescoinGUI::showHelpMessageClicked()
+void AllGamesCoinGUI::showHelpMessageClicked()
 {
     helpMessageDialog->show();
 }
 
-void AllgamescoinGUI::showPrivateSendHelpClicked()
+void AllGamesCoinGUI::showPrivateSendHelpClicked()
 {
     if(!clientModel)
         return;
@@ -854,7 +854,7 @@ void AllgamescoinGUI::showPrivateSendHelpClicked()
 }
 
 #ifdef ENABLE_WALLET
-void AllgamescoinGUI::openClicked()
+void AllGamesCoinGUI::openClicked()
 {
     OpenURIDialog dlg(this);
     if(dlg.exec())
@@ -863,19 +863,19 @@ void AllgamescoinGUI::openClicked()
     }
 }
 
-void AllgamescoinGUI::gotoOverviewPage()
+void AllGamesCoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     if (walletFrame) walletFrame->gotoOverviewPage();
 }
 
-void AllgamescoinGUI::gotoHistoryPage()
+void AllGamesCoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
 
-void AllgamescoinGUI::gotoMasternodePage()
+void AllGamesCoinGUI::gotoMasternodePage()
 {
     QSettings settings;
     if (settings.value("fShowMasternodesTab").toBool()) {
@@ -884,30 +884,30 @@ void AllgamescoinGUI::gotoMasternodePage()
     }
 }
 
-void AllgamescoinGUI::gotoReceiveCoinsPage()
+void AllGamesCoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoReceiveCoinsPage();
 }
 
-void AllgamescoinGUI::gotoSendCoinsPage(QString addr)
+void AllGamesCoinGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
 }
 
-void AllgamescoinGUI::gotoSignMessageTab(QString addr)
+void AllGamesCoinGUI::gotoSignMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoSignMessageTab(addr);
 }
 
-void AllgamescoinGUI::gotoVerifyMessageTab(QString addr)
+void AllGamesCoinGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
 #endif // ENABLE_WALLET
 
-void AllgamescoinGUI::updateNetworkState()
+void AllGamesCoinGUI::updateNetworkState()
 {
     int count = clientModel->getNumConnections();
     QString icon;
@@ -922,7 +922,7 @@ void AllgamescoinGUI::updateNetworkState()
     }
 
     if (clientModel->getNetworkActive()) {
-        labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Allgamescoin network", "", count));
+        labelConnectionsIcon->setToolTip(tr("%n active connection(s) to AllGamesCoin network", "", count));
     } else {
         labelConnectionsIcon->setToolTip(tr("Network activity disabled"));
         icon = ":/icons/" + theme + "/network_disabled";
@@ -931,17 +931,17 @@ void AllgamescoinGUI::updateNetworkState()
     labelConnectionsIcon->setPixmap(platformStyle->SingleColorIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
 }
 
-void AllgamescoinGUI::setNumConnections(int count)
+void AllGamesCoinGUI::setNumConnections(int count)
 {
     updateNetworkState();
 }
 
-void AllgamescoinGUI::setNetworkActive(bool networkActive)
+void AllGamesCoinGUI::setNetworkActive(bool networkActive)
 {
     updateNetworkState();
 }
 
-void AllgamescoinGUI::updateHeadersSyncProgressLabel()
+void AllGamesCoinGUI::updateHeadersSyncProgressLabel()
 {
     int64_t headersTipTime = clientModel->getHeaderTipTime();
     int headersTipHeight = clientModel->getHeaderTipHeight();
@@ -950,7 +950,7 @@ void AllgamescoinGUI::updateHeadersSyncProgressLabel()
         progressBarLabel->setText(tr("Syncing Headers (%1%)...").arg(QString::number(100.0 / (headersTipHeight+estHeadersLeft)*headersTipHeight, 'f', 1)));
 }
 
-void AllgamescoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
+void AllGamesCoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
 {
     if (modalOverlay)
     {
@@ -1061,7 +1061,7 @@ void AllgamescoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double
     progressBar->setToolTip(tooltip);
 }
 
-void AllgamescoinGUI::setAdditionalDataSyncProgress(double nSyncProgress)
+void AllGamesCoinGUI::setAdditionalDataSyncProgress(double nSyncProgress)
 {
     if(!clientModel)
         return;
@@ -1114,9 +1114,9 @@ void AllgamescoinGUI::setAdditionalDataSyncProgress(double nSyncProgress)
     progressBar->setToolTip(tooltip);
 }
 
-void AllgamescoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
+void AllGamesCoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Allgamescoin Core"); // default title
+    QString strTitle = tr("AllGamesCoin Core"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -1142,7 +1142,7 @@ void AllgamescoinGUI::message(const QString &title, const QString &message, unsi
             break;
         }
     }
-    // Append title to "Allgamescoin Core - "
+    // Append title to "AllGamesCoin Core - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 
@@ -1173,7 +1173,7 @@ void AllgamescoinGUI::message(const QString &title, const QString &message, unsi
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void AllgamescoinGUI::changeEvent(QEvent *e)
+void AllGamesCoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -1192,7 +1192,7 @@ void AllgamescoinGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void AllgamescoinGUI::closeEvent(QCloseEvent *event)
+void AllGamesCoinGUI::closeEvent(QCloseEvent *event)
 {
 #ifndef Q_OS_MAC // Ignored on Mac
     if(clientModel && clientModel->getOptionsModel())
@@ -1209,7 +1209,7 @@ void AllgamescoinGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void AllgamescoinGUI::showEvent(QShowEvent *event)
+void AllGamesCoinGUI::showEvent(QShowEvent *event)
 {
     // enable the debug window when the main window shows up
     openInfoAction->setEnabled(true);
@@ -1222,11 +1222,11 @@ void AllgamescoinGUI::showEvent(QShowEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-void AllgamescoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label)
+void AllGamesCoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label)
 {
     // On new transaction, make an info balloon
     QString msg = tr("Date: %1\n").arg(date) +
-                  tr("Amount: %1\n").arg(AllgamescoinUnits::formatWithUnit(unit, amount, true)) +
+                  tr("Amount: %1\n").arg(AllGamesCoinUnits::formatWithUnit(unit, amount, true)) +
                   tr("Type: %1\n").arg(type);
     if (!label.isEmpty())
         msg += tr("Label: %1\n").arg(label);
@@ -1237,14 +1237,14 @@ void AllgamescoinGUI::incomingTransaction(const QString& date, int unit, const C
 }
 #endif // ENABLE_WALLET
 
-void AllgamescoinGUI::dragEnterEvent(QDragEnterEvent *event)
+void AllGamesCoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void AllgamescoinGUI::dropEvent(QDropEvent *event)
+void AllGamesCoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -1256,7 +1256,7 @@ void AllgamescoinGUI::dropEvent(QDropEvent *event)
     event->acceptProposedAction();
 }
 
-bool AllgamescoinGUI::eventFilter(QObject *object, QEvent *event)
+bool AllGamesCoinGUI::eventFilter(QObject *object, QEvent *event)
 {
     // Catch status tip events
     if (event->type() == QEvent::StatusTip)
@@ -1269,7 +1269,7 @@ bool AllgamescoinGUI::eventFilter(QObject *object, QEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-bool AllgamescoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
+bool AllGamesCoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
 {
     // URI has to be valid
     if (walletFrame && walletFrame->handlePaymentRequest(recipient))
@@ -1281,7 +1281,7 @@ bool AllgamescoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
     return false;
 }
 
-void AllgamescoinGUI::setHDStatus(int hdEnabled)
+void AllGamesCoinGUI::setHDStatus(int hdEnabled)
 {
     QString theme = GUIUtil::getThemeName();
 
@@ -1292,7 +1292,7 @@ void AllgamescoinGUI::setHDStatus(int hdEnabled)
     labelWalletHDStatusIcon->setEnabled(hdEnabled);
 }
 
-void AllgamescoinGUI::setEncryptionStatus(int status)
+void AllGamesCoinGUI::setEncryptionStatus(int status)
 {
     QString theme = GUIUtil::getThemeName();
     switch(status)
@@ -1339,7 +1339,7 @@ void AllgamescoinGUI::setEncryptionStatus(int status)
 }
 #endif // ENABLE_WALLET
 
-void AllgamescoinGUI::showNormalIfMinimized(bool fToggleHidden)
+void AllGamesCoinGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     if(!clientModel)
         return;
@@ -1364,12 +1364,12 @@ void AllgamescoinGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void AllgamescoinGUI::toggleHidden()
+void AllGamesCoinGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void AllgamescoinGUI::detectShutdown()
+void AllGamesCoinGUI::detectShutdown()
 {
     if (ShutdownRequested())
     {
@@ -1379,7 +1379,7 @@ void AllgamescoinGUI::detectShutdown()
     }
 }
 
-void AllgamescoinGUI::showProgress(const QString &title, int nProgress)
+void AllGamesCoinGUI::showProgress(const QString &title, int nProgress)
 {
     if (nProgress == 0)
     {
@@ -1402,7 +1402,7 @@ void AllgamescoinGUI::showProgress(const QString &title, int nProgress)
         progressDialog->setValue(nProgress);
 }
 
-void AllgamescoinGUI::setTrayIconVisible(bool fHideTrayIcon)
+void AllGamesCoinGUI::setTrayIconVisible(bool fHideTrayIcon)
 {
     if (trayIcon)
     {
@@ -1410,13 +1410,13 @@ void AllgamescoinGUI::setTrayIconVisible(bool fHideTrayIcon)
     }
 }
 
-void AllgamescoinGUI::showModalOverlay()
+void AllGamesCoinGUI::showModalOverlay()
 {
     if (modalOverlay && (progressBar->isVisible() || modalOverlay->isLayerVisible()))
         modalOverlay->toggleVisibility();
 }
 
-static bool ThreadSafeMessageBox(AllgamescoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
+static bool ThreadSafeMessageBox(AllGamesCoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -1433,21 +1433,21 @@ static bool ThreadSafeMessageBox(AllgamescoinGUI *gui, const std::string& messag
     return ret;
 }
 
-void AllgamescoinGUI::subscribeToCoreSignals()
+void AllGamesCoinGUI::subscribeToCoreSignals()
 {
     // Connect signals to client
     uiInterface.ThreadSafeMessageBox.connect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
     uiInterface.ThreadSafeQuestion.connect(boost::bind(ThreadSafeMessageBox, this, _1, _3, _4));
 }
 
-void AllgamescoinGUI::unsubscribeFromCoreSignals()
+void AllGamesCoinGUI::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from client
     uiInterface.ThreadSafeMessageBox.disconnect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
     uiInterface.ThreadSafeQuestion.disconnect(boost::bind(ThreadSafeMessageBox, this, _1, _3, _4));
 }
 
-void AllgamescoinGUI::toggleNetworkActive()
+void AllGamesCoinGUI::toggleNetworkActive()
 {
     if (clientModel) {
         clientModel->setNetworkActive(!clientModel->getNetworkActive());
@@ -1455,7 +1455,7 @@ void AllgamescoinGUI::toggleNetworkActive()
 }
 
 /** Get restart command-line parameters and request restart */
-void AllgamescoinGUI::handleRestart(QStringList args)
+void AllGamesCoinGUI::handleRestart(QStringList args)
 {
     if (!ShutdownRequested())
         Q_EMIT requestedRestart(args);
@@ -1467,12 +1467,12 @@ UnitDisplayStatusBarControl::UnitDisplayStatusBarControl(const PlatformStyle *pl
 {
     createContextMenu();
     setToolTip(tr("Unit to show amounts in. Click to select another unit."));
-    QList<AllgamescoinUnits::Unit> units = AllgamescoinUnits::availableUnits();
+    QList<AllGamesCoinUnits::Unit> units = AllGamesCoinUnits::availableUnits();
     int max_width = 0;
     const QFontMetrics fm(font());
-    Q_FOREACH (const AllgamescoinUnits::Unit unit, units)
+    Q_FOREACH (const AllGamesCoinUnits::Unit unit, units)
     {
-        max_width = qMax(max_width, fm.width(AllgamescoinUnits::name(unit)));
+        max_width = qMax(max_width, fm.width(AllGamesCoinUnits::name(unit)));
     }
     setMinimumSize(max_width, 0);
     setAlignment(Qt::AlignRight | Qt::AlignVCenter);
@@ -1489,9 +1489,9 @@ void UnitDisplayStatusBarControl::mousePressEvent(QMouseEvent *event)
 void UnitDisplayStatusBarControl::createContextMenu()
 {
     menu = new QMenu(this);
-    Q_FOREACH(AllgamescoinUnits::Unit u, AllgamescoinUnits::availableUnits())
+    Q_FOREACH(AllGamesCoinUnits::Unit u, AllGamesCoinUnits::availableUnits())
     {
-        QAction *menuAction = new QAction(QString(AllgamescoinUnits::name(u)), this);
+        QAction *menuAction = new QAction(QString(AllGamesCoinUnits::name(u)), this);
         menuAction->setData(QVariant(u));
         menu->addAction(menuAction);
     }
@@ -1516,7 +1516,7 @@ void UnitDisplayStatusBarControl::setOptionsModel(OptionsModel *optionsModel)
 /** When Display Units are changed on OptionsModel it will refresh the display text of the control on the status bar */
 void UnitDisplayStatusBarControl::updateDisplayUnit(int newUnits)
 {
-    setText(AllgamescoinUnits::name(newUnits));
+    setText(AllGamesCoinUnits::name(newUnits));
 }
 
 /** Shows context menu with Display Unit options by the mouse coordinates */

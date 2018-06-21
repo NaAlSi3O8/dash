@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2015 The Allgamescoin Core developers
-// Copyright (c) 2014-2017 The Allgamescoin Core developers
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -42,17 +42,17 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** Allgamescoin unit definitions. Encapsulates parsing and formatting
+/** AllGamesCoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class AllgamescoinUnits: public QAbstractListModel
+class AllGamesCoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit AllgamescoinUnits(QObject *parent);
+    explicit AllGamesCoinUnits(QObject *parent);
 
-    /** Allgamescoin units.
+    /** AllGamesCoin units.
       @note Source: https://en.allgamescoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
@@ -127,8 +127,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<AllgamescoinUnits::Unit> unitlist;
+    QList<AllGamesCoinUnits::Unit> unitlist;
 };
-typedef AllgamescoinUnits::Unit AllgamescoinUnit;
+typedef AllGamesCoinUnits::Unit AllGamesCoinUnit;
 
 #endif // ALLGAMESCOIN_QT_ALLGAMESCOINUNITS_H

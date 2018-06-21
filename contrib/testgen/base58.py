@@ -1,5 +1,5 @@
 '''
-Allgamescoin base58 encoding and decoding.
+AllGamesCoin base58 encoding and decoding.
 
 Based on https://allgamescointalk.org/index.php?topic=1026.0 (public domain)
 '''
@@ -34,7 +34,7 @@ def b58encode(v):
         long_value = div
     result = __b58chars[long_value] + result
 
-    # Allgamescoin does a little leading-zero-compression:
+    # AllGamesCoin does a little leading-zero-compression:
     # leading 0-bytes in the input become leading-1s
     nPad = 0
     for c in v:
