@@ -3650,11 +3650,15 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>版权(C) 2009-%i The AllGamesCoin Core Developers</translation>
+        <translation>版权(C) 2009-%i The Bitcoin Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Bitcoin Core Developers</source>
-        <translation>版权 (C) 2014-%i The AllGamesCoin Core Developers</translation>
+        <source>Copyright (C) 2014-%i The Dash Core Developers</source>
+        <translation>版权 (C) 2014-%i The Dash Core Developers</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2017-%i The AllGamesCoin Core Developers</source>
+        <translation>版权 (C) 2017-%i The AllGamesCoin Core Developers</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>

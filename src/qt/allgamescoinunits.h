@@ -57,9 +57,9 @@ public:
      */
     enum Unit
     {
-        ALLGAMESCOIN,
-        mALLGAMESCOIN,
-        uALLGAMESCOIN,
+        AGC,
+        mAGC,
+        uAGC,
         duffs
     };
 

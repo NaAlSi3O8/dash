@@ -2209,7 +2209,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <source>Inputs...</source>
-        <translation>Entradas...</translation>
+        <translation>Entradas de AGC...</translation>
     </message>
     <message>
         <source>automatically selected</source>
@@ -3801,8 +3801,12 @@ por ejemplo: alertnotify=echo %%s | mail -s "Alerta de AllGamesCoin" admin@foo.c
         <translation>Copyright (C) 2009-%i Los Desarrolladores de Bitcoin Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2014-%i Los Desarrolladores de Bitcoin Core</translation>
+        <source>Copyright (C) 2014-%i The Dash Core Developers</source>
+        <translation>Copyright (C) 2014-%i Los Desarrolladores de Dash Core</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2017-%i The AllGamesCoin Core Developers</source>
+        <translation>Copyright (C) 2017-%i Los Desarrolladores de AllGamesCoin Core</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>

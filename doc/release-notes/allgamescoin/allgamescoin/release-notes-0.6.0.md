@@ -18,7 +18,7 @@ https://github.com/allgamescoin/allgamescoin/zipball/v0.6.0  # .zip
 For Ubuntu users, there is a ppa maintained by Matt Corallo which
 you can add to your system so that it will automatically keep
 allgamescoin up-to-date.  Just type
-sudo apt-add-repository ppa:allgamescoin/allgamescoin
+sudo apt-add-repository ppa:bitcoin/bitcoin
 in your terminal, then install the allgamescoin-qt package.
 
 

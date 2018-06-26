@@ -3696,8 +3696,12 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
         <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2014-%i Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2014-%i The Dash Core Developers</source>
+        <translation>Copyright (C) 2014-%i Dash Core Developers</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2017-%i The AllGamesCoin Core Developers</source>
+        <translation>Copyright (C) 2017-%i AllGamesCoin Core Developers</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>

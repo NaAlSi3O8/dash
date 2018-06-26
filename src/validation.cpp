@@ -1233,8 +1233,18 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 {
     double dDiff;
 
-    if (!nPrevHeight) {
-        return 1051200 * COIN;
+    if (!nPrevHeight && Params().NetworkIDString() != "test" || nPrevHeight <= 2) { // No Premine on testnet
+        return 350400 * COIN;
+    }
+
+    // Ninja Launch, first 500 blocks 1 AGC reward
+    if (nPrevHeight <= 300) {
+        return 1 * COIN;
+    }
+
+    // Total supply 22,075,700
+    if (nPrevHeight >= 3154101) {
+        return 0;
     }
 
     if (nPrevHeight <= 4500 && Params().NetworkIDString() == CBaseChainParams::MAIN) {
@@ -1253,8 +1263,8 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     }
 
     // Minimum reward is 1.25
-    if (nSubsidy < 1.25) {
-        nSubsidy = 1.25;
+    if (nSubsidy < (1.25 * COIN)) {
+        nSubsidy = 1.25 * COIN;
     }
 
     // Hard fork to reduce the block reward by 10 extra percent (allowing budget/superblocks)

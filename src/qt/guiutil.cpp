@@ -117,7 +117,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a AllGamesCoin address (e.g. %1)").arg("XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"));
+    widget->setPlaceholderText(QObject::tr("Enter a AllGamesCoin address (e.g. %1)").arg("AbWMQqUNEosjjEb9WAGuJ5KGN9h4WL5bqf"));
 #endif
     widget->setValidator(new AllGamesCoinAddressEntryValidator(parent));
     widget->setCheckValidator(new AllGamesCoinAddressCheckValidator(parent));
@@ -184,7 +184,7 @@ bool parseAllGamesCoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!AllGamesCoinUnits::parse(AllGamesCoinUnits::ALLGAMESCOIN, i->second, &rv.amount))
+                if(!AllGamesCoinUnits::parse(AllGamesCoinUnits::AGC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -223,7 +223,7 @@ QString formatAllGamesCoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(AllGamesCoinUnits::format(AllGamesCoinUnits::ALLGAMESCOIN, info.amount, false, AllGamesCoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(AllGamesCoinUnits::format(AllGamesCoinUnits::AGC, info.amount, false, AllGamesCoinUnits::separatorNever));
         paramCount++;
     }
 

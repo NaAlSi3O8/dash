@@ -19,9 +19,9 @@ AllGamesCoinUnits::AllGamesCoinUnits(QObject *parent):
 QList<AllGamesCoinUnits::Unit> AllGamesCoinUnits::availableUnits()
 {
     QList<AllGamesCoinUnits::Unit> unitlist;
-    unitlist.append(ALLGAMESCOIN);
-    unitlist.append(mALLGAMESCOIN);
-    unitlist.append(uALLGAMESCOIN);
+    unitlist.append(AGC);
+    unitlist.append(mAGC);
+    unitlist.append(uAGC);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -30,9 +30,9 @@ bool AllGamesCoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case ALLGAMESCOIN:
-    case mALLGAMESCOIN:
-    case uALLGAMESCOIN:
+    case AGC:
+    case mAGC:
+    case uAGC:
     case duffs:
         return true;
     default:
@@ -46,9 +46,9 @@ QString AllGamesCoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case ALLGAMESCOIN: return QString("ALLGAMESCOIN");
-            case mALLGAMESCOIN: return QString("mALLGAMESCOIN");
-            case uALLGAMESCOIN: return QString::fromUtf8("μALLGAMESCOIN");
+            case AGC: return QString("AGC");
+            case mAGC: return QString("mAGC");
+            case uAGC: return QString::fromUtf8("μAGC");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString AllGamesCoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case ALLGAMESCOIN: return QString("tALLGAMESCOIN");
-            case mALLGAMESCOIN: return QString("mtALLGAMESCOIN");
-            case uALLGAMESCOIN: return QString::fromUtf8("μtALLGAMESCOIN");
+            case AGC: return QString("tAGC");
+            case mAGC: return QString("mtAGC");
+            case uAGC: return QString::fromUtf8("μtAGC");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -72,9 +72,9 @@ QString AllGamesCoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case ALLGAMESCOIN: return QString("AllGamesCoin");
-            case mALLGAMESCOIN: return QString("Milli-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uALLGAMESCOIN: return QString("Micro-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case AGC: return QString("AllGamesCoin");
+            case mAGC: return QString("Milli-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uAGC: return QString("Micro-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-AllGamesCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -83,9 +83,9 @@ QString AllGamesCoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case ALLGAMESCOIN: return QString("TestAllGamesCoins");
-            case mALLGAMESCOIN: return QString("Milli-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uALLGAMESCOIN: return QString("Micro-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case AGC: return QString("TestAllGamesCoins");
+            case mAGC: return QString("Milli-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uAGC: return QString("Micro-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestAllGamesCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -96,9 +96,9 @@ qint64 AllGamesCoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case ALLGAMESCOIN:  return 100000000;
-    case mALLGAMESCOIN: return 100000;
-    case uALLGAMESCOIN: return 100;
+    case AGC:  return 100000000;
+    case mAGC: return 100000;
+    case uAGC: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -108,9 +108,9 @@ int AllGamesCoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case ALLGAMESCOIN: return 8;
-    case mALLGAMESCOIN: return 5;
-    case uALLGAMESCOIN: return 2;
+    case AGC: return 8;
+    case mAGC: return 5;
+    case uAGC: return 2;
     case duffs: return 0;
     default: return 0;
     }

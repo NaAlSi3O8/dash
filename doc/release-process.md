@@ -61,7 +61,7 @@ Check out the source code in the following directory hierarchy.
 ### Fetch and create inputs: (first time, or when dependency versions change)
 
 	mkdir -p inputs
-	wget -P inputs https://allgamescoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
+	wget -P inputs https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
 	wget -P inputs http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
 
  Register and download the Apple SDK: see [OS X readme](README_osx.txt) for details.
@@ -194,7 +194,7 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - Update title of #allgamescoindev on Freenode IRC
 
-  - Optionally reddit /r/AllGamesCoinpay, ... but this will usually sort out itself
+  - Optionally reddit /r/allgamescoindev, ... but this will usually sort out itself
 
 - Notify flare so that he can start building [the PPAs](https://launchpad.net/~allgamescoin.org/+archive/ubuntu/allgamescoin)
 

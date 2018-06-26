@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.allgamescoin.AllGamesCoinPayment</string>
+      <string>org.allgamescoin.allgamescoindevment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>allgamescoin</string>

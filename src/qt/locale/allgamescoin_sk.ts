@@ -3831,11 +3831,15 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Autorské práva (C) 2009-%i Vývojári AllGamesCoin Core</translation>
+        <translation>Autorské práva (C) 2009-%i Vývojári Bitcoin Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Bitcoin Core Developers</source>
-        <translation>Autorské práva (C) 2014-%i Vývojári jadra AllGamesCoin</translation>
+        <source>Copyright (C) 2014-%i The Dash Core Developers</source>
+        <translation>Autorské práva (C) 2014-%i Vývojári jadra Dash</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2017-%i The AllGamesCoin Core Developers</source>
+        <translation>Autorské práva (C) 2017-%i Vývojári jadra AllGamesCoin</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>

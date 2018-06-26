@@ -15,7 +15,7 @@ source-only tarballs/zipballs directly from there:
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
 allgamescoin up-to-date.  Just type
-  sudo apt-add-repository ppa:allgamescoin/allgamescoin
+  sudo apt-add-repository ppa:bitcoin/bitcoin
   sudo apt-get update
 in your terminal, then install the allgamescoin-qt package:
   sudo apt-get install allgamescoin-qt

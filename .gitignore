@@ -1,5 +1,6 @@
 *.sublime-project
 *.sublime-workspace
+.vscode
 todo.txt
 reset-files.bash
 
@@ -132,8 +133,3 @@ allgamescoin-cli
 allgamescoind
 allgamescoin-qt
 make
-
-#CLion
-.idea
-CMakeLists.txt
-cmake-build-debug

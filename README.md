@@ -1,7 +1,6 @@
-AllGamesCoin Core staging tree 0.12.2
+AllGamesCoin Core 0.2.0
 ===============================
 
-`master:` [![Build Status](https://travis-ci.org/allgamescoindev/allgamescoin.svg?branch=master)](https://travis-ci.org/allgamescoindev/allgamescoin) `develop:` [![Build Status](https://travis-ci.org/allgamescoindev/allgamescoin.svg?branch=develop)](https://travis-ci.org/allgamescoindev/allgamescoin/branches)
 
 https://www.allgamescoin.org
 
@@ -16,7 +15,7 @@ are carried out collectively by the network. AllGamesCoin Core is the name of th
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the AllGamesCoin Core software, see https://www.allgamescoin.org/get-allgamescoin/.
+the AllGamesCoin Core software, see https://www.allgamescoin.org/.
 
 
 License
@@ -61,17 +60,3 @@ Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
-
-Translations
-------------
-
-Changes to translations as well as new translations can be submitted to
-[AllGamesCoin Core's Transifex page](https://www.transifex.com/projects/p/allgamescoin/).
-
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
-
-Translators should also follow the [forum](https://www.allgamescoin.org/forum/topic/allgamescoin-worldwide-collaboration.88/).
