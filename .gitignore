@@ -133,3 +133,8 @@ allgamescoin-cli
 allgamescoind
 allgamescoin-qt
 make
+
+#CLion	
+.idea	
+CMakeLists.txt	
+cmake-build-debug

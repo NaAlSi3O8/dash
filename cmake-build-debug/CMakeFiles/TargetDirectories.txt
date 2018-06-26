@@ -1,3 +1,0 @@
-/home/ubuntu/code/allgamescoin/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ubuntu/code/allgamescoin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/code/allgamescoin/cmake-build-debug/CMakeFiles/allgamescoin.dir
