@@ -100,7 +100,7 @@ deploy:
   api_key:
     secure: sT9iTQEQH1QBZ235ByXM5hiJJfhTyBZzH09bE3BBHukPWQ3MINPLJZXLaMs7lgdIES7ISjUdcXsIxMZHxY42Ow3X2RMHxzLBKMPdm+2vPEcN5I0ZSgSKTfWPxKcZ5vHa6lf9VOcUKdotZ2/asmnZejiQNUQ4gc+QBfjpPr4WIjDn1jiGqpZx7lcy99h0/GbYGCGGA8pY3WhF3W+3WC60244xs/Suq6VfonMp+8DHqJTX4Vmw/cekQZ7W2f7ozwC3whFJ5WRt2T2fz0duNswFDHp86KUnYy0QyhhyRvBLQ+AyHU+aUjGFewzLQdVo9zr/bi56P22D92bQu2C1CD/XhNYfHrBQeWEz2cnUVgMT9bgwXYMGJjN8/L/kSw86gmHctdf2xxi/b5eaxsrUWHryGdLjUe3XSM0SrXaiFtRXYhDaCJVXlnNUhtr4qL9SwgCXT/TAnfIXMb5kxGDm2hG2UVzGTB6CVEMV0K/TjJ0eGNUdMpx3jXRZPecvJzyBcCcN+EfSZeAaxP3sdCYBr+tKIZi6ct70AUjGsZ9pX6ST2B8IRmHnMQzlmZiS+UK/5tz2sS62kCQo0xVTdEk5Ek02BMeE3YgeLNPz290uo2svicEklYgYBzqavzxwo5HeY9VH2b/gHHihkfI2TufU5Yc7CGy92kuxhFU/GJcVY7cMs9k=
   file_glob: true
-  file: allgamescoincore-*
+  file: $TRAVIS_BUILD_DIR/allgamescoin-$HOST/*
   skip_cleanup: true
   on:
     tags: true   

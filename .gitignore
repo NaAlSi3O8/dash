@@ -135,6 +135,6 @@ allgamescoin-qt
 make
 
 #CLion	
-.idea	
-CMakeLists.txt	
+.idea
+CMakeLists.txt
 cmake-build-debug
