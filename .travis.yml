@@ -94,7 +94,7 @@ after_script:
     - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then (echo "Upload goes here. Something like: scp -r $BASE_OUTDIR server" || echo "upload failed"); fi
     - ls $TRAVIS_BUILD_DIR
     - ls $BASE_OUTDIR
-    - ls $TRAVIS_BUILD_DIR/motion-$HOST
+    - ls $TRAVIS_BUILD_DIR/allgamescoin-$HOST
 deploy:
   provider: releases
   api_key:
