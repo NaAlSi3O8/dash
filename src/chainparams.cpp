@@ -142,12 +142,12 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xf2;
-        pchMessageStart[1] = 0xbc;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xd5;
+        pchMessageStart[0] = 0xbc;
+        pchMessageStart[1] = 0x0d;
+        pchMessageStart[2] = 0x6c;
+        pchMessageStart[3] = 0xba;
         vAlertPubKey = ParseHex("0463f1d71ae6731bba66d974fbc6f132525d541309b4f944dde855b6287e74468669499394c66e0741e5b6df0d1602a8f73cea195d334395799e958fff77ee9e32");
-        nDefaultPort = 8989;
+        nDefaultPort = 7208;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in allgamescoin
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
@@ -267,12 +267,12 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xf2;
-        pchMessageStart[1] = 0xbc;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xd6;
+        pchMessageStart[0] = 0xbd;
+        pchMessageStart[1] = 0x0a;
+        pchMessageStart[2] = 0x6b;
+        pchMessageStart[3] = 0xab;
         vAlertPubKey = ParseHex("04621f7aea29e57493d33569f3cde075574b68a0016be44011097f51bab0c530407ef91647e570646c8bf061bae493abbb83635cbbcc631a986378c505450384e3");
-        nDefaultPort = 18989;
+        nDefaultPort = 17208;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 1000;
@@ -384,11 +384,11 @@ public:
 
         pchMessageStart[0] = 0xf2;
         pchMessageStart[1] = 0xbc;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xd7;
+        pchMessageStart[2] = 0xbe;
+        pchMessageStart[3] = 0xdf;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in allgamescoin
         nDelayGetHeadersTime = 0; // never delay GETHEADERS in regtests
-        nDefaultPort = 17989;
+        nDefaultPort = 17108;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1529735129, 1282268, 0x1e0ffff0, 1, 150000 * COIN);
