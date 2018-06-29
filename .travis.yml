@@ -44,6 +44,8 @@ env:
     libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev" ALLGAMESCOIN_CONFIG="--enable-gui
     --enable-reduce-exports" OSX_SDK=10.9 GOAL="deploy"
 before_install:
+- openssl aes-256-cbc -K $encrypted_f17145be0bb3_key -iv $encrypted_f17145be0bb3_iv
+  -in id_rsa_down_allgamescoin.enc -out ~\/.ssh/id_rsa_down_allgamescoin -d
 - git clone https://github.com/allgamescoindev/x16r_hash
 - travis_retry sudo apt-get install python-dev
 - travis_retry sudo add-apt-repository ppa:ubuntu-wine/ppa -y
@@ -90,7 +92,8 @@ script:
   --log_level=test_suite; fi
 - if [ "$RUN_TESTS" = "true" ]; then qa/pull-tester/rpc-tests.py --coverage; fi
 after_script:
-- openssl aes-256-cbc -K $encrypted_f17145be0bb3_key -iv $encrypted_f17145be0bb3_iv -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_f17145be0bb3_key -iv $encrypted_f17145be0bb3_iv
+  -in id_rsa_down_allgamescoin.enc -out ~\/.ssh/id_rsa_down_allgamescoin -d
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/id_rsa
 - ssh-add /tmp/id_rsa
