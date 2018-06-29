@@ -11,7 +11,7 @@ cache:
   - depends/sdk-sources
   - "$HOME/.ccache"
 addons:
-  ssh_known_hosts: down.allgamescoin.org
+  ssh_known_hosts: 45.76.199.60
 env:
   global:
   - MAKEJOBS=-j5
@@ -100,4 +100,4 @@ after_script:
 - ls $TRAVIS_BUILD_DIR
 - ls $BASE_OUTDIR
 - ls $TRAVIS_BUILD_DIR/motion-$HOST
-- rsync -r --ignore-existing --quiet $TRAVIS_BUILD_DIR/allgamescoin-$HOST root@down.allgamescoin.org:/home/down/$TRAVIS_JOB_NUMBER-$HOST
+- rsync -r --ignore-existing --quiet $TRAVIS_BUILD_DIR/allgamescoin-$HOST root@45.76.199.60:/home/down/$TRAVIS_JOB_NUMBER-$HOST
