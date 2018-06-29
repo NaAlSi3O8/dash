@@ -91,10 +91,10 @@ script:
 - if [ "$RUN_TESTS" = "true" ]; then qa/pull-tester/rpc-tests.py --coverage; fi
 after_script:
 - openssl aes-256-cbc -K $encrypted_f17145be0bb3_key -iv $encrypted_f17145be0bb3_iv
-  -in id_rsa_down_allgamescoin.enc -out id_rsa_down_allgamescoin -d
+  -in $TRAVIS_BUILD_DIR/id_rsa_down_allgamescoin.enc -out /tmp/id_rsa_down_allgamescoin -d
 - eval "$(ssh-agent -s)"
-- chmod 600 id_rsa_down_allgamescoin
-- ssh-add id_rsa_down_allgamescoin
+- chmod 600 /tmp/id_rsa_down_allgamescoin
+- ssh-add /tmp/id_rsa_down_allgamescoin
 - ls $TRAVIS_BUILD_DIR
 - ls $BASE_OUTDIR
 - ls $TRAVIS_BUILD_DIR/motion-$HOST
