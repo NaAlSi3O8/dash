@@ -1233,10 +1233,10 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 {
     double dDiff;
 
-    if (!nPrevHeight && Params().NetworkIDString() != "test" || nPrevHeight <= 2) { // No Premine on testnet
-        return 350400 * COIN;
-    }
-    
+    //if (!nPrevHeight && Params().NetworkIDString() != "test" || nPrevHeight <= 2) { // No Premine on testnet
+    //    return 350400 * COIN;
+    //}
+
     // Total supply 22,075,700
     if (nPrevHeight >= 3154101) {
         return 0;
