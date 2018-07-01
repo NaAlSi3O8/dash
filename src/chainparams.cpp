@@ -159,10 +159,7 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x0000058179e876cda7fb90bee0574d286e403bc175e4fd3d2ac313fbf1fa390e"));
         assert(genesis.hashMerkleRoot == uint256S("0xb40d1b9a7e80e236b8afe6756b238766f567222b1214d1e25a6a054abc10856a"));
 
-        vSeeds.push_back(CDNSSeedData("seed0.allgamescoin.org", "seed0.allgamescoin.org"));
-        //vSeeds.push_back(CDNSSeedData("fixed-seeds.allgamescoin.org", "one.fixed-seeds.allgamescoin.org"));
-        //vSeeds.push_back(CDNSSeedData("fixed-seeds.allgamescoin.org", "two.fixed-seeds.allgamescoin.org"));
-        //vSeeds.push_back(CDNSSeedData("fixed-seeds.allgamescoin.org", "three.fixed-seeds.allgamescoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed0_allgamescoin", "seed0.allgamescoin.org"));
         // vFixedSeeds.clear();
         // vSeeds.clear();
 
@@ -198,7 +195,7 @@ public:
             1530347109, // * UNIX timestamp of last checkpoint block
             0,    // * total number of transactions between genesis and last checkpoint
                   //   (the tx=... number in the SetBestChain debug.log lines)
-            500   // * estimated number of transactions per day after checkpoint
+            0   // * estimated number of transactions per day after checkpoint
         };
     }
 };
