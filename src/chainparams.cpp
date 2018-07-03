@@ -188,7 +188,7 @@ public:
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
         strSporkPubKey = "04cdba5432c41747ab39695af8350ba5c3ba14b5c6a5c838e7d82a7a7f7f8ddbe55741fea8b3d1f83d9b713d95baaec2fc9c5b2988033efe6a5473f62de7ce1bb5";
-
+        /*
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (0, uint256S("0x0000058179e876cda7fb90bee0574d286e403bc175e4fd3d2ac313fbf1fa390e")),
@@ -196,7 +196,7 @@ public:
             0,    // * total number of transactions between genesis and last checkpoint
                   //   (the tx=... number in the SetBestChain debug.log lines)
             0   // * estimated number of transactions per day after checkpoint
-        };
+        };*/
     }
 };
 
