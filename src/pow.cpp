@@ -140,7 +140,7 @@ unsigned int LwmaCalculateNextWorkRequired(const CBlockIndex* pindexLast, const 
     const int height = pindexLast->nHeight + 1;
     
     // For new coins
-    if (pindexLast->nHeight <= 5) { return 0.0002; }
+    if (pindexLast->nHeight <= 5) { return 1; }
     if (height <= N) { N = pindexLast->nHeight; } // prevent breaks
 
     assert(height > N);
