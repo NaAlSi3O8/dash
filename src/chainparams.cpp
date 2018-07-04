@@ -159,7 +159,7 @@ public:
         {
                 arith_uint256 hashTarget = UintToArith256(consensus.powLimit);
                 arith_uint256 hashNow = UintToArith256(genesis.GetHash());
-                while (hashNow <= hashTarget || genesis.nNonce < 20000000)
+                while (hashNow > hashTarget)
                 {
                     if((genesis.nNonce & 0xFFF) == 0)
                     {
