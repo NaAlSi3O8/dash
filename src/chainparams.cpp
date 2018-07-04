@@ -152,42 +152,12 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1530678600, 0, 0x1e0ffff0, 1, 50 * COIN);
-
-        //create genesis
-        if(true && genesis.GetHash() != consensus.hashGenesisBlock)
-        {
-                arith_uint256 hashTarget = UintToArith256(consensus.powLimit);
-                arith_uint256 hashNow = UintToArith256(genesis.GetHash());
-                while (hashNow > hashTarget)
-                {
-                    if((genesis.nNonce & 0xFFF) == 0)
-                    {
-                        LogPrintf("genesis.GetHash=%s\n", genesis.GetHash().ToString());
-                        LogPrintf("genesis.hashMerkleRoot=%s\n", genesis.hashMerkleRoot.ToString());
-                        LogPrintf("genesis.nTime=%u\n", genesis.nTime);
-                        LogPrintf("genesis.nNonce=%u\n", genesis.nNonce);
-                        LogPrintf("genesis.nBits=%u\n\n", genesis.nBits);
-                    }
-                    genesis.nNonce ++;
-                    if(genesis.nNonce == 0)
-                    {
-                        LogPrintf("new genesis.nTime=%u\n", genesis.nTime);
-                    }
-                    genesis = CreateGenesisBlock(genesis.nTime, genesis.nNonce, genesis.nBits, 1, 50 * COIN);
-                    hashNow = UintToArith256(genesis.GetHash());
-                }
-                LogPrintf("genesis.GetHash=%s\n", genesis.GetHash().ToString());
-                LogPrintf("genesis.hashMerkleRoot=%s\n", genesis.hashMerkleRoot.ToString());
-                LogPrintf("genesis.nTime=%u\n", genesis.nTime);
-                LogPrintf("genesis.nNonce=%u\n", genesis.nNonce);
-                LogPrintf("genesis.nBits=%u\n\n", genesis.nBits);
-        }
-
+        genesis = CreateGenesisBlock(1530678600, 432244, 0x1e0ffff0, 1, 50 * COIN);
+        
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        //assert(consensus.hashGenesisBlock == uint256S("0x0000058179e876cda7fb90bee0574d286e403bc175e4fd3d2ac313fbf1fa390e"));
-        //assert(genesis.hashMerkleRoot == uint256S("0xb40d1b9a7e80e236b8afe6756b238766f567222b1214d1e25a6a054abc10856a"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000475c48fb4eca6e368c5b72980055f66d36f95714bc01c139a53044880df"));
+        assert(genesis.hashMerkleRoot == uint256S("0xb40d1b9a7e80e236b8afe6756b238766f567222b1214d1e25a6a054abc10856a"));
 
         vSeeds.push_back(CDNSSeedData("seed0_allgamescoin", "seed0.allgamescoin.org"));
         // vFixedSeeds.clear();
@@ -218,15 +188,15 @@ public:
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
         strSporkPubKey = "04cdba5432c41747ab39695af8350ba5c3ba14b5c6a5c838e7d82a7a7f7f8ddbe55741fea8b3d1f83d9b713d95baaec2fc9c5b2988033efe6a5473f62de7ce1bb5";
-        /*
+
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (0, uint256S("0x0000058179e876cda7fb90bee0574d286e403bc175e4fd3d2ac313fbf1fa390e")),
+            (0, uint256S("0x00000475c48fb4eca6e368c5b72980055f66d36f95714bc01c139a53044880df")),
             1530678600, // * UNIX timestamp of last checkpoint block
             0,    // * total number of transactions between genesis and last checkpoint
                   //   (the tx=... number in the SetBestChain debug.log lines)
             500   // * estimated number of transactions per day after checkpoint
-        };*/
+        };
     }
 };
 
