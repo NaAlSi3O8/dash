@@ -1240,7 +1240,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     {
         nSubsidy = (CAmount)(nSubsidy * 0.98089);
     }
-    for (int i = 10080; i <= nPrevHeight; i += nSubsidyHalvingInterval) {
+    for (int i = 10080; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
         nSubsidy = nSubsidy * 0.98089;
     }
     nSubsidy = nSubsidy * 100;
