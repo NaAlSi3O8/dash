@@ -1255,7 +1255,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
     // Until tiers implementation, MN gets 60% from block reward
-    return blockValue * 0.6;
+    return blockValue * 0.49;
 }
 
 bool IsInitialBlockDownload()
