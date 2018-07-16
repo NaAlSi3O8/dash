@@ -1231,44 +1231,25 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
 */
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    double dDiff;
-
-    //if (!nPrevHeight && Params().NetworkIDString() != "test" || nPrevHeight <= 2) { // No Premine on testnet
-    //    return 350400 * COIN;
-    //}
-    if(nPrevHeight <= 500) {
-        return 20 * COIN;
+    CAmount nSubsidy = 100 * COIN / 100;
+    for (int i = 100; i <= nPrevHeight && i < 6400; i = i * 2)
+    {
+        nSubsidy = (CAmount)(nSubsidy * 0.86);
     }
-
-    // Total supply 22,075,700
-    else if (nPrevHeight >= 3154101) {
-        return 0;
+    if (nPrevHeight >= 6400)
+    {
+        nSubsidy = (CAmount)(nSubsidy * 0.98089);
     }
-
-    if (nPrevHeight <= 4500 && Params().NetworkIDString() == CBaseChainParams::MAIN) {
-        /* a bug which caused diff to not be correctly calculated */
-        dDiff = (double)0x0000ffff / (double)(nPrevBits & 0x00ffffff);
-    } else {
-        dDiff = ConvertBitsToDouble(nPrevBits);
+    for (int i = 10080; i <= nPrevHeight; i += nSubsidyHalvingInterval) {
+        nSubsidy = nSubsidy * 0.98089;
     }
-
-    // LogPrintf("height %u diff %4.2f reward %d\n", nPrevHeight, dDiff, nSubsidyBase);
-    // Block reward starts at 20 and declines 50% every 2 years, getting in 10 years ~21M AGC.
-    CAmount nSubsidy = 20 * COIN;
-
-    for (int i = consensusParams.nSubsidyHalvingInterval; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
-        nSubsidy = nSubsidy/2;
+    nSubsidy = nSubsidy * 100;
+    //block > 7378561, 10248 days, total 20985163 COIN
+    if (nSubsidy < 0.000001 * COIN)
+    {
+        nSubsidy = 0;
     }
-
-    // Minimum reward is 1.25
-    if (nSubsidy < (1.25 * COIN)) {
-        nSubsidy = 1.25 * COIN;
-    }
-
-    // Hard fork to reduce the block reward by 10 extra percent (allowing budget/superblocks)
-    CAmount nSuperblockPart = (nPrevHeight > consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/10 : 0;
-
-    return fSuperblockPartOnly ? nSuperblockPart : nSubsidy - nSuperblockPart;
+    return nSubsidy;
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
