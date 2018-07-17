@@ -1231,20 +1231,28 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
 */
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    CAmount nSubsidy = 100 * COIN / 100;
-    for (int i = 100; i <= nPrevHeight && i < 6400; i = i * 2)
+    int week = consensusParams.nSubsidyHalvingInterval;
+    int day = week / 7;
+    int hour = day / 24;
+
+    CAmount nSubsidy = 19.88 * COIN / 100;
+    for (int i = 4 * hour; i <= nPrevHeight && i < day; i += 4 * hour)
     {
-        nSubsidy = (CAmount)(nSubsidy * 0.86);
+        nSubsidy = (CAmount)(nSubsidy * 1.381338);
     }
-    if (nPrevHeight >= 6400)
+    for (int i = day; i <= nPrevHeight && i < 3 * day; i += 4 * hour)
     {
-        nSubsidy = (CAmount)(nSubsidy * 0.98089);
+        nSubsidy = (CAmount)(nSubsidy * 0.8766);
     }
-    for (int i = 10080; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
-        nSubsidy = nSubsidy * 0.98089;
+    for (int i = 3 * day; i <= nPrevHeight && i < week; i += day)
+    {
+        nSubsidy = (CAmount)(nSubsidy * 0.99512);
+    }
+    for (int i = week; i <= nPrevHeight; i += week) {
+        nSubsidy = nSubsidy * 0.99512;
     }
     nSubsidy = nSubsidy * 100;
-    //block > 7378561, 10248 days, total 20985163 COIN
+    //When 17276.00 days later, the block height > 12438720, the largest supply of AGC is 20907570.69384010.
     if (nSubsidy < 0.000001 * COIN)
     {
         nSubsidy = 0;
