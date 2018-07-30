@@ -1235,24 +1235,24 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     int day = week / 7;
     int hour = day / 24;
 
-    CAmount nSubsidy = 19.88 * COIN / 100;
+    CAmount nSubsidy = 20 * COIN / 100;
     for (int i = 4 * hour; i <= nPrevHeight && i < day; i += 4 * hour)
     {
-        nSubsidy = (CAmount)(nSubsidy * 1.381338);
+        nSubsidy = (CAmount)(nSubsidy * 1.378);
     }
     for (int i = day; i <= nPrevHeight && i < 3 * day; i += 4 * hour)
     {
-        nSubsidy = (CAmount)(nSubsidy * 0.8766);
+        nSubsidy = (CAmount)(nSubsidy * 0.8778);
     }
     for (int i = 3 * day; i <= nPrevHeight && i < week; i += day)
     {
-        nSubsidy = (CAmount)(nSubsidy * 0.99512);
+        nSubsidy = (CAmount)(nSubsidy * 0.990266);
     }
     for (int i = week; i <= nPrevHeight; i += week) {
-        nSubsidy = nSubsidy * 0.99512;
+        nSubsidy = nSubsidy * 0.99518;
     }
     nSubsidy = nSubsidy * 100;
-    //When 17276.00 days later, the block height > 12438720, the largest supply of AGC is 20907570.69384010.
+    //When 17465.00 days later, the block height > 12569761, the largest supply of AGC is 20974083.35772010.
     if (nSubsidy < 0.000001 * COIN)
     {
         nSubsidy = 0;
