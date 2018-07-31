@@ -2,20 +2,16 @@ AllGamesCoin Core 0.2.0
 ===============================
 
 
-https://www.allgamescoin.org
+https://allgamescoin.org
 
 
 What is AllGamesCoin?
 ----------------
 
-AllGamesCoin is an experimental new digital currency that enables anonymous, instant
-payments to anyone, anywhere in the world. AllGamesCoin uses peer-to-peer technology
-to operate with no central authority: managing transactions and issuing money
-are carried out collectively by the network. AllGamesCoin Core is the name of the open
-source software which enables the use of this currency.
+AllGamesCoin(AGC) is a new cryptocurrency that provides a blockchain revolution for the gaming industry. We aim to use the blockchain to storage the game asset; to build trusty game rules; to achieve game economy system interoperability, and player game autonomy. AGC will allow game developers and players that from all around the world to enjoy the tremendous changes and benefits of the blockchain rebuilding game world. AGC owners will influence and manage the game world.
 
 For more information, as well as an immediately useable, binary version of
-the AllGamesCoin Core software, see https://www.allgamescoin.org/.
+the AllGamesCoin Core software, see https://allgamescoin.org/.
 
 
 License
