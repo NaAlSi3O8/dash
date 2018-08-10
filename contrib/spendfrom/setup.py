@@ -1,5 +1,5 @@
 from distutils.core import setup
-setup(name='AGCspendfrom',
+setup(name='XAGCspendfrom',
       version='1.0',
       description='Command-line utility for allgamescoin "coin control"',
       author='Gavin Andresen',

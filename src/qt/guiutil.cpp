@@ -184,7 +184,7 @@ bool parseAllGamesCoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!AllGamesCoinUnits::parse(AllGamesCoinUnits::AGC, i->second, &rv.amount))
+                if(!AllGamesCoinUnits::parse(AllGamesCoinUnits::XAGC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -223,7 +223,7 @@ QString formatAllGamesCoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(AllGamesCoinUnits::format(AllGamesCoinUnits::AGC, info.amount, false, AllGamesCoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(AllGamesCoinUnits::format(AllGamesCoinUnits::XAGC, info.amount, false, AllGamesCoinUnits::separatorNever));
         paramCount++;
     }
 

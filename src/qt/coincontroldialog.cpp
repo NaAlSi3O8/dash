@@ -625,7 +625,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
     }
 
     // actually update labels
-    int nDisplayUnit = AllGamesCoinUnits::AGC;
+    int nDisplayUnit = AllGamesCoinUnits::XAGC;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 

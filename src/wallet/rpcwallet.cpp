@@ -485,7 +485,7 @@ UniValue instantsendtoaddress(const UniValue& params, bool fHelp)
             + HelpRequiringPassphrase() +
             "\nArguments:\n"
             "1. \"allgamescoinaddress\"  (string, required) The allgamescoin address to send to.\n"
-            "2. \"amount\"      (numeric, required) The amount in AGC to send. eg 0.1\n"
+            "2. \"amount\"      (numeric, required) The amount in XAGC to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
             "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"

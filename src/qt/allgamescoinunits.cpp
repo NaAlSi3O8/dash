@@ -19,9 +19,9 @@ AllGamesCoinUnits::AllGamesCoinUnits(QObject *parent):
 QList<AllGamesCoinUnits::Unit> AllGamesCoinUnits::availableUnits()
 {
     QList<AllGamesCoinUnits::Unit> unitlist;
-    unitlist.append(AGC);
-    unitlist.append(mAGC);
-    unitlist.append(uAGC);
+    unitlist.append(XAGC);
+    unitlist.append(mXAGC);
+    unitlist.append(uXAGC);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -30,9 +30,9 @@ bool AllGamesCoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case AGC:
-    case mAGC:
-    case uAGC:
+    case XAGC:
+    case mXAGC:
+    case uXAGC:
     case duffs:
         return true;
     default:
@@ -46,9 +46,9 @@ QString AllGamesCoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case AGC: return QString("AGC");
-            case mAGC: return QString("mAGC");
-            case uAGC: return QString::fromUtf8("μAGC");
+            case XAGC: return QString("XAGC");
+            case mXAGC: return QString("mXAGC");
+            case uXAGC: return QString::fromUtf8("μXAGC");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString AllGamesCoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case AGC: return QString("tAGC");
-            case mAGC: return QString("mtAGC");
-            case uAGC: return QString::fromUtf8("μtAGC");
+            case XAGC: return QString("tXAGC");
+            case mXAGC: return QString("mtXAGC");
+            case uXAGC: return QString::fromUtf8("μtXAGC");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -72,9 +72,9 @@ QString AllGamesCoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case AGC: return QString("AllGamesCoin");
-            case mAGC: return QString("Milli-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uAGC: return QString("Micro-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case XAGC: return QString("AllGamesCoin");
+            case mXAGC: return QString("Milli-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uXAGC: return QString("Micro-AllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-AllGamesCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -83,9 +83,9 @@ QString AllGamesCoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case AGC: return QString("TestAllGamesCoins");
-            case mAGC: return QString("Milli-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uAGC: return QString("Micro-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case XAGC: return QString("TestAllGamesCoins");
+            case mXAGC: return QString("Milli-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uXAGC: return QString("Micro-TestAllGamesCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestAllGamesCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -96,9 +96,9 @@ qint64 AllGamesCoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case AGC:  return 100000000;
-    case mAGC: return 100000;
-    case uAGC: return 100;
+    case XAGC:  return 100000000;
+    case mXAGC: return 100000;
+    case uXAGC: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -108,9 +108,9 @@ int AllGamesCoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case AGC: return 8;
-    case mAGC: return 5;
-    case uAGC: return 2;
+    case XAGC: return 8;
+    case mXAGC: return 5;
+    case uXAGC: return 2;
     case duffs: return 0;
     default: return 0;
     }

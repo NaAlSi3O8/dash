@@ -3447,7 +3447,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     <message>
         <location line="+20"/>
         <source>Inputs...</source>
-        <translation>AGC Inputs...</translation>
+        <translation>XAGC Inputs...</translation>
     </message>
     <message>
         <location line="+10"/>

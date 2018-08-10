@@ -982,7 +982,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CValidationState &state, const C
         // Remove conflicting transactions from the mempool
         BOOST_FOREACH(const CTxMemPool::txiter it, allConflicting)
         {
-            LogPrint("mempool", "replacing tx %s with %s for %s AGC additional fees, %d delta bytes\n",
+            LogPrint("mempool", "replacing tx %s with %s for %s XAGC additional fees, %d delta bytes\n",
                     it->GetTx().GetHash().ToString(),
                     hash.ToString(),
                     FormatMoney(nModifiedFees - nConflictingFees),
@@ -1252,7 +1252,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         nSubsidy = nSubsidy * 0.99518;
     }
     nSubsidy = nSubsidy * 100;
-    //When 17465.00 days later, the block height > 12569761, the largest supply of AGC is 20974083.35772010.
+    //When 17465.00 days later, the block height > 12569761, the largest supply of XAGC is 20974083.35772010.
     if (nSubsidy < 0.000001 * COIN)
     {
         nSubsidy = 0;

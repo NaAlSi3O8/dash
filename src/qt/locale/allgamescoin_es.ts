@@ -2209,7 +2209,7 @@ https://www.transifex.com/projects/p/allgamescoin/</translation>
     </message>
     <message>
         <source>Inputs...</source>
-        <translation>Entradas de AGC...</translation>
+        <translation>Entradas de XAGC...</translation>
     </message>
     <message>
         <source>automatically selected</source>

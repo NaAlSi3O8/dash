@@ -57,9 +57,9 @@ public:
      */
     enum Unit
     {
-        AGC,
-        mAGC,
-        uAGC,
+        XAGC,
+        mXAGC,
+        uXAGC,
         duffs
     };
 

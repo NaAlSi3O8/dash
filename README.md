@@ -8,7 +8,7 @@ https://allgamescoin.org
 What is AllGamesCoin?
 ----------------
 
-AllGamesCoin(AGC) is a new cryptocurrency that provides a blockchain revolution for the gaming industry. We aim to use the blockchain to storage the game asset; to build trusty game rules; to achieve game economy system interoperability, and player game autonomy. AGC will allow game developers and players that from all around the world to enjoy the tremendous changes and benefits of the blockchain rebuilding game world. AGC owners will influence and manage the game world.
+AllGamesCoin(XAGC) is a new cryptocurrency that provides a blockchain revolution for the gaming industry. We aim to use the blockchain to storage the game asset; to build trusty game rules; to achieve game economy system interoperability, and player game autonomy. XAGC will allow game developers and players that from all around the world to enjoy the tremendous changes and benefits of the blockchain rebuilding game world. XAGC owners will influence and manage the game world.
 
 For more information, as well as an immediately useable, binary version of
 the AllGamesCoin Core software, see https://allgamescoin.org/.

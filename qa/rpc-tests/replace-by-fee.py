@@ -134,7 +134,7 @@ class ReplaceByFeeTest(AllGamesCoinTestFramework):
         else:
             assert(False)
 
-        # Extra 0.1 AGC fee
+        # Extra 0.1 XAGC fee
         tx1b = CTransaction()
         tx1b.vin = [CTxIn(tx0_outpoint, nSequence=0)]
         tx1b.vout = [CTxOut(int(0.9*COIN), CScript([b'b']))]
@@ -168,7 +168,7 @@ class ReplaceByFeeTest(AllGamesCoinTestFramework):
             prevout = COutPoint(int(txid, 16), 0)
 
         # Whether the double-spend is allowed is evaluated by including all
-        # child fees - 40 AGC - so this attempt is rejected.
+        # child fees - 40 XAGC - so this attempt is rejected.
         dbl_tx = CTransaction()
         dbl_tx.vin = [CTxIn(tx0_outpoint, nSequence=0)]
         dbl_tx.vout = [CTxOut(initial_nValue - 30*COIN, CScript([1]))]
@@ -246,7 +246,7 @@ class ReplaceByFeeTest(AllGamesCoinTestFramework):
         else:
             assert(False)
 
-        # 1 AGC fee is enough
+        # 1 XAGC fee is enough
         dbl_tx = CTransaction()
         dbl_tx.vin = [CTxIn(tx0_outpoint, nSequence=0)]
         dbl_tx.vout = [CTxOut(initial_nValue - fee*n - 1*COIN, CScript([1]))]
