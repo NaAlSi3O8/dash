@@ -9,9 +9,13 @@ What is AllGamesCoin?
 ----------------
 
 AllGamesCoin(XAGC) is a new cryptocurrency that provides a blockchain revolution for the gaming industry. We aim to use the blockchain to storage the game asset; to build trusty game rules; to achieve game economy system interoperability and player autonomy.
+
 With the reshaping of the blockchain, the game equipment will become a real asset, the game token will also be truly valuable, and the rules of the game will be transparent and feasible. The blockchain will have a huge impact on the existing gaming system. It will quicken the pace of the gaming industry 4.0 era.
+
 Blockchain technology will be applied to the following situations: game asset trading platform, game asset blockchain storage, rule identification, economic system interoperability, and player autonomy.
+
 The AllGameCoin System adopts a three-layer structure of a public blockchain layer, a data blockchain layer and an application layer. The public blockchain adopts the consensus mode of POW and Masternode, the data blockchain adopts the consensus mode of super nodes, and the data blockchain will be authenticated twice in the public blockchain. The separation of the public blockchain and the data blockchain achieves the consensus of the whole users and the confirmation within several milliseconds.
+
 AllGameCoin System will allow game developers and players that from all around the world to enjoy the tremendous changes and benefits of the blockchain rebuilding game world. XAGC holders will influence and manage the game world.
 
 For more information, as well as an immediately useable, binary version of
