@@ -1232,27 +1232,16 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
     int week = consensusParams.nSubsidyHalvingInterval;
-    int day = week / 7;
-    int hour = day / 24;
-
     CAmount nSubsidy = 20 * COIN / 100;
-    for (int i = 4 * hour; i <= nPrevHeight && i < day; i += 4 * hour)
-    {
-        nSubsidy = (CAmount)(nSubsidy * 1.378);
-    }
-    for (int i = day; i <= nPrevHeight && i < 3 * day; i += 4 * hour)
-    {
-        nSubsidy = (CAmount)(nSubsidy * 0.8778);
-    }
-    for (int i = 3 * day; i <= nPrevHeight && i < week; i += day)
-    {
-        nSubsidy = (CAmount)(nSubsidy * 0.990266);
+    //premine 0.832589632%
+    if (nPrevHeight == 1){	
+	nSubsidy += (174843.82272 * COIN / 100);
     }
     for (int i = week; i <= nPrevHeight; i += week) {
-        nSubsidy = nSubsidy * 0.99518;
+	nSubsidy = (CAmount)(nSubsidy * 0.99516);
     }
     nSubsidy = nSubsidy * 100;
-    //When 17465.00 days later, the block height > 12569761, the largest supply of XAGC is 20974083.35772010.
+    //When 17395.00 days later, the block height > 12524400, the largest supply of XAGC is 21000000.00000000.
     if (nSubsidy < 0.000001 * COIN)
     {
         nSubsidy = 0;
@@ -1262,7 +1251,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    // Until tiers implementation, MN gets 60% from block reward
+    // Until tiers implementation, MN gets 49% from block reward
     return blockValue * 0.49;
 }
 
