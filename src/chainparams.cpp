@@ -55,7 +55,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "The Times 30/Jun/2018 The great summer mortgage war";
+    const char* pszTimestamp = "The Times 26/Aug/2018 OG are Grand Champions of The International 2018";
     const CScript genesisOutputScript = CScript() << ParseHex("04621f7aea29e57493d33569f3cde075574b68a0016be44011097f51bab0c530407ef91647e570646c8bf061bae493abbb83635cbbcc631a986378c505450384e3") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -152,12 +152,11 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1530678600, 432244, 0x1e0ffff0, 1, 50 * COIN);
-        
+        genesis = CreateGenesisBlock(1535281200, 1896061, 0x1e0ffff0, 1, 20 * COIN);        
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        assert(consensus.hashGenesisBlock == uint256S("0x00000475c48fb4eca6e368c5b72980055f66d36f95714bc01c139a53044880df"));
-        assert(genesis.hashMerkleRoot == uint256S("0xb40d1b9a7e80e236b8afe6756b238766f567222b1214d1e25a6a054abc10856a"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000085c9a8c00c3733cb74ae48cb531c01ebede206129466de56e65bec72c44"));
+        assert(genesis.hashMerkleRoot == uint256S("0x435d204017e7838aba41471c58f658cf39208663a584e057045a39495b9814a9"));
 
         vSeeds.push_back(CDNSSeedData("seed0_allgamescoin", "seed0.allgamescoin.org"));
         vSeeds.push_back(CDNSSeedData("seed1_allgamescoin", "seed1.allgamescoin.org"));
@@ -182,10 +181,10 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = true;
+        fMineBlocksOnDemand = false;
         fTestnetToBeDeprecatedFieldRPC = false;
 
         nPoolMaxTransactions = 3;
@@ -194,8 +193,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (0, uint256S("0x00000475c48fb4eca6e368c5b72980055f66d36f95714bc01c139a53044880df")),
-            1530678600, // * UNIX timestamp of last checkpoint block
+            (0, uint256S("0x0000085c9a8c00c3733cb74ae48cb531c01ebede206129466de56e65bec72c44")),
+            1535281200, // * UNIX timestamp of last checkpoint block
             0,    // * total number of transactions between genesis and last checkpoint
                   //   (the tx=... number in the SetBestChain debug.log lines)
             500   // * estimated number of transactions per day after checkpoint
@@ -277,7 +276,7 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1530678600UL, 155965UL, 0x1e0ffff0, 1, 150000 * COIN);
+        genesis = CreateGenesisBlock(1535281200UL, 155965UL, 0x1e0ffff0, 1, 150000 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
         //assert(consensus.hashGenesisBlock == uint256S("0x0x8efde483cc07f2076b04d42f05ee6a12f0b5c57a058bd9e56635ff9794f42f78"));
@@ -391,7 +390,7 @@ public:
         nDefaultPort = 17108;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1530678600, 1282268, 0x1e0ffff0, 1, 150000 * COIN);
+        genesis = CreateGenesisBlock(1535281200, 1282268, 0x1e0ffff0, 1, 150000 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         //assert(consensus.hashGenesisBlock == uint256S("0x000005ec6d48ac579d697448a82e93127b94403770629399cf561caa216a694b"));
         //assert(genesis.hashMerkleRoot == uint256S("0xd5dec0980d7b84cc1c048eb8706afe68bbbdb07fdefab76de8d176dfcb858ae8"));
@@ -410,7 +409,7 @@ public:
         //checkpointData = (CCheckpointData){
             //boost::assign::map_list_of
             //( 0, uint256S("0x000005ec6d48ac579d697448a82e93127b94403770629399cf561caa216a694b")),
-            //1530678600,
+            //1535281200,
             //0,
             //0
         //};
