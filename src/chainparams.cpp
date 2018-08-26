@@ -160,6 +160,9 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xb40d1b9a7e80e236b8afe6756b238766f567222b1214d1e25a6a054abc10856a"));
 
         vSeeds.push_back(CDNSSeedData("seed0_allgamescoin", "seed0.allgamescoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed1_allgamescoin", "seed1.allgamescoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed2_allgamescoin", "seed2.allgamescoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed3_allgamescoin", "seed3.allgamescoin.org"));
         // vFixedSeeds.clear();
         // vSeeds.clear();
 
@@ -179,10 +182,10 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
         fTestnetToBeDeprecatedFieldRPC = false;
 
         nPoolMaxTransactions = 3;
